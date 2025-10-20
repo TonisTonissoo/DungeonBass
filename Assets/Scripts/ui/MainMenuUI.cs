@@ -1,20 +1,20 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
     public GameObject mainButtons;
     public GameObject settingsPanel;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneLoader.Load("Level1");
         Debug.Log("Play pressed");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit pressed");
-        Application.Quit();
+        SceneLoader.QuitGame();
     }
 
     public void OpenSettings()
@@ -29,3 +29,4 @@ public class MainMenuUI : MonoBehaviour
         mainButtons.SetActive(true);
     }
 }
+    
