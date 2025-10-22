@@ -7,7 +7,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneLoader.Load("Level1");
+        SceneLoader.Load("DungeonBoard");
         Debug.Log("Play pressed");
     }
 

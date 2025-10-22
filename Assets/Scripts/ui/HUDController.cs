@@ -26,7 +26,6 @@ public class HUDController : MonoBehaviour
         if (loopText) loopText.text = $"Loop: {currentLoop}/{totalLoops}";
     }
 
-    // --- Avalikud meetodid teistele skriptidele ---
     public void SetHealth(int value)
     {
         health = Mathf.Max(0, value);
