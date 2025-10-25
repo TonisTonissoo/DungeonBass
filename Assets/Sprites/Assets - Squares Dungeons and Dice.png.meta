@@ -1,0 +1,4950 @@
+fileFormatVersion: 2
+guid: 31a6947c311b1654aaff90bce5642340
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4273935598478779852
+    second: Assets - Squares Dungeons and Dice_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a96cba73eefa4c0800000000000000
+      internalID: -4273935598478779852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58503493dd1524049b72bc9d2ea49cba
+      internalID: 726072899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 443
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047a3d022d3a0d043b845f320e010f3d
+      internalID: 1876552915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b87dd7ad3cb74459478dbe80225178
+      internalID: -1420118480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58546a14e2836c448b262645a8137405
+      internalID: -1637764685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcb5548cf2842a409df0efebb08ad97
+      internalID: 167200742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089d2ae23faa0d54db04aae06696e7b7
+      internalID: 1269091486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6756d83a8b483c428e0e9d0e7477d65
+      internalID: -238924559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2629eabab99cc8643bb005119c0b763d
+      internalID: -383219600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f66d4eb1fafa8541999daa3faeb2596
+      internalID: 2000353467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6f148776710104c8f6b329abe1ee2e
+      internalID: 1329378636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e21751fc37cb74fb89580b689cce96
+      internalID: 1265061019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_12
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6698fd5239dab24eb46da815cac98f3
+      internalID: -204796900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_13
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2f7de7f81401b41a45f46063f29550
+      internalID: -376639495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_14
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 444
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c38cead98477ed4b82a71f08c4ee2e6
+      internalID: -1494544722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e6ba2f4d9ae284384608957a3171db
+      internalID: 141871843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_16
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b071157a0280442941d7d6a85efada
+      internalID: -1068963564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_17
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510c56cec8d7c0f4eb65daad555a5660
+      internalID: 206670420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_18
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c261238987f613746ab1ee4b8e758447
+      internalID: -1502566416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_19
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428141c3912873e498260472fbdd03a5
+      internalID: 393660737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_20
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb7fdbb3dd6f9247afa1f48a2766bed
+      internalID: -925338872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_21
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35055945b81af240ab26b3483560b0e
+      internalID: 330797962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_22
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c74850e87180714ba071e1172ec28d3
+      internalID: 1472877319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_23
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa514358cf8ec34eb87b57f3445efbb
+      internalID: 2020415242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_24
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75acf2d81b21e2f41a4e578bf6dd6a84
+      internalID: -1021003989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_25
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098fa84c392b50c43b5f419c6abdb69f
+      internalID: 1012222729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_26
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f859578bd37b80640857f84b10fbc942
+      internalID: -2063209354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_27
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8919240f5578944f98931cd1fd47e90
+      internalID: 1432753711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_28
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91732633516f0da4cb0c14ea652802c7
+      internalID: 240602597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_29
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 412
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445ec5d364d4df849a0c2ff722a0a66a
+      internalID: -1342947998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_30
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae824798e9353d64a85c8ed086e5eeef
+      internalID: -2049712898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_31
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba3a60589ea90947a8f4f2ef03493b1
+      internalID: 628197580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_32
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3766abab3e12a044e8931a9e580e7744
+      internalID: 219351067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_33
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a783e0bf5c01d1142864dd1787f099b0
+      internalID: 1853233761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_34
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba537101038b3343ae43fa93b6baad5
+      internalID: -1900630516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_35
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938d98f4cdcf6414b81a30e19183dd76
+      internalID: 354034046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_36
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b51fca6d9f84a24fac2a8fa06d91e29
+      internalID: -1916507963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_37
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5548d16fd75897f42aeb1847175002f3
+      internalID: -1018730266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_38
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5e1258d70f88b42b44bd97328514f6
+      internalID: 1687295968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_39
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c588cfeed7ec0204da632a114851d6a3
+      internalID: 1479194709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_40
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429e55e6b12c2924d93aead2d06207f1
+      internalID: 1552385121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_41
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af98c2f7b007a5b47af72e56967b8e36
+      internalID: -957093155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_42
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853fa291acb457d46a82f76b23160cc1
+      internalID: -571682338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_43
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fd27fb9a4eb5a41b9fbac9fc2d5057
+      internalID: 2104664280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_44
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 380
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c586a35e7d24f4991fbffabbf3e358
+      internalID: -1278534225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_45
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d366f0aadf0c934fb98f1ca491b88d0
+      internalID: 1005080226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_46
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cda9ac6ddf38c848a2d938e656f18cc
+      internalID: -1121291279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_47
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5235d1acbde6ba444a19f998b3042a0c
+      internalID: 1146414161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_48
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776f9215b3b3d9a40ba18905d0a49d5d
+      internalID: -1674263210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_49
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ece8d5f4ea558c409f7f462a850dc72
+      internalID: 268045947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_50
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add773b81ece7c944a1d563fe0fa750f
+      internalID: -445027503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_51
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2649d74b20a0b5f43b70453a5c196932
+      internalID: 1282620566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_52
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f272041d12deb454c8c3641ce40eb3c3
+      internalID: 990941841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_53
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60dc64f3ea14a94d94d0921e405f469
+      internalID: 1418039735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_54
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487e690fda7dd92499d7d5653b3fefc2
+      internalID: 1795207152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_55
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b014f2e428ceb468ed5789809568c4
+      internalID: 1930884338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_56
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbdce1356e7d0448927785cc9f1e3e6
+      internalID: 528316271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_57
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8629f9318381942810e3431de806d4
+      internalID: -611004517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_58
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3bdc8463a8d9d49915886817abe2e7
+      internalID: -1835163542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_59
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 348
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9f5840acf241948a9e1bbcb975b7d1
+      internalID: -955714924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_60
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf708cb3130f814c884ebeb7d809e79
+      internalID: 1300244942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_61
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d7d5380e1c6fb4faa2200ab758b4d4
+      internalID: -139296229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_62
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd13cb57f9a5754584a623cf2dc9324
+      internalID: -948846650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_63
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af79c1da58cad5d4087fc408223356af
+      internalID: 361252620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_64
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef7eae2ffc89dd4abb9efadc98c1aef
+      internalID: -901724656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_65
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e8d25ecb685df40a689c091d703548
+      internalID: 1293420486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_66
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061420a51f9c2384da6fcecc52495de5
+      internalID: -1275196487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_67
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec60adc609950f4888d2cec332db1bd
+      internalID: 218355734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_68
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f3dc012a5e98746a87b1d52b2370e0
+      internalID: -998796952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_69
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874ac10089fd9a946bd002a2737ef58d
+      internalID: -1280051418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_70
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b9e4908e9f2674399a36e1b2535147
+      internalID: 1367990145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_71
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41694d4583b4aa47ab1ba33d23cedb9
+      internalID: -1788696106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_72
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6561bc57425fa488461d7d63512d17
+      internalID: 161524865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_73
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9858a3fd098014a9b7eb2067ff9a04
+      internalID: -1149500400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_74
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 316
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff8e4b86cd6be944a2f6fc9c42bc073
+      internalID: 1372347361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_75
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0076936fd547747ac80a9fb567aaea
+      internalID: 221157693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_76
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b913fe3fbe982448a7a10c6f16abc3
+      internalID: -2121531854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_77
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87cf3155b9852e648bf91d1d0c675255
+      internalID: 1349687123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_78
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7bc4c390016944e9708280f03e9592
+      internalID: -998777506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_79
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9414eebab65a5b4a9d0771f67b8baab
+      internalID: 92549536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_80
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4e16f9ae9cd1f4db566e2aee0e1697
+      internalID: 2107122127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_81
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c617cd036e6119842a17ac75704c186d
+      internalID: -1189081352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_82
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b986abcbdaba72448df2c93197515c7
+      internalID: 95378271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_83
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2339d4617ef94c6479d62307ca003bfa
+      internalID: 1964651840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_84
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fb539a8364da54198d95be61a70468
+      internalID: -572012679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_85
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852a2a8eea711a540b136708aacf9d10
+      internalID: -1876987691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_86
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937ae2e35e4f8534faddc47f2d4c0cf4
+      internalID: -1009857502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_87
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1457753878b745e4eb3b20deb21a5ab1
+      internalID: -1097103087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_88
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbe64e039ec0094595aa19210d4b455
+      internalID: 1587897584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_89
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 284
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327acd3847c4c884181a1c891067f0bc
+      internalID: 188328672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_90
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5bc9419d5edd654b8155f16761d432c
+      internalID: 1426352312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_91
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c26aaba9b56874e8665832c09832ed
+      internalID: 230123280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_92
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28b01ed7949d544b94d5d190f574ce4
+      internalID: -454137773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_93
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8305415001546104cb129f097689b93f
+      internalID: -1341267741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_94
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b342d40c93942408999f57380ba5d1
+      internalID: 1686608358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_95
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb2b8c63c60a99429a338f4c91648e8
+      internalID: -1956713308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_96
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b199d058a265da4095f9b25c5dbcf20
+      internalID: -1069032677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_97
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149f9a049eb82c54ba8bbb3ce5b12c6b
+      internalID: -1711302271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_98
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9678c7851b093b4d9cb2efe3abb3cda
+      internalID: -447232778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_99
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3998774709bcb0a49afe1a37f2152b57
+      internalID: 611401085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_100
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1b9a76a046c9a46bfac7676af7e30e
+      internalID: -43504231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_101
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f6b707cc9e39b4dafd1fb430a57662
+      internalID: 2131314641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_102
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ba81e7b38b84a48ba48e4b57a9ef9a
+      internalID: 821425571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_103
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e0d5f4522da854ead6f763eea32ffc
+      internalID: 826394784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_104
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 252
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2a467f954308b4a920b568442272bd
+      internalID: -534934826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_105
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e0dfcbceb130b4fb9369e89b14ce36
+      internalID: -541023721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_106
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426f49e4a9d31e748b115129ff20e783
+      internalID: 537656486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_107
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b105c7dc9c627040b4010c4baf313ac
+      internalID: -1748037087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_108
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c33b2e574c4d594faffb507ac12a8da
+      internalID: -885057191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_109
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b8fe964a4b06b48bfdd8e9490d8017
+      internalID: -93464306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_110
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bc1e9304fbde94490f2c0a0440b8eb
+      internalID: -1501721804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_111
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e7a24475667d549bcc0906fc8c7a04
+      internalID: -2132580838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_112
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37cdeec72b85be04588732c6d26b2157
+      internalID: -1016584659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_113
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f19492108557e4d81f134a75f9ab8b
+      internalID: 226204172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_114
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e033555254997d4ebce70408b41c0da
+      internalID: 1277674226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_115
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d931358f8f6fd4bb34a21016254a12
+      internalID: 30066262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_116
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f28d3ae4406c7488ceede2ac13af91
+      internalID: -335129737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_117
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4d2c023859cb240bb291349469284b
+      internalID: 508765105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_118
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ac877850840fe4d8cc120a0d3e9b1e
+      internalID: 259885291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_119
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 220
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71116c31dcd481a42a44d94bb057ad86
+      internalID: 181148630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_120
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483872330753dba408b90bd3bffe80cc
+      internalID: -261299461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_121
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfb4b2d9a34e6145ae3cd547473bd28
+      internalID: -750836834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_122
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b445397e64f963498b66d0d61363b3a
+      internalID: -671578431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_123
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696e91ad7486f754c8641f9dcff10f60
+      internalID: -2117994635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_124
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daab992123d9b39438f909dfc413b83a
+      internalID: 658523425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_125
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00679cb7ba6203d40962edcf596000f2
+      internalID: -280162213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_126
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb6ff4eda90ed3439470bdd13c364d5
+      internalID: 2039858499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_127
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769757dff2e94ac4b9ff9484b7b20cbb
+      internalID: 180077268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_128
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6779f50e46172b748b071485579354e9
+      internalID: -1423400508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_129
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b329ec976efc440b1587810ab91c6c
+      internalID: -688160000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_130
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a466c57518c5c7a4db4fb31f5ebabe75
+      internalID: -1176442993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_131
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1b84cd981fcc84e8f5ffd8fd4b4e8a
+      internalID: 804909819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_132
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb60b6f0ff3c7a46851dada9f9f9731
+      internalID: 631116227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_133
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88d054a3b9901d4188d3bf33a0efec0
+      internalID: 1917286766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_134
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 188
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7efcc0a8084a24abe2392e2a3a1693
+      internalID: 85738761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_135
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bd6c956dba3f74aa23649889de726b
+      internalID: 1986060749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_136
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463a8493eb9bbaa4dbea94d2ab723784
+      internalID: -847243602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_137
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edcc023342edfd44ab604764dac850e
+      internalID: -773724722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_138
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a985e89184f91e54d987de0e7f85a218
+      internalID: 1012721548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_139
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc5242f81cd2fa4698aee249ea86d65
+      internalID: 1552405638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_140
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8761408400e4a5b4aad6ae92ec2e6000
+      internalID: 225301762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_141
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213204eb3d25fd6459ad8e4705490d73
+      internalID: -1318866338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_142
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1283099c3c92e4d8a93fa5bde190e2
+      internalID: -1425562834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_143
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4781eede0f190c40bee53e2444f4d2d
+      internalID: 1659301596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_144
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b770aeab8752849b93c6958296899c
+      internalID: 1742725220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_145
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf61a909b4760646ba1c3f4d30a6ecb
+      internalID: 1956468954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_146
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071429c60513c214ca1311b73cb62d50
+      internalID: 464814928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_147
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc8cfbe8efa24b4b86c816994a3f49c
+      internalID: -354232279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_148
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c4726bce65b3c43bda5021174ff78b
+      internalID: -489370403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_149
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 156
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da0b7992628f7143a53083e90286adb
+      internalID: -1397763556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_150
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e205624ce7bb04ea64bac3d4fe470a
+      internalID: 875205055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_151
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f79644de4b423346bf3c7dfdc33cdda
+      internalID: 913587778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_152
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835b1dfdd3788ae4984044fc3147ca3b
+      internalID: -1213993747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_153
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce8ed9602661cf4288e7ad412aadbe7
+      internalID: 12941840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_154
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead968015bfaaf049b78d9f20908f035
+      internalID: -9690249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_155
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba326476c8adc147a00b44e37c09985
+      internalID: -1041077942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_156
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2672d253a4e3b904cb5f53e467f5c455
+      internalID: 176204222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_157
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318e980287dbcc649995a6445391ae73
+      internalID: -2129004876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_158
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb1cb9b0b4af3745b5a54706825d631
+      internalID: -1473860820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_159
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ddef81ca0eb95408b16c627d5f6b44
+      internalID: -1292601142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_160
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c53ef0bd3947a943b7859d1148cb597
+      internalID: -666185585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_161
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dc7360983bd134096892b7ddb0d0ef
+      internalID: 112085734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_162
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c91f5a3e8080145afbce220cd4d62d
+      internalID: -500818835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_163
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabd3f146375050408f409021aad7194
+      internalID: 2111755099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_164
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 124
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b62092014d47a4a9ddcc8a20f0b162
+      internalID: 503775578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_165
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7b14d1f9cb68a479516a8253b662fb
+      internalID: -304886855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_166
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe289754a5e67043ba0286ccd7d97a2
+      internalID: 1299291280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_167
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa2f279b704de744a28efa7fb18ad39
+      internalID: -2142373579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_168
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75183f72f035784aae2a0a1fa3b202a
+      internalID: -1333900881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_169
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7b3ee35615cf245ac973de3c8b7588
+      internalID: -262802066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_170
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dd8977a4718b8428b290821a8342af
+      internalID: 600530558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_171
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccbb1a8172744e4a871eb9b78c8c105
+      internalID: 675844791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_172
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989b882ec5f8aec4a830bcb08228196f
+      internalID: -1187971103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_173
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feeb6579630240646b563200bb64e521
+      internalID: 1152054176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_174
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5692063846c041478503692cc9919e1
+      internalID: -491341072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_175
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8174297cb1c8e9a4e9dbf350172662d8
+      internalID: 1073231809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_176
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e659dc96e8bd804d95700194f19d948
+      internalID: -807999298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_177
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b195590f355ce947b4be28d2a24d3db
+      internalID: -1512301164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_178
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d99282b6d011cc4b862dd6d34e987b4
+      internalID: -2057235072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_179
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 92
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b393d9859496b574281553ca6b2f66ea
+      internalID: 288565054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_180
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767d75279c833f043a29885e48b87ab2
+      internalID: -1179684307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_181
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e863c8e377ddc4fafd2f8d07625026
+      internalID: -669534267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_182
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc198f49036b1cc43b8fdf8e9efdfb65
+      internalID: 1151183617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_183
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f442c07029a374bb244dc6a32f8cdd
+      internalID: -1253847614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_184
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8ea46b4dc50024fbdf8244b45556c8
+      internalID: 598042081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_185
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbb3e978bab49e44ab0016b4f95ea13
+      internalID: 119470400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_186
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aba2a7809ecae45b1e5b8686cfa50d
+      internalID: -1341451552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_187
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafd13051357ef146aaa8367989f9e2e
+      internalID: -1401485926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_188
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd04a0d04b1df743913c73e46ce67f2
+      internalID: 2121083682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_189
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03f7e46eca5a524797b84cce6a60aa2
+      internalID: 1712577345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_190
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c4cfefb9d4e2c428f39e6013c28d3e
+      internalID: 1439988664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_191
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139977f4c2fe8ab43bb2579e29e52137
+      internalID: -2050731951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_192
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3a52ec1ed1b944c9b9b900cf7ca7fe
+      internalID: -47076392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_193
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8149867e6a23eb3438718553d5a5d65f
+      internalID: -1168451601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_194
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 60
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61249c3043fbf1547b04ba8558c116d0
+      internalID: -1374932610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_195
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa5735c60f828d4cb5865b24ee0bd47
+      internalID: 868857797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_196
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533818624ac4fe04ca80ab23e714fcbb
+      internalID: -336590893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_197
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d818c8bcef4c340b1e1e0d7e5aa83a
+      internalID: -1463447839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_198
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80d5c7c05e9b4044a9406cc7d5d85bb
+      internalID: -1440860748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_199
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c40f51c48f18742b59a5281f995c24
+      internalID: 398845621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_200
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0989d26b6fdc83f41900244c5faf9149
+      internalID: -505248282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_201
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c81fb35923ccdd439578147006f5eac
+      internalID: 103264485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_202
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfec80c5c481c5408062979df211f61
+      internalID: -967156930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_203
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021a77f19596e8d479acbe78b3d5b479
+      internalID: 1097860548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_204
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526e1ee89886c574fb4b306d14e1a69e
+      internalID: -1809915772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_205
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86eba2cb099e9734e9d533d82417a654
+      internalID: -1607436310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_206
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc6708d89ef8d24e98244f017004208
+      internalID: 1585468183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_207
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6193c1ed88a10104180c2287aa760828
+      internalID: -1877805476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_208
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3269f01dc45b63449ac62e948933196
+      internalID: 2069764030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets - Squares Dungeons and Dice_209
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 28
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140062f49915947429610d3c154855ea
+      internalID: -1817276177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 03a13f369d4a9cd4990ac8f6ed6c6bab
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Assets - Squares Dungeons and Dice_0: -4273935598478779852
+      Assets - Squares Dungeons and Dice_1: 726072899
+      Assets - Squares Dungeons and Dice_10: 1329378636
+      Assets - Squares Dungeons and Dice_100: -43504231
+      Assets - Squares Dungeons and Dice_101: 2131314641
+      Assets - Squares Dungeons and Dice_102: 821425571
+      Assets - Squares Dungeons and Dice_103: 826394784
+      Assets - Squares Dungeons and Dice_104: -534934826
+      Assets - Squares Dungeons and Dice_105: -541023721
+      Assets - Squares Dungeons and Dice_106: 537656486
+      Assets - Squares Dungeons and Dice_107: -1748037087
+      Assets - Squares Dungeons and Dice_108: -885057191
+      Assets - Squares Dungeons and Dice_109: -93464306
+      Assets - Squares Dungeons and Dice_11: 1265061019
+      Assets - Squares Dungeons and Dice_110: -1501721804
+      Assets - Squares Dungeons and Dice_111: -2132580838
+      Assets - Squares Dungeons and Dice_112: -1016584659
+      Assets - Squares Dungeons and Dice_113: 226204172
+      Assets - Squares Dungeons and Dice_114: 1277674226
+      Assets - Squares Dungeons and Dice_115: 30066262
+      Assets - Squares Dungeons and Dice_116: -335129737
+      Assets - Squares Dungeons and Dice_117: 508765105
+      Assets - Squares Dungeons and Dice_118: 259885291
+      Assets - Squares Dungeons and Dice_119: 181148630
+      Assets - Squares Dungeons and Dice_12: -204796900
+      Assets - Squares Dungeons and Dice_120: -261299461
+      Assets - Squares Dungeons and Dice_121: -750836834
+      Assets - Squares Dungeons and Dice_122: -671578431
+      Assets - Squares Dungeons and Dice_123: -2117994635
+      Assets - Squares Dungeons and Dice_124: 658523425
+      Assets - Squares Dungeons and Dice_125: -280162213
+      Assets - Squares Dungeons and Dice_126: 2039858499
+      Assets - Squares Dungeons and Dice_127: 180077268
+      Assets - Squares Dungeons and Dice_128: -1423400508
+      Assets - Squares Dungeons and Dice_129: -688160000
+      Assets - Squares Dungeons and Dice_13: -376639495
+      Assets - Squares Dungeons and Dice_130: -1176442993
+      Assets - Squares Dungeons and Dice_131: 804909819
+      Assets - Squares Dungeons and Dice_132: 631116227
+      Assets - Squares Dungeons and Dice_133: 1917286766
+      Assets - Squares Dungeons and Dice_134: 85738761
+      Assets - Squares Dungeons and Dice_135: 1986060749
+      Assets - Squares Dungeons and Dice_136: -847243602
+      Assets - Squares Dungeons and Dice_137: -773724722
+      Assets - Squares Dungeons and Dice_138: 1012721548
+      Assets - Squares Dungeons and Dice_139: 1552405638
+      Assets - Squares Dungeons and Dice_14: -1494544722
+      Assets - Squares Dungeons and Dice_140: 225301762
+      Assets - Squares Dungeons and Dice_141: -1318866338
+      Assets - Squares Dungeons and Dice_142: -1425562834
+      Assets - Squares Dungeons and Dice_143: 1659301596
+      Assets - Squares Dungeons and Dice_144: 1742725220
+      Assets - Squares Dungeons and Dice_145: 1956468954
+      Assets - Squares Dungeons and Dice_146: 464814928
+      Assets - Squares Dungeons and Dice_147: -354232279
+      Assets - Squares Dungeons and Dice_148: -489370403
+      Assets - Squares Dungeons and Dice_149: -1397763556
+      Assets - Squares Dungeons and Dice_15: 141871843
+      Assets - Squares Dungeons and Dice_150: 875205055
+      Assets - Squares Dungeons and Dice_151: 913587778
+      Assets - Squares Dungeons and Dice_152: -1213993747
+      Assets - Squares Dungeons and Dice_153: 12941840
+      Assets - Squares Dungeons and Dice_154: -9690249
+      Assets - Squares Dungeons and Dice_155: -1041077942
+      Assets - Squares Dungeons and Dice_156: 176204222
+      Assets - Squares Dungeons and Dice_157: -2129004876
+      Assets - Squares Dungeons and Dice_158: -1473860820
+      Assets - Squares Dungeons and Dice_159: -1292601142
+      Assets - Squares Dungeons and Dice_16: -1068963564
+      Assets - Squares Dungeons and Dice_160: -666185585
+      Assets - Squares Dungeons and Dice_161: 112085734
+      Assets - Squares Dungeons and Dice_162: -500818835
+      Assets - Squares Dungeons and Dice_163: 2111755099
+      Assets - Squares Dungeons and Dice_164: 503775578
+      Assets - Squares Dungeons and Dice_165: -304886855
+      Assets - Squares Dungeons and Dice_166: 1299291280
+      Assets - Squares Dungeons and Dice_167: -2142373579
+      Assets - Squares Dungeons and Dice_168: -1333900881
+      Assets - Squares Dungeons and Dice_169: -262802066
+      Assets - Squares Dungeons and Dice_17: 206670420
+      Assets - Squares Dungeons and Dice_170: 600530558
+      Assets - Squares Dungeons and Dice_171: 675844791
+      Assets - Squares Dungeons and Dice_172: -1187971103
+      Assets - Squares Dungeons and Dice_173: 1152054176
+      Assets - Squares Dungeons and Dice_174: -491341072
+      Assets - Squares Dungeons and Dice_175: 1073231809
+      Assets - Squares Dungeons and Dice_176: -807999298
+      Assets - Squares Dungeons and Dice_177: -1512301164
+      Assets - Squares Dungeons and Dice_178: -2057235072
+      Assets - Squares Dungeons and Dice_179: 288565054
+      Assets - Squares Dungeons and Dice_18: -1502566416
+      Assets - Squares Dungeons and Dice_180: -1179684307
+      Assets - Squares Dungeons and Dice_181: -669534267
+      Assets - Squares Dungeons and Dice_182: 1151183617
+      Assets - Squares Dungeons and Dice_183: -1253847614
+      Assets - Squares Dungeons and Dice_184: 598042081
+      Assets - Squares Dungeons and Dice_185: 119470400
+      Assets - Squares Dungeons and Dice_186: -1341451552
+      Assets - Squares Dungeons and Dice_187: -1401485926
+      Assets - Squares Dungeons and Dice_188: 2121083682
+      Assets - Squares Dungeons and Dice_189: 1712577345
+      Assets - Squares Dungeons and Dice_19: 393660737
+      Assets - Squares Dungeons and Dice_190: 1439988664
+      Assets - Squares Dungeons and Dice_191: -2050731951
+      Assets - Squares Dungeons and Dice_192: -47076392
+      Assets - Squares Dungeons and Dice_193: -1168451601
+      Assets - Squares Dungeons and Dice_194: -1374932610
+      Assets - Squares Dungeons and Dice_195: 868857797
+      Assets - Squares Dungeons and Dice_196: -336590893
+      Assets - Squares Dungeons and Dice_197: -1463447839
+      Assets - Squares Dungeons and Dice_198: -1440860748
+      Assets - Squares Dungeons and Dice_199: 398845621
+      Assets - Squares Dungeons and Dice_2: 1876552915
+      Assets - Squares Dungeons and Dice_20: -925338872
+      Assets - Squares Dungeons and Dice_200: -505248282
+      Assets - Squares Dungeons and Dice_201: 103264485
+      Assets - Squares Dungeons and Dice_202: -967156930
+      Assets - Squares Dungeons and Dice_203: 1097860548
+      Assets - Squares Dungeons and Dice_204: -1809915772
+      Assets - Squares Dungeons and Dice_205: -1607436310
+      Assets - Squares Dungeons and Dice_206: 1585468183
+      Assets - Squares Dungeons and Dice_207: -1877805476
+      Assets - Squares Dungeons and Dice_208: 2069764030
+      Assets - Squares Dungeons and Dice_209: -1817276177
+      Assets - Squares Dungeons and Dice_21: 330797962
+      Assets - Squares Dungeons and Dice_22: 1472877319
+      Assets - Squares Dungeons and Dice_23: 2020415242
+      Assets - Squares Dungeons and Dice_24: -1021003989
+      Assets - Squares Dungeons and Dice_25: 1012222729
+      Assets - Squares Dungeons and Dice_26: -2063209354
+      Assets - Squares Dungeons and Dice_27: 1432753711
+      Assets - Squares Dungeons and Dice_28: 240602597
+      Assets - Squares Dungeons and Dice_29: -1342947998
+      Assets - Squares Dungeons and Dice_3: -1420118480
+      Assets - Squares Dungeons and Dice_30: -2049712898
+      Assets - Squares Dungeons and Dice_31: 628197580
+      Assets - Squares Dungeons and Dice_32: 219351067
+      Assets - Squares Dungeons and Dice_33: 1853233761
+      Assets - Squares Dungeons and Dice_34: -1900630516
+      Assets - Squares Dungeons and Dice_35: 354034046
+      Assets - Squares Dungeons and Dice_36: -1916507963
+      Assets - Squares Dungeons and Dice_37: -1018730266
+      Assets - Squares Dungeons and Dice_38: 1687295968
+      Assets - Squares Dungeons and Dice_39: 1479194709
+      Assets - Squares Dungeons and Dice_4: -1637764685
+      Assets - Squares Dungeons and Dice_40: 1552385121
+      Assets - Squares Dungeons and Dice_41: -957093155
+      Assets - Squares Dungeons and Dice_42: -571682338
+      Assets - Squares Dungeons and Dice_43: 2104664280
+      Assets - Squares Dungeons and Dice_44: -1278534225
+      Assets - Squares Dungeons and Dice_45: 1005080226
+      Assets - Squares Dungeons and Dice_46: -1121291279
+      Assets - Squares Dungeons and Dice_47: 1146414161
+      Assets - Squares Dungeons and Dice_48: -1674263210
+      Assets - Squares Dungeons and Dice_49: 268045947
+      Assets - Squares Dungeons and Dice_5: 167200742
+      Assets - Squares Dungeons and Dice_50: -445027503
+      Assets - Squares Dungeons and Dice_51: 1282620566
+      Assets - Squares Dungeons and Dice_52: 990941841
+      Assets - Squares Dungeons and Dice_53: 1418039735
+      Assets - Squares Dungeons and Dice_54: 1795207152
+      Assets - Squares Dungeons and Dice_55: 1930884338
+      Assets - Squares Dungeons and Dice_56: 528316271
+      Assets - Squares Dungeons and Dice_57: -611004517
+      Assets - Squares Dungeons and Dice_58: -1835163542
+      Assets - Squares Dungeons and Dice_59: -955714924
+      Assets - Squares Dungeons and Dice_6: 1269091486
+      Assets - Squares Dungeons and Dice_60: 1300244942
+      Assets - Squares Dungeons and Dice_61: -139296229
+      Assets - Squares Dungeons and Dice_62: -948846650
+      Assets - Squares Dungeons and Dice_63: 361252620
+      Assets - Squares Dungeons and Dice_64: -901724656
+      Assets - Squares Dungeons and Dice_65: 1293420486
+      Assets - Squares Dungeons and Dice_66: -1275196487
+      Assets - Squares Dungeons and Dice_67: 218355734
+      Assets - Squares Dungeons and Dice_68: -998796952
+      Assets - Squares Dungeons and Dice_69: -1280051418
+      Assets - Squares Dungeons and Dice_7: -238924559
+      Assets - Squares Dungeons and Dice_70: 1367990145
+      Assets - Squares Dungeons and Dice_71: -1788696106
+      Assets - Squares Dungeons and Dice_72: 161524865
+      Assets - Squares Dungeons and Dice_73: -1149500400
+      Assets - Squares Dungeons and Dice_74: 1372347361
+      Assets - Squares Dungeons and Dice_75: 221157693
+      Assets - Squares Dungeons and Dice_76: -2121531854
+      Assets - Squares Dungeons and Dice_77: 1349687123
+      Assets - Squares Dungeons and Dice_78: -998777506
+      Assets - Squares Dungeons and Dice_79: 92549536
+      Assets - Squares Dungeons and Dice_8: -383219600
+      Assets - Squares Dungeons and Dice_80: 2107122127
+      Assets - Squares Dungeons and Dice_81: -1189081352
+      Assets - Squares Dungeons and Dice_82: 95378271
+      Assets - Squares Dungeons and Dice_83: 1964651840
+      Assets - Squares Dungeons and Dice_84: -572012679
+      Assets - Squares Dungeons and Dice_85: -1876987691
+      Assets - Squares Dungeons and Dice_86: -1009857502
+      Assets - Squares Dungeons and Dice_87: -1097103087
+      Assets - Squares Dungeons and Dice_88: 1587897584
+      Assets - Squares Dungeons and Dice_89: 188328672
+      Assets - Squares Dungeons and Dice_9: 2000353467
+      Assets - Squares Dungeons and Dice_90: 1426352312
+      Assets - Squares Dungeons and Dice_91: 230123280
+      Assets - Squares Dungeons and Dice_92: -454137773
+      Assets - Squares Dungeons and Dice_93: -1341267741
+      Assets - Squares Dungeons and Dice_94: 1686608358
+      Assets - Squares Dungeons and Dice_95: -1956713308
+      Assets - Squares Dungeons and Dice_96: -1069032677
+      Assets - Squares Dungeons and Dice_97: -1711302271
+      Assets - Squares Dungeons and Dice_98: -447232778
+      Assets - Squares Dungeons and Dice_99: 611401085
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
