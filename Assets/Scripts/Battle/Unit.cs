@@ -10,19 +10,21 @@ public class Unit : MonoBehaviour
     public float attackPower = 10f;
     public float attackRange = 1.5f;
     public float moveSpeed = 3f;
-    public float attackCooldown = 0.5f;
+    public float attackCooldown = 1.5f;
 
-    [Header("Critical Hit Stats")]
+    [Header("Critical Hit")]
     [Range(0f, 1f)]
-    public float criticalHitChance = 0.15f;  // 15% chance by default
-    public float criticalHitMultiplier = 2f; // Double damage on crit by default
+    [Tooltip("Chance to deal a critical hit (0..1)")]
+    public float criticalHitChance = 0.15f;
+    [Tooltip("Damage multiplier applied when a critical hit occurs")]
+    public float criticalHitMultiplier = 2f;
 
     [Header("VFX")]
-    [Tooltip("Particle system prefab to spawn when this unit hits a target.")]
+    [Tooltip("Particle system prefab to spawn when this unit hits a target")]
     public ParticleSystem hitEffectPrefab;
-    [Tooltip("Optional particle system prefab for critical hit.")]
+    [Tooltip("Optional particle system prefab to spawn on a critical hit")]
     public ParticleSystem critEffectPrefab;
-    [Tooltip("Vertical offset applied when spawning hit VFX.")]
+    [Tooltip("Vertical offset for spawning the hit effect")]
     public float hitEffectYOffset = 0.5f;
 
     private Vector3 startPos;
@@ -34,28 +36,33 @@ public class Unit : MonoBehaviour
     {
         healthBar = GetComponentInChildren<HealthBar>();
     }
-
     void Start()
     {
-        currentHP = maxHP;
+        if (unitName == "Player" && PlayerStats.Instance != null)
+        {
+            maxHP = PlayerStats.Instance.maxHealth;
+            currentHP = maxHP;
+        }
+        else
+        {
+            currentHP = maxHP;
+        }
+
         startPos = transform.position;
         healthBar?.updateHealthBar(currentHP, maxHP);
     }
 
     public bool IsAlive() => currentHP > 0;
-
+    
     public void TakeDamage(float dmg)
     {
         currentHP -= dmg;
+        healthBar?.updateHealthBar(currentHP, maxHP);
         if (currentHP <= 0)
         {
             currentHP = 0;
-            healthBar?.updateHealthBar(currentHP, maxHP);
             Die();
-            return;
         }
-
-        healthBar?.updateHealthBar(currentHP, maxHP);
     }
 
     protected virtual void Die()
@@ -72,33 +79,26 @@ public class Unit : MonoBehaviour
     protected float CalculateDamage(out bool wasCritical)
     {
         wasCritical = RollForCriticalHit();
-        float damage = attackPower;
-
+        float dmg = attackPower;
         if (wasCritical)
         {
-            damage *= criticalHitMultiplier;
-            Debug.Log($"CRITICAL HIT! {unitName} will deal {damage} damage!");
+            dmg *= criticalHitMultiplier;
         }
-
-        return damage;
+        return dmg;
     }
 
-    private void SpawnHitVFX(bool isCrit, Vector3 position)
+    private void SpawnHitVFX(bool isCritical, Vector3 position)
     {
-        ParticleSystem prefab = isCrit && critEffectPrefab != null ? critEffectPrefab : hitEffectPrefab;
+        ParticleSystem prefab = isCritical && critEffectPrefab != null ? critEffectPrefab : hitEffectPrefab;
         if (prefab == null) return;
 
-        // spawn instance
         ParticleSystem ps = Instantiate(prefab, position + Vector3.up * hitEffectYOffset, Quaternion.identity);
-
-        // Defensive: ensure the particle system is stopped/cleared before playing once.
-        // This avoids double-emission when the prefab has Play On Awake or sub-emitters that auto-play.
-        ps.gameObject.SetActive(true);
+        // defensive: ensure a clean start
         ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         ps.Clear(true);
         ps.Play();
 
-        // compute safe lifetime and schedule destroy
+        // destroy after estimated lifetime
         var main = ps.main;
         float lifetime = main.duration;
         lifetime += main.startLifetime.constantMax;
@@ -118,16 +118,17 @@ public class Unit : MonoBehaviour
             yield return null;
         }
 
-        // Calculate damage with potential critical hit
+        // calculate damage with critical chance
         bool wasCrit;
         float damage = CalculateDamage(out wasCrit);
 
-        // hit
+        // hit and spawn effect (crit uses critEffectPrefab if assigned)
         target.TakeDamage(damage);
-        Debug.Log($"{unitName} hits {target.unitName} for {damage} damage!");
-
-        // spawn hit VFX at the target position
         SpawnHitVFX(wasCrit, target.transform.position);
+        if (wasCrit)
+            Debug.Log($"CRITICAL! {unitName} hits {target.unitName} for {damage} damage!");
+        else
+            Debug.Log($"{unitName} hits {target.unitName} for {damage} damage!");
 
         // move back
         while (Vector3.Distance(transform.position, startPos) > 0.01f)
