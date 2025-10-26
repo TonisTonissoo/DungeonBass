@@ -62,6 +62,13 @@ public class WaypointFollower : MonoBehaviour
 
                 HUDController.Instance?.UpdateHUD();
                 UpdateLoopText();
+
+                if (loops >= 20)
+                {
+                    Debug.Log("Victory! 20 loops completed!");
+                    SceneLoader.Load("Victory");
+                    yield break; // peatab korutini, et ei läheks edasi
+                }
             }
 
             // liikumine järgmisele waypointile
