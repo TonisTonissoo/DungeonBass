@@ -377,6 +377,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
+      propertyPath: moveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
+      propertyPath: attackCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 6671377576403784092, guid: 784c008423060634e8bb0d84a602f48b, type: 3}
+    - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
+      propertyPath: critEffectPrefab
+      value: 
+      objectReference: {fileID: 6671377576403784092, guid: cd21192fa4f7d484194531373dd31e57, type: 3}
     m_RemovedComponents:
     - {fileID: 5863878701895811894, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
     m_RemovedGameObjects: []
@@ -527,6 +543,18 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1320414097}
+    - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
+      propertyPath: attackCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 6671377576403784092, guid: 784c008423060634e8bb0d84a602f48b, type: 3}
+    - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
+      propertyPath: critEffectPrefab
+      value: 
+      objectReference: {fileID: 6671377576403784092, guid: cd21192fa4f7d484194531373dd31e57, type: 3}
     - target: {fileID: 6004659364575478978, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.52
