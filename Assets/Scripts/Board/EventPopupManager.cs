@@ -47,4 +47,41 @@ public class EventPopupManager : MonoBehaviour
             onClose?.Invoke();
         });
     }
+
+    public void ShowChoiceEvent(string message, string option1Text, string option2Text, System.Action onPay, System.Action onRisk)
+    {
+        popupRoot.SetActive(true);
+        eventText.text = message;
+
+        okButton.onClick.RemoveAllListeners();
+
+
+        Button payBtn = Instantiate(okButton, okButton.transform.parent);
+        Button riskBtn = Instantiate(okButton, okButton.transform.parent);
+
+        payBtn.GetComponentInChildren<TMP_Text>().text = option1Text;
+        riskBtn.GetComponentInChildren<TMP_Text>().text = option2Text;
+
+        okButton.gameObject.SetActive(false); 
+        PauseManager.PauseGame();
+
+        payBtn.onClick.AddListener(() =>
+        {
+            popupRoot.SetActive(false);
+            Destroy(payBtn.gameObject);
+            Destroy(riskBtn.gameObject);
+            PauseManager.ResumeGame();
+            onPay?.Invoke();
+        });
+
+        riskBtn.onClick.AddListener(() =>
+        {
+            popupRoot.SetActive(false);
+            Destroy(payBtn.gameObject);
+            Destroy(riskBtn.gameObject);
+            PauseManager.ResumeGame();
+            onRisk?.Invoke();
+        });
+    }
+
 }

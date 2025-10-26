@@ -62,9 +62,61 @@ public class TileEvent : MonoBehaviour
                 break;
 
             case TileType.Bandit:
-                Debug.Log("Bandit event!");
-                // TODO: lisa raha riskimine / kaotus
+                Debug.Log("Bandit event triggered!");
+
+                int banditCost = 30;
+                int riskLoss = 60;
+
+                if (EventPopupManager.Instance != null)
+                {
+                    // Esimene popup küsimuseks
+                    EventPopupManager.Instance.ShowChoiceEvent(
+                        $"Bandits block your path!\nPay {banditCost} coins or risk losing {riskLoss}?",
+                        "Pay",
+                        "Risk",
+                        onPay: () =>
+                        {
+                            // maksad kohe
+                            if (PlayerStats.Instance != null && PlayerStats.Instance.coins >= banditCost)
+                            {
+                                PlayerStats.Instance.SpendCoins(banditCost);
+                                HUDController.Instance?.UpdateHUD();
+                                EventPopupManager.Instance.ShowEvent($"You paid the bandits {banditCost} coins and they let you pass.");
+                            }
+                            else
+                            {
+                                EventPopupManager.Instance.ShowEvent("You don't have enough coins! The bandits take all your remaining gold!");
+                                PlayerStats.Instance.coins = 0;
+                                HUDController.Instance?.UpdateHUD();
+                            }
+                        },
+                        onRisk: () =>
+                        {
+                            // 50% chance good or bad
+                            bool lost = Random.value < 0.5f;
+                            if (lost)
+                            {
+                                int amount = Mathf.Min(PlayerStats.Instance.coins, riskLoss);
+                                PlayerStats.Instance.coins -= amount;
+                                EventPopupManager.Instance.ShowEvent($"You tried to resist, but the bandits took {amount} coins!");
+                            }
+                            else
+                            {
+                                EventPopupManager.Instance.ShowEvent("You managed to scare the bandits away! You keep your coins!");
+                            }
+
+                            HUDController.Instance?.UpdateHUD();
+                        }
+                    );
+                }
+                else
+                {
+                    Debug.LogWarning("EventPopupManager not found! (Bandit event fallback)");
+                    PlayerStats.Instance.SpendCoins(banditCost);
+                    HUDController.Instance?.UpdateHUD();
+                }
                 break;
+
 
             case TileType.HorseCarriage:
                 Debug.Log("Horse Carriage event!");
