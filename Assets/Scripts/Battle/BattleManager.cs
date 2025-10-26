@@ -20,19 +20,22 @@ public class BattleManager : MonoBehaviour
         {
             if (!player.IsAlive())
             {
-                EndPanelManager.Instance.ShowGameOver();
                 Debug.Log("Player lost!");
-                battleActive = false;
-                break;
+                EndPanelManager.Instance.ShowGameOver();
+                PlayerPrefs.SetString("BattleResult", "Lose");
+                PlayerPrefs.Save();
+                yield break;
             }
 
             enemies = enemies.Where(e => e.IsAlive()).ToList();
+
             if (enemies.Count == 0)
             {
-                EndPanelManager.Instance.ShowVictory();
                 Debug.Log("Player won!");
-                battleActive = false;
-                break;
+                EndPanelManager.Instance.ShowVictory();
+                PlayerPrefs.SetString("BattleResult", "Win");
+                PlayerPrefs.Save();
+                yield break;
             }
 
             // Player attacks first

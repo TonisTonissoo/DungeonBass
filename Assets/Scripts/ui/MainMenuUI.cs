@@ -7,6 +7,12 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayGame()
     {
+ 
+        PlayerPrefs.DeleteKey("LastTileIndex");
+        PlayerPrefs.DeleteKey("BattleResult");
+        PlayerPrefs.DeleteKey("LastTileName");
+        PlayerPrefs.Save();
+
         SceneLoader.Load("DungeonBoard");
         Debug.Log("Play pressed");
     }

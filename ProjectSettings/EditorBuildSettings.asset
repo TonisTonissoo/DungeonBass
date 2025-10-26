@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/DungeonBoard.unity
     guid: 8c8c1f2750ea09c4986916ddf66f4257
   - enabled: 1
+    path: Assets/Scenes/CombatScene.unity
+    guid: 64db68a327e3fa143948a035a8f2c085
+  - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: 5c83d06f24e6c5c4b86ed58235ad2bc2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Victory.unity
     guid: 7fedb26b50bbe4b43b64c65f707f0399
   m_configObjects:

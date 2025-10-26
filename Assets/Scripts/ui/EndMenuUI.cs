@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class EndMenuUI : MonoBehaviour
 {
-    public void PlayAgain()
+
+    public void ContinueGame()
     {
         Time.timeScale = 1f;
+        PlayerPrefs.SetString("BattleResult", "Win");
         SceneLoader.Load("DungeonBoard");
     }
 
@@ -12,11 +14,5 @@ public class EndMenuUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneLoader.Load("MainMenu");
-    }
-
-    public void ContinueGame()
-    {
-        Time.timeScale = 1f;
-        SceneLoader.Load("DungeonBoard"); // hiljem saab muuta "NextLoop"
     }
 }

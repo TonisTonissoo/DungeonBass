@@ -22,7 +22,16 @@ public class TileEvent : MonoBehaviour
         {
             case TileType.Enemy:
                 Debug.Log("Enemy encounter!");
-                // Käivita võitlus
+                PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
+                PlayerPrefs.Save();
+                SceneLoader.Load("CombatScene");
+                break;
+
+            case TileType.Boss:
+                Debug.Log("Boss fight!");
+                PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
+                PlayerPrefs.Save();
+                SceneLoader.Load("CombatScene");
                 break;
 
             case TileType.Shop:
@@ -48,11 +57,6 @@ public class TileEvent : MonoBehaviour
             case TileType.RandomEvent:
                 Debug.Log("Random card drawn!");
                 // Random event süsteem
-                break;
-
-            case TileType.Boss:
-                Debug.Log("Boss fight!");
-                // Ava boss fight stseen
                 break;
 
             case TileType.Start:

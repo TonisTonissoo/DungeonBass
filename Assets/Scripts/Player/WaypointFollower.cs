@@ -74,4 +74,10 @@ public class WaypointFollower : MonoBehaviour
         if (loopText != null && loops <= 20)
             loopText.text = $"Loop: {loops}/20";
     }
+
+    public void SetCurrentWaypoint(Waypoint wp)
+    {
+        current = wp;
+    }
+
 }

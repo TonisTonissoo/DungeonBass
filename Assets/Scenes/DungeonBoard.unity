@@ -7188,6 +7188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032463130}
   - component: {fileID: 2032463129}
+  - component: {fileID: 2032463131}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -7225,6 +7226,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032463131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032463128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9f4511dc8f1064f9328a1533f6b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  follower: {fileID: 1434384140}
+  allWaypoints:
+  - {fileID: 1864663653}
+  - {fileID: 1012568905}
+  - {fileID: 1169562453}
+  - {fileID: 126624044}
+  - {fileID: 2113260301}
+  - {fileID: 980975024}
+  - {fileID: 401252941}
+  - {fileID: 2062556800}
+  - {fileID: 1372771080}
+  - {fileID: 1294733933}
+  - {fileID: 2106727610}
+  - {fileID: 1660497421}
+  - {fileID: 884280037}
+  - {fileID: 519430009}
+  - {fileID: 832948769}
+  - {fileID: 912005335}
+  - {fileID: 1686752383}
+  - {fileID: 1947958417}
+  - {fileID: 1474957976}
+  - {fileID: 301498359}
+  - {fileID: 832845010}
+  - {fileID: 90490589}
+  - {fileID: 441160678}
+  - {fileID: 695284147}
+  - {fileID: 964800184}
+  - {fileID: 486557191}
+  - {fileID: 1866176088}
+  - {fileID: 6426702}
+  - {fileID: 420984416}
+  - {fileID: 912819235}
+  - {fileID: 1932755111}
+  - {fileID: 560402794}
+  - {fileID: 1039287381}
+  - {fileID: 675132519}
+  - {fileID: 1042121569}
+  - {fileID: 551001050}
 --- !u!1 &2044141342
 GameObject:
   m_ObjectHideFlags: 0
