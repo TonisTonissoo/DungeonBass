@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth;
-    public int coins = 100;
+    public int coins = 0;
     public int attackPower = 20;   // baas damage
     public int currentLoop = 1;
 
