@@ -69,14 +69,12 @@ public class TileEvent : MonoBehaviour
 
                 if (EventPopupManager.Instance != null)
                 {
-                    // Esimene popup küsimuseks
                     EventPopupManager.Instance.ShowChoiceEvent(
                         $"Bandits block your path!\nPay {banditCost} coins or risk losing {riskLoss}?",
                         "Pay",
                         "Risk",
                         onPay: () =>
                         {
-                            // maksad kohe
                             if (PlayerStats.Instance != null && PlayerStats.Instance.coins >= banditCost)
                             {
                                 PlayerStats.Instance.SpendCoins(banditCost);
@@ -92,7 +90,6 @@ public class TileEvent : MonoBehaviour
                         },
                         onRisk: () =>
                         {
-                            // 50% chance good or bad
                             bool lost = Random.value < 0.5f;
                             if (lost)
                             {
@@ -112,10 +109,9 @@ public class TileEvent : MonoBehaviour
                 else
                 {
                     Debug.LogWarning("EventPopupManager not found! (Bandit event fallback)");
-                    PlayerStats.Instance.SpendCoins(banditCost);
-                    HUDController.Instance?.UpdateHUD();
                 }
                 break;
+
 
 
             case TileType.HorseCarriage:
