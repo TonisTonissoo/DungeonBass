@@ -42,25 +42,38 @@ public class TileEvent : MonoBehaviour
                     Debug.LogWarning("ShopUI.Instance is missing in the scene!");
                 break;
 
-
             case TileType.Rest:
-                Debug.Log("Resting...");
-                // Lisa HP
+                Debug.Log("Rest event triggered!");
+
+                int coinsGained = Random.Range(10, 26); // 10–25 münti
+                PlayerStats.Instance.AddCoins(coinsGained);
+
+                HUDController.Instance?.UpdateHUD();
+
+                // Kui sul on EventPopupManager (popup tekstiks)
+                if (EventPopupManager.Instance != null)
+                {
+                    EventPopupManager.Instance.ShowEvent($"You found {coinsGained} coins while resting!");
+                }
+                else
+                {
+                    Debug.Log($"You found {coinsGained} coins while resting!");
+                }
                 break;
 
             case TileType.Bandit:
                 Debug.Log("Bandit event!");
-                // Raha riskimine
+                // TODO: lisa raha riskimine / kaotus
                 break;
 
             case TileType.HorseCarriage:
                 Debug.Log("Horse Carriage event!");
-                // Teleportatsioon
+                // TODO: lisa teleportatsioon / juhuslik liikumine
                 break;
 
             case TileType.RandomEvent:
                 Debug.Log("Random card drawn!");
-                // Random event süsteem
+                // TODO: lisa random event süsteem
                 break;
 
             case TileType.Start:
