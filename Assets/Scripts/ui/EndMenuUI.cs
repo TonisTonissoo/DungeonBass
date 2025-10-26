@@ -4,19 +4,19 @@ public class EndMenuUI : MonoBehaviour
 {
     public void PlayAgain()
     {
+        Time.timeScale = 1f;
         SceneLoader.Load("DungeonBoard");
-        Debug.Log("Play Again pressed");
     }
 
     public void BackToMainMenu()
     {
+        Time.timeScale = 1f;
         SceneLoader.Load("MainMenu");
-        Debug.Log("Main Menu pressed");
     }
 
     public void ContinueGame()
     {
-        SceneLoader.Load("DungeonBoard");
-        Debug.Log("Continue pressed");
+        Time.timeScale = 1f;
+        SceneLoader.Load("DungeonBoard"); // hiljem saab muuta "NextLoop"
     }
 }

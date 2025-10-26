@@ -61,6 +61,11 @@ public class WaypointFollower : MonoBehaviour
             transform.position = target;
         }
 
+        if (current != null)
+        {
+            current.TriggerTileEvent();
+        }
+
         IsMoving = false;
     }
 

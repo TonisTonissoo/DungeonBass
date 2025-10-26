@@ -20,6 +20,7 @@ public class BattleManager : MonoBehaviour
         {
             if (!player.IsAlive())
             {
+                EndPanelManager.Instance.ShowGameOver();
                 Debug.Log("Player lost!");
                 battleActive = false;
                 break;
@@ -28,6 +29,7 @@ public class BattleManager : MonoBehaviour
             enemies = enemies.Where(e => e.IsAlive()).ToList();
             if (enemies.Count == 0)
             {
+                EndPanelManager.Instance.ShowVictory();
                 Debug.Log("Player won!");
                 battleActive = false;
                 break;
