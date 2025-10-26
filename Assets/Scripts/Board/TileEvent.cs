@@ -36,8 +36,12 @@ public class TileEvent : MonoBehaviour
 
             case TileType.Shop:
                 Debug.Log("Shop entered!");
-                // Ava shop UI
+                if (ShopUI.Instance != null)
+                    ShopUI.Instance.OpenShop();
+                else
+                    Debug.LogWarning("ShopUI.Instance is missing in the scene!");
                 break;
+
 
             case TileType.Rest:
                 Debug.Log("Resting...");

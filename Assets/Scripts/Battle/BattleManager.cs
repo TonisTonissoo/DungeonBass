@@ -32,11 +32,28 @@ public class BattleManager : MonoBehaviour
             if (enemies.Count == 0)
             {
                 Debug.Log("Player won!");
+
+
+                int reward = Random.Range(15, 31); // näiteks 15–30 coin'i
+
+                PlayerStats.Instance.AddCoins(reward);
+
+                Debug.Log($"Player earned {reward} coins!");
+
+
+                PlayerStats.Instance.HealToFull();
+
+
+                HUDController.Instance?.UpdateHUD();
+
+
                 EndPanelManager.Instance.ShowVictory();
+
                 PlayerPrefs.SetString("BattleResult", "Win");
                 PlayerPrefs.Save();
                 yield break;
             }
+
 
             // Player attacks first
             Unit target = enemies[Random.Range(0, enemies.Count)];

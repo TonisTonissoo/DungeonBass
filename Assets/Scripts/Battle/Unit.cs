@@ -22,9 +22,17 @@ public class Unit : MonoBehaviour
     }
     void Start()
     {
-        currentHP = maxHP;
+        if (unitName == "Player" && PlayerStats.Instance != null)
+        {
+            maxHP = PlayerStats.Instance.maxHealth;
+            currentHP = maxHP;
+        }
+        else
+        {
+            currentHP = maxHP;
+        }
+
         startPos = transform.position;
-        // initialize the UI to show full health
         healthBar?.updateHealthBar(currentHP, maxHP);
     }
 

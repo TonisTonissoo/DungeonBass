@@ -14,6 +14,14 @@ public class HUDController : MonoBehaviour
     [SerializeField] private int currentLoop = 1;
     [SerializeField] private int totalLoops = 20;
 
+    public static HUDController Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+
     private void Start()
     {
         UpdateHUD();
@@ -21,10 +29,18 @@ public class HUDController : MonoBehaviour
 
     public void UpdateHUD()
     {
+        if (PlayerStats.Instance != null)
+        {
+            health = PlayerStats.Instance.currentHealth;
+            coins = PlayerStats.Instance.coins;
+            currentLoop = PlayerStats.Instance.currentLoop;
+        }
+
         if (healthText) healthText.text = $"Health: {health}";
         if (coinsText) coinsText.text = $"Coins: {coins}";
         if (loopText) loopText.text = $"Loop: {currentLoop}/{totalLoops}";
     }
+    
 
     public void SetHealth(int value)
     {
