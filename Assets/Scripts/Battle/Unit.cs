@@ -20,12 +20,14 @@ public class Unit : MonoBehaviour
     {
         healthBar = GetComponentInChildren<HealthBar>();
     }
+
     void Start()
     {
         if (unitName == "Player" && PlayerStats.Instance != null)
         {
             maxHP = PlayerStats.Instance.maxHealth;
-            currentHP = maxHP;
+            currentHP = PlayerStats.Instance.currentHealth;
+            attackPower = PlayerStats.Instance.attackPower; 
         }
         else
         {
@@ -48,7 +50,6 @@ public class Unit : MonoBehaviour
             Die();
         }
     }
-
 
     protected virtual void Die()
     {

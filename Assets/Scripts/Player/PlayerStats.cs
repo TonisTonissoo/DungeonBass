@@ -6,12 +6,12 @@ public class PlayerStats : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth;
-    public int coins = 0;
-    public int currentLoop = 1; // kui kasutad Loop HUDis
+    public int coins = 100;
+    public int attackPower = 20;   // baas damage
+    public int currentLoop = 1;
 
     private void Awake()
     {
-        // ainult üks PlayerStats objekt
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); // jääb alles kõikides stseenides
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -39,6 +39,12 @@ public class PlayerStats : MonoBehaviour
         Debug.Log($"Max HP increased to {maxHealth}");
     }
 
+    public void IncreaseAttackPower(int amount)
+    {
+        attackPower += amount;
+        Debug.Log($"Attack Power increased to {attackPower}");
+    }
+
     public void AddCoins(int amount)
     {
         coins += amount;
@@ -49,8 +55,11 @@ public class PlayerStats : MonoBehaviour
         if (coins >= cost)
         {
             coins -= cost;
+            Debug.Log($"Spent {cost} coins. Remaining: {coins}");
             return true;
         }
+
+        Debug.Log($"Not enough coins! Have {coins}, need {cost}");
         return false;
     }
 }

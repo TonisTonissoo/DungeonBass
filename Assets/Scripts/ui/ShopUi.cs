@@ -12,6 +12,10 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private TMP_Text coinsText;
     [SerializeField] private Button buyHealthButton;
     [SerializeField] private Button closeButton;
+    [SerializeField] private Button buyAttackButton;
+    [SerializeField] private int attackCost = 75;
+    [SerializeField] private int attackIncrease = 5;
+
 
     [Header("Shop Settings")]
     [SerializeField] private int cost = 50;
@@ -39,6 +43,9 @@ public class ShopUI : MonoBehaviour
 
         if (closeButton != null)
             closeButton.onClick.AddListener(CloseShop);
+
+        if (buyAttackButton != null)
+            buyAttackButton.onClick.AddListener(BuyAttackUpgrade);
 
         UpdateCoinsDisplay();
     }
@@ -96,4 +103,23 @@ public class ShopUI : MonoBehaviour
             Debug.Log("Not enough coins to buy upgrade!");
         }
     }
+
+    private void BuyAttackUpgrade()
+    {
+        if (PlayerStats.Instance == null) return;
+
+        if (PlayerStats.Instance.SpendCoins(attackCost))
+        {
+            PlayerStats.Instance.IncreaseAttackPower(attackIncrease);
+            Debug.Log($"+{attackIncrease} Attack Power purchased for {attackCost} coins!");
+
+            HUDController.Instance?.UpdateHUD();
+            UpdateCoinsDisplay();
+        }
+        else
+        {
+            Debug.Log("Not enough coins to buy attack upgrade!");
+        }
+    }
+
 }
