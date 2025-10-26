@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum TileType
 {
@@ -45,7 +45,7 @@ public class TileEvent : MonoBehaviour
             case TileType.Rest:
                 Debug.Log("Rest event triggered!");
 
-                int coinsGained = Random.Range(10, 26); // 10�25 m�nti
+                int coinsGained = Random.Range(10, 26); // 10–25 münti
                 PlayerStats.Instance.AddCoins(coinsGained);
 
                 HUDController.Instance?.UpdateHUD();
@@ -72,9 +72,69 @@ public class TileEvent : MonoBehaviour
                 break;
 
             case TileType.RandomEvent:
-                Debug.Log("Random card drawn!");
-                // TODO: lisa random event s�steem
+                Debug.Log("Random event triggered!");
+
+                int eventIndex = Random.Range(0, 5); // 5 sündmust
+                string message = "";
+
+                switch (eventIndex)
+                {
+                    // Head sündmused
+                    case 0:
+                        int treasure = Random.Range(20, 51);
+                        PlayerStats.Instance.AddCoins(treasure);
+                        message = $"You found a hidden chest of gold! (+{treasure} coins)";
+                        break;
+
+                    case 1:
+                        int hpBoost = Random.Range(10, 26);
+                        PlayerStats.Instance.IncreaseMaxHealth(hpBoost);
+                        message = $"You found a healing fountain! Your max HP increased by {hpBoost}.";
+                        break;
+
+                    // Halvad sündmused
+                    case 2:
+                        int damage = Random.Range(15, 31);
+                        PlayerStats.Instance.currentHealth = Mathf.Max(0, PlayerStats.Instance.currentHealth - damage);
+                        message = $"A hidden trap injures you! (-{damage} HP)";
+                        break;
+
+                    case 3:
+                        int coinLoss = Random.Range(10, 26);
+                        PlayerStats.Instance.coins = Mathf.Max(0, PlayerStats.Instance.coins - coinLoss);
+                        message = $"That chest was a mimic! You lost {coinLoss} coins.";
+                        break;
+
+                    // Eriline sündmus — Travel to Shop
+                    case 4:
+                        message = "A mysterious portal sends you directly to a shop!";
+                        if (EventPopupManager.Instance != null)
+                        {
+                            EventPopupManager.Instance.ShowEvent(message, () =>
+                            {
+                                ShopUI.Instance?.OpenShop();
+                            });
+                        }
+                        else
+                        {
+                            Debug.Log(message);
+                            ShopUI.Instance?.OpenShop();
+                        }
+                        break;
+                }
+
+                HUDController.Instance?.UpdateHUD();
+
+                if (eventIndex != 4)
+                {
+                    if (EventPopupManager.Instance != null)
+                        EventPopupManager.Instance.ShowEvent(message);
+                    else
+                        Debug.Log(message);
+                }
+
                 break;
+
 
             case TileType.Start:
                 Debug.Log("Start tile.");
