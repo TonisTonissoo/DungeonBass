@@ -11,6 +11,7 @@ public class HorseCarriageUI : MonoBehaviour
     public Button skipButton;
     public Button chooseTileButton;
     public TextMeshProUGUI descriptionText;
+    public GameObject selectionText;
 
     [HideInInspector] public bool IsChoosingTile = false;
 
@@ -50,9 +51,15 @@ public class HorseCarriageUI : MonoBehaviour
     {
         Debug.Log("[HorseCarriage] Forcing tile selection TRUE");
         panel.SetActive(false);
+
         IsChoosingTile = true;
+
+        if (selectionText != null)
+            selectionText.SetActive(true);
+
+
         Debug.Log("[HorseCarriage] Selection mode ON — waiting for tile click.");
-        descriptionText.text = "Click any tile on the board!";
+
     }
 
     public void OnTileClicked(Waypoint wp)
@@ -87,6 +94,9 @@ public class HorseCarriageUI : MonoBehaviour
             tc.enabled = true;
             Debug.Log("[HorseCarriage] TurnController enabled after teleport.");
         }
+
+        if (selectionText != null)
+            selectionText.SetActive(false);
 
     }
 }
