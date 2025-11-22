@@ -24,7 +24,7 @@ public class TileEvent : MonoBehaviour
                 Debug.Log("Enemy encounter!");
                 PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
                 PlayerPrefs.Save();
-                SceneLoader.Load("CombatScene");
+                FadeController.Instance.FadeToScene("CombatScene");
                 break;
 
             case TileType.Boss:
