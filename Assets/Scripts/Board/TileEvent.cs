@@ -115,9 +115,24 @@ public class TileEvent : MonoBehaviour
 
 
             case TileType.HorseCarriage:
-                Debug.Log("Horse Carriage event!");
-                // TODO: lisa teleportatsioon / juhuslik liikumine
+                Debug.Log("[TileEvent] HorseCarriage event triggered.");
+
+                // 1) STOP ALL DICE INPUT
+                TurnController tc = FindObjectOfType<TurnController>();
+                if (tc != null)
+                {
+                    tc.enabled = false;
+                    Debug.Log("[TileEvent] TurnController disabled for teleport selection.");
+                }
+
+                // 2) OPEN POPUP
+                var f = FindObjectOfType<WaypointFollower>();
+                HorseCarriageUI.Instance.OpenPopup(f);
+
                 break;
+
+
+
 
             case TileType.RandomEvent:
                 Debug.Log("Random event triggered!");
