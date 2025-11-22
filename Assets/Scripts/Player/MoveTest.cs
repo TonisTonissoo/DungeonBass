@@ -9,8 +9,8 @@ public class MoveTest : MonoBehaviour
         if (follower == null) return;
 
         // Space = random 1..12 steps (dice feel)
-        if (Input.GetKeyDown(KeyCode.Space) && !follower.IsMoving)
-            follower.MoveSteps(Random.Range(1, 13));
+        //if (Input.GetKeyDown(KeyCode.Space) && !follower.IsMoving)
+        //    follower.MoveSteps(Random.Range(1, 13));
 
         // Or arrow keys for manual stepping while testing
         if (Input.GetKeyDown(KeyCode.RightArrow) && !follower.IsMoving)

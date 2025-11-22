@@ -105,4 +105,12 @@ public class WaypointFollower : MonoBehaviour
         current = wp;
     }
 
+    public void TeleportTo(Waypoint waypoint)
+    {
+        current = waypoint;
+        transform.position = waypoint.transform.position;
+        IsMoving = false;
+    }
+
+
 }

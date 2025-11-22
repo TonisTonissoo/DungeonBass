@@ -19,13 +19,20 @@ public class TurnController : MonoBehaviour
 
     void Update()
     {
-        // Press Space to roll ONLY if all options are consumed and not moving
-        if (Input.GetKeyDown(rollKey) && !follower.IsMoving && AllUsed())
+        // blokk telepordi ajal
+        if (HorseCarriageUI.Instance != null && HorseCarriageUI.Instance.IsChoosingTile)
+            return;
+
+        // SPACE rollimine (ÜKS TÄRING)
+        if (Input.GetKeyDown(KeyCode.Space) && !follower.IsMoving)
         {
-            RollThreeOptions();
-            ShowForFirstPick();
+            Debug.Log("[Dice] Single dice roll triggered.");
+            int steps = Random.Range(1, 7);
+            follower.MoveSteps(steps);
         }
     }
+
+
 
     bool AllUsed()
     {
