@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8bc1b67d415706945b98729ce22591f3
+guid: 9c2ec8d9552cf804da96f404b91208f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1954859908400777320
-    second: Duneon Background_0
+      213: -1692755369612600283
+    second: 4ef1f059-0470-4384-82c1-d65d141d34a6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Duneon Background_0
+      name: 4ef1f059-0470-4384-82c1-d65d141d34a6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8977e164541fed4e0800000000000000
-      internalID: -1954859908400777320
+      spriteID: 52c1b9eb5ff1288e0800000000000000
+      internalID: -1692755369612600283
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Duneon Background_0: -1954859908400777320
+      4ef1f059-0470-4384-82c1-d65d141d34a6_0: -1692755369612600283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
