@@ -37,7 +37,8 @@ public class Unit : MonoBehaviour
         healthBar = GetComponentInChildren<HealthBar>();
     }
 
-    void Start()
+    // Make Start virtual so derived classes can properly override it
+    protected virtual void Start()
     {
         if (unitName == "Player" && PlayerStats.Instance != null)
         {
@@ -56,7 +57,7 @@ public class Unit : MonoBehaviour
 
     public bool IsAlive() => currentHP > 0;
     
-    public void TakeDamage(float dmg)
+    public virtual void TakeDamage(float dmg)
     {
         currentHP -= dmg;
         healthBar?.updateHealthBar(currentHP, maxHP);
@@ -109,15 +110,29 @@ public class Unit : MonoBehaviour
 
     public IEnumerator Attack(Unit target)
     {
-        if (isAttacking || !target.IsAlive()) yield break;
+        if (isAttacking || target == null || !target.IsAlive()) yield break;
         isAttacking = true;
 
         // move towards target
         Vector3 targetPos = target.transform.position;
         while (Vector3.Distance(transform.position, targetPos) > attackRange)
         {
+            // Check if target is still valid during movement
+            if (target == null || !target.IsAlive()) 
+            {
+                isAttacking = false;
+                yield break;
+            }
+            
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
             yield return null;
+        }
+
+        // Final check before dealing damage
+        if (target == null || !target.IsAlive())
+        {
+            isAttacking = false;
+            yield break;
         }
 
         // calculate damage with critical chance

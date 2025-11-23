@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 public class BattleManager : MonoBehaviour
 {
@@ -11,7 +10,19 @@ public class BattleManager : MonoBehaviour
 
     void Start()
     {
+        // Validate setup
+        if (player == null)
+        {
+            Debug.LogError("BattleManager: Player is not assigned!");
+            return;
+        }
 
+        if (enemies.Count == 0)
+        {
+            Debug.LogWarning("BattleManager: No enemies assigned!");
+        }
+
+        // Initialize player stats from PlayerStats singleton
         if (PlayerStats.Instance != null && player != null)
         {
             player.maxHP = PlayerStats.Instance.maxHealth;
@@ -24,8 +35,18 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator BattleLoop()
     {
+        // Wait one frame to ensure all units are initialized
+        yield return null;
+
         while (battleActive)
         {
+            // Check if player is still valid and alive
+            if (player == null)
+            {
+                Debug.LogError("BattleManager: Player reference is null!");
+                yield break;
+            }
+
             if (!player.IsAlive())
             {
                 Debug.Log("Player lost!");
@@ -35,8 +56,16 @@ public class BattleManager : MonoBehaviour
                 yield break;
             }
 
-            enemies = enemies.Where(e => e.IsAlive()).ToList();
+            // Remove dead or null enemies
+            for (int i = enemies.Count - 1; i >= 0; i--)
+            {
+                if (enemies[i] == null || !enemies[i].IsAlive())
+                {
+                    enemies.RemoveAt(i);
+                }
+            }
 
+            // Check for victory
             if (enemies.Count == 0)
             {
                 Debug.Log("Player won!");
@@ -54,18 +83,65 @@ public class BattleManager : MonoBehaviour
                 yield break;
             }
 
-            // Player attacks first
-            Unit target = enemies[Random.Range(0, enemies.Count)];
-            yield return StartCoroutine(player.Attack(target));
-
-            // Enemies attack back
-            foreach (Unit enemy in enemies)
+            // --- Player's Turn ---
+            if (enemies.Count > 0 && player != null)
             {
-                if (enemy.IsAlive())
+                Unit target = SelectPlayerTarget();
+                if (target != null && target.IsAlive())
+                {
+                    yield return StartCoroutine(player.Attack(target));
+                }
+            }
+
+            // --- Enemies' Turn ---
+            // Create a snapshot to safely iterate even if enemies die
+            List<Unit> enemiesToAttack = new List<Unit>(enemies);
+            
+            foreach (Unit enemy in enemiesToAttack)
+            {
+                // Ensure both units are still valid and alive
+                if (enemy != null && enemy.IsAlive() && player != null && player.IsAlive())
+                {
                     yield return StartCoroutine(enemy.Attack(player));
+                }
             }
 
             yield return null;
         }
+    }
+
+    private Unit SelectPlayerTarget()
+    {
+        // Prioritize minions over the boss
+        List<Unit> minions = new List<Unit>();
+        Unit boss = null;
+
+        foreach (Unit enemy in enemies)
+        {
+            if (enemy != null && enemy.IsAlive())
+            {
+                if (enemy is BossUnit)
+                {
+                    boss = enemy;
+                }
+                else
+                {
+                    minions.Add(enemy);
+                }
+            }
+        }
+
+        // Attack a random minion if any exist, otherwise attack the boss
+        if (minions.Count > 0)
+        {
+            return minions[Random.Range(0, minions.Count)];
+        }
+        else if (boss != null)
+        {
+            return boss;
+        }
+
+        // Fallback to any enemy if categorization fails
+        return enemies.Count > 0 ? enemies[0] : null;
     }
 }

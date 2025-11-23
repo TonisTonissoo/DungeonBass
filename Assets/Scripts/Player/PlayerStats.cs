@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static PlayerStats Instance;
+    // Loome instance'i, et säilitada mängija statistikat üle erinevate stseenide
+    public static PlayerStats Instance { get; private set; }
 
     public int maxHealth = 100;
     public int currentHealth;
@@ -20,10 +21,8 @@ public class PlayerStats : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
 
-    private void Start()
-    {
+        // Omistame elud enne mängu algust
         currentHealth = maxHealth;
     }
 
