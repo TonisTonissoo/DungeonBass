@@ -42,6 +42,7 @@ public class EventPopupManager : MonoBehaviour
         // Ava popup
         popupRoot.SetActive(true);
         eventText.text = message;
+        SpaceHintUI.Show("");
 
         // Peata mäng
         PauseManager.PauseGame();
@@ -60,6 +61,9 @@ public class EventPopupManager : MonoBehaviour
             okButton.gameObject.SetActive(false);
             PauseManager.ResumeGame();
             onClose?.Invoke();
+
+            if (TurnController.Instance != null)
+                TurnController.Instance.UpdateClosedHint();
         });
     }
 
@@ -80,6 +84,7 @@ public class EventPopupManager : MonoBehaviour
         // Ava popup ja tekst
         popupRoot.SetActive(true);
         eventText.text = message;
+        SpaceHintUI.Show("");
 
         // Peata mäng
         PauseManager.PauseGame();
@@ -102,6 +107,9 @@ public class EventPopupManager : MonoBehaviour
             riskButton.gameObject.SetActive(false);
             PauseManager.ResumeGame();
             onPay?.Invoke();
+
+            if (TurnController.Instance != null)
+                TurnController.Instance.UpdateClosedHint();
         });
 
         riskButton.onClick.AddListener(() =>
@@ -111,6 +119,9 @@ public class EventPopupManager : MonoBehaviour
             riskButton.gameObject.SetActive(false);
             PauseManager.ResumeGame();
             onRisk?.Invoke();
+
+            if (TurnController.Instance != null)
+                TurnController.Instance.UpdateClosedHint();
         });
     }
 }

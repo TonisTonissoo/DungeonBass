@@ -27,22 +27,25 @@ public class HorseCarriageUI : MonoBehaviour
     {
         follower = f;
         panel.SetActive(true);
+        SpaceHintUI.Show("");
         IsChoosingTile = false;
 
-        Debug.Log("[HorseCarriage] Popup opened — waiting for player choice.");
+        Debug.Log("[HorseCarriage] Popup opened ï¿½ waiting for player choice.");
 
         skipButton.onClick.RemoveAllListeners();
         chooseTileButton.onClick.RemoveAllListeners();
 
         skipButton.onClick.AddListener(() =>
         {
-            Debug.Log("[HorseCarriage] Player clicked SKIP — event ignored.");
+            Debug.Log("[HorseCarriage] Player clicked SKIP ï¿½ event ignored.");
             panel.SetActive(false);
+            if (TurnController.Instance != null)
+                TurnController.Instance.UpdateClosedHint();
         });
 
         chooseTileButton.onClick.AddListener(() =>
         {
-            Debug.Log("[HorseCarriage] Player clicked CHOOSE TILE — entering selection mode.");
+            Debug.Log("[HorseCarriage] Player clicked CHOOSE TILE ï¿½ entering selection mode.");
             StartTileSelection();
         });
     }
@@ -58,7 +61,7 @@ public class HorseCarriageUI : MonoBehaviour
             selectionText.SetActive(true);
 
 
-        Debug.Log("[HorseCarriage] Selection mode ON — waiting for tile click.");
+        Debug.Log("[HorseCarriage] Selection mode ON ï¿½ waiting for tile click.");
 
     }
 
@@ -70,7 +73,7 @@ public class HorseCarriageUI : MonoBehaviour
             return;
         }
 
-        Debug.Log($"[HorseCarriage] Tile clicked: {wp.name} — performing teleport.");
+        Debug.Log($"[HorseCarriage] Tile clicked: {wp.name} ï¿½ performing teleport.");
         IsChoosingTile = false;
 
         // Teleport 
@@ -97,6 +100,9 @@ public class HorseCarriageUI : MonoBehaviour
 
         if (selectionText != null)
             selectionText.SetActive(false);
+
+        if (TurnController.Instance != null)
+            TurnController.Instance.UpdateClosedHint();
 
     }
 }

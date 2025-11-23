@@ -31,7 +31,7 @@ public class ShopUI : MonoBehaviour
 
         Instance = this;
 
-        // Alguses peidetud – ilmub ainult kui mängija satub Shop-ruudule
+        // Alguses peidetud ï¿½ ilmub ainult kui mï¿½ngija satub Shop-ruudule
         if (panelRoot != null)
             panelRoot.SetActive(false);
     }
@@ -60,6 +60,7 @@ public class ShopUI : MonoBehaviour
 
         panelRoot.SetActive(true);
         PauseManager.PauseGame();
+        SpaceHintUI.Show("");
 
         UpdateCoinsDisplay();
         Debug.Log("Shop opened!");
@@ -75,6 +76,9 @@ public class ShopUI : MonoBehaviour
 
         panelRoot.SetActive(false);
         PauseManager.ResumeGame();
+
+        if (TurnController.Instance != null)
+            TurnController.Instance.UpdateClosedHint();
 
         Debug.Log("Shop closed.");
     }

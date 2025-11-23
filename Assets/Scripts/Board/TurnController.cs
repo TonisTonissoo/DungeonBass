@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TurnController : MonoBehaviour
 {
+    public static TurnController Instance { get; private set; }
     [System.Serializable]
     public struct DicePair
     {
@@ -10,39 +11,82 @@ public class TurnController : MonoBehaviour
         public DicePair(int a, int b) { this.a = a; this.b = b; }
     }
 
-    public KeyCode rollKey = KeyCode.Space;
-    public WaypointFollower follower;       // your existing mover (must have MoveSteps(int) + IsMoving)
-    public DicePanelManager panel;          // hook up in Inspector
+    public KeyCode toggleKey = KeyCode.Space;
+    public WaypointFollower follower;
+    public DicePanelManager panel;
 
-    private DicePair[] options = new DicePair[3];
-    private bool[] used = new bool[3];
+    // PERSIST across scene reloads:
+    private static DicePair[] options = new DicePair[3];
+    private static bool[] used = new bool[3];
+    private static bool hasActiveOptions = false;
+    private static bool isRollingVisual = false;
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
+    void Start()
+    {
+        if (panel != null)
+            panel.Hide();
+
+        // wait one frame so SpaceHintUI has run Awake()
+        StartCoroutine(InitHint());
+    }
+
+    private System.Collections.IEnumerator InitHint()
+    {
+        yield return null;
+        UpdateClosedHint();
+    }
 
     void Update()
     {
-        // blokk telepordi ajal
         if (HorseCarriageUI.Instance != null && HorseCarriageUI.Instance.IsChoosingTile)
             return;
 
-        // SPACE rollimine (ÜKS TÄRING)
-        if (Input.GetKeyDown(KeyCode.Space) && !follower.IsMoving)
+        if (!Input.GetKeyDown(toggleKey))
+            return;
+
+        HandleToggleKey();
+    }
+
+    void HandleToggleKey()
+    {
+        if (follower != null && follower.IsMoving) return;
+        if (isRollingVisual) return;
+
+        // PANEL IS CURRENTLY HIDDEN
+        if (!panel.IsVisible)
         {
-            Debug.Log("[Dice] Single dice roll triggered.");
-            int steps = Random.Range(1, 7);
-            follower.MoveSteps(steps);
+            // need new roll? -> play GIF then roll
+            if (!hasActiveOptions || AllUsed())
+            {
+                SpaceHintUI.Show(""); // optional: clear during roll
+                StartCoroutine(RollWithAnimation());
+            }
+            else
+            {
+                ShowForCurrentState();
+                UpdateOpenHint(); // "Press SPACE to close dice"
+            }
+        }
+        // PANEL IS VISIBLE -> CLOSE IT
+        else
+        {
+            panel.Hide();
+            UpdateClosedHint(); // "Press SPACE to open dice" or "Press SPACE to roll dice"
         }
     }
 
-
-
-    bool AllUsed()
-    {
-        return used[0] && used[1] && used[2];
-    }
+    bool AllUsed() => used[0] && used[1] && used[2];
 
     int RemainingCount()
     {
         int c = 0;
-        for (int i = 0; i < 3; i++) if (!used[i]) c++;
+        for (int i = 0; i < 3; i++)
+            if (!used[i]) c++;
         return c;
     }
 
@@ -57,48 +101,77 @@ public class TurnController : MonoBehaviour
         }
     }
 
-    void ShowForFirstPick()
+    void ShowForCurrentState()
     {
-        panel.SetHeader("Choose your first move");
+        if (panel == null) return;
+
+        int left = RemainingCount();
+        if (!hasActiveOptions || left == 3)
+            panel.SetHeader("Choose your first move");
+        else if (left == 2)
+            panel.SetHeader("Choose your next move (2 left)");
+        else if (left == 1)
+            panel.SetHeader("Choose your last move (1 left)");
+        else
+            panel.SetHeader("No moves left");
+
         panel.ShowOptions(options, used, OnOptionClicked);
     }
 
-    void ShowForNextPicks()
+    // run gif, then show result pictures
+    System.Collections.IEnumerator RollWithAnimation()
     {
-        int left = RemainingCount();
-        if (left == 2) panel.SetHeader("Choose your next move (2 left)");
-        else if (left == 1) panel.SetHeader("Choose your last move (1 left)");
-        panel.ShowOptions(options, used, OnOptionClicked);
+        if (panel == null) yield break;
+
+        isRollingVisual = true;
+
+        SpaceHintUI.Show("");
+        panel.ShowRolling();
+
+        yield return new WaitForSeconds(1.5f);   // change to 2f if you want longer
+
+        RollThreeOptions();
+        hasActiveOptions = true;
+
+        ShowForCurrentState();
+
+        isRollingVisual = false;
+        UpdateOpenHint(); // "Press SPACE to close dice"
     }
 
     void OnOptionClicked(int index)
     {
-        if (follower.IsMoving) return;
+        if (follower != null && follower.IsMoving) return;
         if (index < 0 || index > 2) return;
         if (used[index]) return;
 
         used[index] = true;
-        panel.Hide();
+
+        if (panel != null)
+            panel.Hide();
 
         int steps = options[index].Sum;
-        follower.MoveSteps(steps);
+        if (follower != null)
+            follower.MoveSteps(steps);
+
+        // panel is now closed -> update hint depending on whether we still have options
+        UpdateClosedHint();
     }
 
-    // Hook this to your small "Dice" button OnClick in the Inspector
-    public void ToggleDicePanel()
+    // --- Hint helpers ---
+
+    // Called when panel is CLOSED: what will SPACE do next?
+    public void UpdateClosedHint()
     {
-        if (follower.IsMoving) return;
-
-        int left = RemainingCount();
-        if (left == 0)
-        {
-            // Nothing left this turn; do nothing (next Space will roll new)
-            return;
-        }
-
-        if (!panel.IsVisible)
-            ShowForNextPicks();
+        if (!hasActiveOptions || AllUsed())
+            SpaceHintUI.Show("Press SPACE to roll dice");
         else
-            panel.Hide();
+            SpaceHintUI.Show("Press SPACE to open dice");
+    }
+
+    // Called when panel is OPEN
+    public void UpdateOpenHint()
+    {
+        SpaceHintUI.Show("Press SPACE to close dice");
     }
 }
