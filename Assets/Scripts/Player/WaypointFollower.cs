@@ -40,38 +40,15 @@ public class WaypointFollower : MonoBehaviour
         {
             Waypoint previous = current;
 
-            // liigu järgmisele ruudule või tagasi starti
-            current = (current.GetNext() != null) ? current.GetNext() : start;
+            // Get next waypoint (wrap to start if needed)
+            Waypoint nextWp = current.GetNext();
+            if (nextWp == null)
+                nextWp = start;
 
-            // kontrolli, kas ületasime start-tile'i (tüübi järgi)
-            bool prevWasStart = previous != null && previous.tileEvent != null &&
-                                previous.tileEvent.tileType == TileType.Start;
+            // MOVE to next tile
+            current = nextWp;
 
-            bool currIsStart = current != null && current.tileEvent != null &&
-                               current.tileEvent.tileType == TileType.Start;
-
-            if (currIsStart && !prevWasStart)
-            {
-                loops++;
-
-                if (PlayerStats.Instance != null)
-                    PlayerStats.Instance.currentLoop = loops;
-
-                // lase ühe frame'i mööduda, siis uuenda HUD
-                yield return null;
-
-                HUDController.Instance?.UpdateHUD();
-                UpdateLoopText();
-
-                if (loops >= 20)
-                {
-                    Debug.Log("Victory! 20 loops completed!");
-                    SceneLoader.Load("Victory");
-                    yield break; // peatab korutini, et ei läheks edasi
-                }
-            }
-
-            // liikumine järgmisele waypointile
+            // arrival movement
             Vector3 target = current.transform.position;
             while ((transform.position - target).sqrMagnitude > 0.0001f)
             {
@@ -80,13 +57,36 @@ public class WaypointFollower : MonoBehaviour
                 yield return null;
             }
             transform.position = target;
+
+            // CHECK if this tile IS the START tile
+            bool currIsStart = current != null &&
+                               current.tileEvent != null &&
+                               current.tileEvent.tileType == TileType.Start;
+
+            // If we arrived to START → STOP movement early
+            if (currIsStart)
+            {
+                loops++;
+
+                if (PlayerStats.Instance != null)
+                    PlayerStats.Instance.currentLoop = loops;
+
+                HUDController.Instance?.UpdateHUD();
+                UpdateLoopText();
+
+                Debug.Log("[Loop] Finished loop at START tile → stopping.");
+                break;
+            }
         }
 
+        // Trigger event of the tile where the movement ended
         if (current != null)
             current.TriggerTileEvent();
 
         IsMoving = false;
     }
+
+
 
 
 

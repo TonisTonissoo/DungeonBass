@@ -27,13 +27,6 @@ public class TileEvent : MonoBehaviour
                 FadeController.Instance.FadeToScene("CombatScene");
                 break;
 
-            case TileType.Boss:
-                Debug.Log("Boss fight!");
-                PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
-                PlayerPrefs.Save();
-                SceneLoader.Load("CombatScene");
-                break;
-
             case TileType.Shop:
                 Debug.Log("Shop entered!");
                 if (ShopUI.Instance != null)
@@ -200,8 +193,24 @@ public class TileEvent : MonoBehaviour
 
 
             case TileType.Start:
-                Debug.Log("Start tile.");
+
+                int loop = PlayerStats.Instance.currentLoop;
+
+                // Loop 0 = game start
+                // Loop 1 = completed first lap
+                // Boss active from loop 2+
+                if (loop >= 1)
+                {
+                    Debug.Log("[StartTile] Boss active -> Launch Boss Scene.");
+                    FadeController.Instance.FadeToScene("BossFightScene");
+                }
+                else
+                {
+                    Debug.Log("[StartTile] No boss yet.");
+                }
+
                 break;
+
         }
     }
 }
