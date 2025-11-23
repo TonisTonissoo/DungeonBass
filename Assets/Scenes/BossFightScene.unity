@@ -299,7 +299,7 @@ SpriteRenderer:
   m_SortingLayerID: 1760766763
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1955448553306655712, guid: acc00805e030f374d9a7e3b9a2b9a12d, type: 3}
+  m_Sprite: {fileID: -1093897896430776101, guid: 77ae6d06139532f4092c1a453a14a0f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -319,8 +319,8 @@ Transform:
   m_GameObject: {fileID: 67405204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.59, y: -0.23, z: 0}
-  m_LocalScale: {x: 1.2092676, y: 1.2843888, z: 1}
+  m_LocalPosition: {x: 7.54, y: -0.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 420388507}
@@ -344,11 +344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2464154917835080850, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.62
+      value: -5.65
       objectReference: {fileID: 0}
     - target: {fileID: 2464154917835080850, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 2464154917835080850, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -400,11 +400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       propertyPath: moveSpeed
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       propertyPath: attackCooldown
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       propertyPath: hitEffectPrefab
@@ -423,6 +423,37 @@ PrefabInstance:
       addedObject: {fileID: 2091909747}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
+--- !u!1 &142873729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142873730}
+  m_Layer: 0
+  m_Name: Minion spawn-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142873730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142873729}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.4715023, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1727862600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &184871506
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +597,7 @@ Transform:
   m_GameObject: {fileID: 420388506}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.279162, y: 0, z: 0}
+  m_LocalPosition: {x: -15.021, y: 0.003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -616,9 +647,9 @@ SpriteRenderer:
   m_SortingLayerID: 1760766763
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1955448553306655712, guid: acc00805e030f374d9a7e3b9a2b9a12d, type: 3}
+  m_Sprite: {fileID: -1093897896430776101, guid: 77ae6d06139532f4092c1a453a14a0f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 9.28, y: 7.93}
@@ -797,7 +828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 0, y: 3.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692701492
@@ -847,8 +878,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1909,6 +1940,38 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1727862599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1727862600}
+  m_Layer: 0
+  m_Name: Minion spawn-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1727862600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727862599}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.4880457, y: -3.2075396, z: -3.490134}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 142873730}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759638284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,15 +2373,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2894586892513766838, guid: bbaf25877a3c6d640aa1d50188e89bd3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 43.34
       objectReference: {fileID: 0}
     - target: {fileID: 2894586892513766838, guid: bbaf25877a3c6d640aa1d50188e89bd3, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 4.5
+      value: 3.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894586892513766838, guid: bbaf25877a3c6d640aa1d50188e89bd3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0000021458
       objectReference: {fileID: 0}
     - target: {fileID: 2894586892513766838, guid: bbaf25877a3c6d640aa1d50188e89bd3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.75
+      value: -8.9
       objectReference: {fileID: 0}
     - target: {fileID: 4182201453240433017, guid: bbaf25877a3c6d640aa1d50188e89bd3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2608,8 +2675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.09, y: 1.34}
-  m_SizeDelta: {x: 100, y: 60}
+  m_AnchoredPosition: {x: -0.09, y: 1.3432}
+  m_SizeDelta: {x: 100, y: 60.433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1819175302303807285
 GameObject:
@@ -2673,7 +2740,7 @@ Transform:
   m_GameObject: {fileID: 3796842636836532486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.9825, y: -2.5392, z: 0}
+  m_LocalPosition: {x: 6.42, y: -1.54, z: 0}
   m_LocalScale: {x: 1.5395478, y: 1.6675395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2885,8 +2952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5658662}
-  m_AnchoredPosition: {x: 0.9999788, y: -7.7999973}
-  m_SizeDelta: {x: 141.84, y: 9.39}
+  m_AnchoredPosition: {x: -3.26, y: -9.77}
+  m_SizeDelta: {x: 164.59, y: 13.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3442830747417896366
 MonoBehaviour:
@@ -2948,8 +3015,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5658662}
-  m_AnchoredPosition: {x: 0.9999788, y: -7.7999973}
-  m_SizeDelta: {x: 141.84, y: 9.39}
+  m_AnchoredPosition: {x: -3.26, y: -9.77}
+  m_SizeDelta: {x: 164.59, y: 13.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3733925344264927927
 MonoBehaviour:
@@ -2968,8 +3035,8 @@ MonoBehaviour:
   currentHP: 200
   attackPower: 10
   attackRange: 1.5
-  moveSpeed: 3
-  attackCooldown: 1.5
+  moveSpeed: 25
+  attackCooldown: 0.1
   criticalHitChance: 0.15
   criticalHitMultiplier: 2
   hitEffectPrefab: {fileID: 6671377576403784092, guid: 784c008423060634e8bb0d84a602f48b, type: 3}
@@ -2978,8 +3045,10 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   numberOfStages: 3
   bossHealthBar: {fileID: 3442830747417896366}
-  minionPrefab: {fileID: 0}
-  minionSpawnPoints: []
+  minionPrefab: {fileID: 1681495973958875786, guid: d81afa7900c6b364eab57d5066b57992, type: 3}
+  minionSpawnPoints:
+  - {fileID: 1727862600}
+  - {fileID: 142873730}
   minionsPerStage: 2
   minionSpawnDelay: 0.3
   onStageChangeEvents: []
@@ -3211,8 +3280,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5658662}
-  m_AnchoredPosition: {x: 1, y: -7.8}
-  m_SizeDelta: {x: 141.84, y: 9.39}
+  m_AnchoredPosition: {x: -3.26, y: -9.77}
+  m_SizeDelta: {x: 164.59, y: 13.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6056322276838667770
 GameObject:
@@ -3425,7 +3494,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3861509453359391609, guid: d725f51d4c6e5644a9540227818a1e23, type: 3}
+  m_Sprite: {fileID: 3064268939594492125, guid: fe6d907c40010e84aa4bb8934ca6b73d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3597,8 +3666,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3635,7 +3704,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -5.1651917}
+  m_margin: {x: 0, y: 0, z: -22.66726, w: -5.1651917}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3957,8 +4026,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 16.8}
-  m_SizeDelta: {x: 290.96, y: 103.13}
+  m_AnchoredPosition: {x: 0, y: 26.7}
+  m_SizeDelta: {x: 200, y: 103.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8472413887839091961
 MonoBehaviour:
@@ -3992,8 +4061,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5658662}
-  m_AnchoredPosition: {x: 0.9999788, y: -7.7999973}
-  m_SizeDelta: {x: 141.84, y: 9.39}
+  m_AnchoredPosition: {x: -3.26, y: -9.77}
+  m_SizeDelta: {x: 164.59, y: 13.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8837733876611317608
 MonoBehaviour:
@@ -4103,7 +4172,8 @@ SceneRoots:
   - {fileID: 67405206}
   - {fileID: 15912283}
   - {fileID: 71195728}
-  - {fileID: 1985126479805895095}
   - {fileID: 9125662964004507973}
   - {fileID: 1182509108}
   - {fileID: 1156934540}
+  - {fileID: 1985126479805895095}
+  - {fileID: 1727862600}
