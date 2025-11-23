@@ -96,6 +96,17 @@ public class WaypointFollower : MonoBehaviour
             }
             transform.position = target;
 
+            // Stop early on the shop tile (18th waypoint) so we always enter the shop
+            bool currIsShop = current != null &&
+                              current.tileEvent != null &&
+                              current.tileEvent.tileType == TileType.Shop;
+            if (currIsShop)
+            {
+                Debug.Log("[Shop] Stopping movement at shop tile (index " +
+                          (current.transform.GetSiblingIndex() + 1) + ").");
+                break;
+            }
+
             // CHECK if this tile IS the START tile
             bool currIsStart = current != null &&
                                current.tileEvent != null &&
