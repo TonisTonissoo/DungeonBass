@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7676549084978118673
@@ -105,6 +105,17 @@ MonoBehaviour:
   currentHP: 90
   attackPower: 20
   attackRange: 1.5
-  moveSpeed: 10
-  attackCooldown: 1.5
+  moveSpeed: 25
+  attackCooldown: 0.1
+  criticalHitChance: 0.15
+  criticalHitMultiplier: 2
+  hitEffectPrefab: {fileID: 0}
+  critEffectPrefab: {fileID: 0}
+  hitEffectYOffset: 0.5
+  hitSound: {fileID: 8300000, guid: b963d69415d6b2145b86cc1f7e375c98, type: 3}
+  criticalHitSound: {fileID: 8300000, guid: 5b67a59d94ed11f4082b026df914fd5c, type: 3}
+  deathSound: {fileID: 8300000, guid: 303d5a9c96a8d6d438e8a7e0fbd07559, type: 3}
+  hitSoundVolume: 1
+  criticalHitSoundVolume: 1
+  deathSoundVolume: 1
   healthBar: {fileID: 0}

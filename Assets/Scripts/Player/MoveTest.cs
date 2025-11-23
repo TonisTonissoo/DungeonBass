@@ -15,5 +15,6 @@ public class MoveTest : MonoBehaviour
         // Or arrow keys for manual stepping while testing
         if (Input.GetKeyDown(KeyCode.RightArrow) && !follower.IsMoving)
             follower.MoveSteps(1);
+
     }
 }

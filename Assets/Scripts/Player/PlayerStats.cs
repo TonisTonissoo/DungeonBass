@@ -2,13 +2,21 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static PlayerStats Instance;
+    // Singleton
+    public static PlayerStats Instance { get; private set; }
 
-    public int maxHealth = 100;
+    // DEFAULT VALUES (milleni resetitakse)
+    public int maxHealthDefault = 100;
+    public int attackPowerDefault = 20;
+    public int startingCoins = 0;
+    public int startingLoop = 1;
+
+    // RUNTIME VALUES (mängus muutuvad)
+    public int maxHealth;
     public int currentHealth;
-    public int coins = 0;
-    public int attackPower = 20;   // baas damage
-    public int currentLoop = 1;
+    public int coins;
+    public int attackPower;
+    public int currentLoop;
 
     private void Awake()
     {
@@ -20,12 +28,26 @@ public class PlayerStats : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        // Reset to defaults at the start of game
+        ResetStatsToDefault();
     }
 
-    private void Start()
+    // Seda kutsub EndPanelManager.ReturnToMainMenu()
+    public void ResetStatsToDefault()
     {
-        currentHealth = maxHealth;
+        maxHealth = maxHealthDefault;
+        currentHealth = maxHealthDefault;
+
+        attackPower = attackPowerDefault;
+
+        coins = startingCoins;
+        currentLoop = startingLoop;
+
+        Debug.Log("[PlayerStats] Reset to default stats.");
     }
+
+    // ---- GAMEPLAY STAT FUNCTIONS ---- //
 
     public void HealToFull()
     {

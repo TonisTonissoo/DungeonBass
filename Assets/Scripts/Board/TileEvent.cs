@@ -24,14 +24,7 @@ public class TileEvent : MonoBehaviour
                 Debug.Log("Enemy encounter!");
                 PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
                 PlayerPrefs.Save();
-                SceneLoader.Load("CombatScene");
-                break;
-
-            case TileType.Boss:
-                Debug.Log("Boss fight!");
-                PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
-                PlayerPrefs.Save();
-                SceneLoader.Load("CombatScene");
+                FadeController.Instance.FadeToScene("CombatScene");
                 break;
 
             case TileType.Shop:
@@ -158,10 +151,16 @@ public class TileEvent : MonoBehaviour
                     // Halvad sündmused
                     case 2:
                         int damage = Random.Range(15, 31);
-                        PlayerStats.Instance.currentHealth = Mathf.Max(0, PlayerStats.Instance.currentHealth - damage);
-                        message = $"A hidden trap injures you! (-{damage} HP)";
-                        break;
 
+                        // Reduce max HP permanently
+                        PlayerStats.Instance.maxHealth = Mathf.Max(1, PlayerStats.Instance.maxHealth - damage);
+
+                        // Clamp current HP to new max
+                        PlayerStats.Instance.currentHealth = Mathf.Min(PlayerStats.Instance.currentHealth, PlayerStats.Instance.maxHealth);
+
+                        message = $"A hidden trap injures you! Your max HP decreased by {damage}!";
+                        break;
+    
                     case 3:
                         int coinLoss = Random.Range(10, 26);
                         PlayerStats.Instance.coins = Mathf.Max(0, PlayerStats.Instance.coins - coinLoss);
@@ -200,8 +199,27 @@ public class TileEvent : MonoBehaviour
 
 
             case TileType.Start:
-                Debug.Log("Start tile.");
+
+                int loop = PlayerStats.Instance.currentLoop;
+
+                if (loop >= 1)
+                {
+                    Debug.Log("[StartTile] Boss active -> Launch Boss Scene.");
+
+                    // Save current waypoint index EXACTLY like normal enemy fights
+                    PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
+                    PlayerPrefs.Save();
+
+                    FadeController.Instance.FadeToScene("BossFightScene");
+                }
+                else
+                {
+                    Debug.Log("[StartTile] No boss yet.");
+                }
                 break;
+    
+
+
         }
     }
 }

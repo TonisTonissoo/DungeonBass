@@ -11,8 +11,6 @@ public class HUDController : MonoBehaviour
     [Header("Runtime Values")]
     [SerializeField] private int health = 100;
     [SerializeField] private int coins = 0;
-    [SerializeField] private int currentLoop = 1;
-    [SerializeField] private int totalLoops = 20;
 
     public static HUDController Instance;
 
@@ -20,7 +18,6 @@ public class HUDController : MonoBehaviour
     {
         Instance = this;
     }
-
 
     private void Start()
     {
@@ -33,14 +30,15 @@ public class HUDController : MonoBehaviour
         {
             health = PlayerStats.Instance.currentHealth;
             coins = PlayerStats.Instance.coins;
-            currentLoop = PlayerStats.Instance.currentLoop;
         }
+
+        // Always read loop from PlayerStats (single source of truth)
+        int loop = PlayerStats.Instance != null ? PlayerStats.Instance.currentLoop : 1;
 
         if (healthText) healthText.text = $"Health: {health}";
         if (coinsText) coinsText.text = $"Coins: {coins}";
-        if (loopText) loopText.text = $"Loop: {currentLoop}/{totalLoops}";
+        if (loopText) loopText.text = $"Loop: {loop}/20";
     }
-    
 
     public void SetHealth(int value)
     {
@@ -51,13 +49,6 @@ public class HUDController : MonoBehaviour
     public void AddCoins(int amount)
     {
         coins = Mathf.Max(0, coins + amount);
-        UpdateHUD();
-    }
-
-    public void SetLoop(int current, int total)
-    {
-        currentLoop = Mathf.Max(1, current);
-        totalLoops = Mathf.Max(currentLoop, total);
         UpdateHUD();
     }
 }

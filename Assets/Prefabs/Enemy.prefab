@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6004659364575478978}
   - component: {fileID: 424388364486349995}
   - component: {fileID: 5282174606003717850}
+  - component: {fileID: 7587229935373113979}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5282174606003717850
@@ -105,6 +106,31 @@ MonoBehaviour:
   currentHP: 0
   attackPower: 10
   attackRange: 1.5
-  moveSpeed: 15
-  attackCooldown: 1.5
+  moveSpeed: 25
+  attackCooldown: 0.1
+  criticalHitChance: 0.15
+  criticalHitMultiplier: 2
+  hitEffectPrefab: {fileID: 6671377576403784092, guid: 784c008423060634e8bb0d84a602f48b, type: 3}
+  critEffectPrefab: {fileID: 6671377576403784092, guid: cd21192fa4f7d484194531373dd31e57, type: 3}
+  hitEffectYOffset: 0.5
+  hitSound: {fileID: 8300000, guid: b963d69415d6b2145b86cc1f7e375c98, type: 3}
+  criticalHitSound: {fileID: 8300000, guid: 5b67a59d94ed11f4082b026df914fd5c, type: 3}
+  deathSound: {fileID: 8300000, guid: ddf8762c25a7c814384d670eb0a0b6b2, type: 3}
+  hitSoundVolume: 1
+  criticalHitSoundVolume: 1
+  deathSoundVolume: 1
   healthBar: {fileID: 0}
+--- !u!114 &7587229935373113979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529915050346628147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc215725fbac25419945dfb1e38639a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpPerLoop: 0.25
+  attackPerLoop: 0.2

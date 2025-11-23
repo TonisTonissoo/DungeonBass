@@ -12,18 +12,56 @@ public class WaypointFollower : MonoBehaviour
     public TextMeshProUGUI loopText;   // drag your UI text here
 
     private Waypoint current;
-    private int loops = 1;
 
     void Start()
     {
-        current = start;
-        if (current != null)
-            transform.position = current.transform.position;
-        else
-            Debug.LogError("WaypointFollower: assign a start waypoint.");
+        // 1) Boss fightist tagasi tulek
+        bool returnFromBoss = PlayerPrefs.GetInt("ReturnAfterBoss", 0) == 1;
 
+        if (returnFromBoss)
+        {
+            current = start;
+            transform.position = start.transform.position;
+
+            PlayerPrefs.SetInt("ReturnAfterBoss", 0);
+            PlayerPrefs.Save();
+
+            Debug.Log("[Follower] Returned from Boss → forced to START.");
+            UpdateLoopText();
+            return;
+        }
+
+        // 2) Tavalise COMBATi tagasitulek (kasutame LastTileIndex’i)
+        if (PlayerPrefs.HasKey("LastTileIndex"))
+        {
+            int index = PlayerPrefs.GetInt("LastTileIndex");
+            Waypoint[] all = FindObjectsOfType<Waypoint>();
+
+            // Leia waypoint õige indexiga
+            foreach (Waypoint w in all)
+            {
+                if (w.transform.GetSiblingIndex() == index)
+                {
+                    current = w;
+                    transform.position = w.transform.position;
+
+                    Debug.Log("[Follower] Returned from Normal Fight → restored tile: " + index);
+                    UpdateLoopText();
+                    return;
+                }
+            }
+        }
+
+        // 3) Mängu täiesti uus algus
+        current = start;
+        transform.position = start.transform.position;
+
+        Debug.Log("[Follower] Fresh start.");
         UpdateLoopText();
     }
+
+
+
 
     // Call this with how many tiles to move (e.g., a dice roll)
     public void MoveSteps(int steps)
@@ -40,38 +78,15 @@ public class WaypointFollower : MonoBehaviour
         {
             Waypoint previous = current;
 
-            // liigu järgmisele ruudule või tagasi starti
-            current = (current.GetNext() != null) ? current.GetNext() : start;
+            // Get next waypoint (wrap to start if needed)
+            Waypoint nextWp = current.GetNext();
+            if (nextWp == null)
+                nextWp = start;
 
-            // kontrolli, kas ületasime start-tile'i (tüübi järgi)
-            bool prevWasStart = previous != null && previous.tileEvent != null &&
-                                previous.tileEvent.tileType == TileType.Start;
+            // MOVE to next tile
+            current = nextWp;
 
-            bool currIsStart = current != null && current.tileEvent != null &&
-                               current.tileEvent.tileType == TileType.Start;
-
-            if (currIsStart && !prevWasStart)
-            {
-                loops++;
-
-                if (PlayerStats.Instance != null)
-                    PlayerStats.Instance.currentLoop = loops;
-
-                // lase ühe frame'i mööduda, siis uuenda HUD
-                yield return null;
-
-                HUDController.Instance?.UpdateHUD();
-                UpdateLoopText();
-
-                if (loops >= 20)
-                {
-                    Debug.Log("Victory! 20 loops completed!");
-                    SceneLoader.Load("Victory");
-                    yield break; // peatab korutini, et ei läheks edasi
-                }
-            }
-
-            // liikumine järgmisele waypointile
+            // arrival movement
             Vector3 target = current.transform.position;
             while ((transform.position - target).sqrMagnitude > 0.0001f)
             {
@@ -80,25 +95,64 @@ public class WaypointFollower : MonoBehaviour
                 yield return null;
             }
             transform.position = target;
+
+            // Stop early on the shop tile (18th waypoint) so we always enter the shop
+            bool currIsShop = current != null &&
+                              current.tileEvent != null &&
+                              current.tileEvent.tileType == TileType.Shop;
+            if (currIsShop)
+            {
+                Debug.Log("[Shop] Stopping movement at shop tile (index " +
+                          (current.transform.GetSiblingIndex() + 1) + ").");
+                break;
+            }
+
+            // CHECK if this tile IS the START tile
+            bool currIsStart = current != null &&
+                               current.tileEvent != null &&
+                               current.tileEvent.tileType == TileType.Start;
+
+            if (currIsStart)
+            {
+                // Loop increase on reaching START tile
+                PlayerStats.Instance.currentLoop++;
+
+                // Update loop for scaling system
+                if (GameLoopManager.Instance != null)
+                    GameLoopManager.Instance.SetLoop(PlayerStats.Instance.currentLoop);
+
+                // Update UI
+                HUDController.Instance?.UpdateHUD();
+                UpdateLoopText();
+
+                Debug.Log("[Loop] Finished loop at START tile → new loop = " + PlayerStats.Instance.currentLoop);
+
+                break; // stop movement exactly on START tile
+            }
+
+
         }
 
-        if (current != null)
+        // Trigger event of the tile where the movement ended
+        if (current != null && gameObject.scene.isLoaded)
             current.TriggerTileEvent();
 
         IsMoving = false;
     }
 
-
-
-
-
+    public void StopMovementImmediately()
+    {
+        StopAllCoroutines();
+        IsMoving = false;
+    }
 
 
     private void UpdateLoopText()
     {
-        if (loopText != null && loops <= 20)
-            loopText.text = $"Loop: {loops}/20";
+        if (loopText != null)
+            loopText.text = $"Loop: {PlayerStats.Instance.currentLoop}/20";
     }
+
 
     public void SetCurrentWaypoint(Waypoint wp)
     {

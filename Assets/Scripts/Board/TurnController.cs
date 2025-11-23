@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TurnController : MonoBehaviour
 {
@@ -43,6 +43,19 @@ public class TurnController : MonoBehaviour
 
     void Update()
     {
+        // Auto-fix for missing follower reference after scene reload
+        if (follower == null)
+        {
+            follower = FindObjectOfType<WaypointFollower>();
+            if (follower == null)
+                return; // still null → safely skip frame
+        }
+
+        // Auto-fix for missing panel (optional)
+        if (panel == null)
+            panel = FindObjectOfType<DicePanelManager>();
+
+        // blokk telepordi ajal
         if (HorseCarriageUI.Instance != null && HorseCarriageUI.Instance.IsChoosingTile)
             return;
 

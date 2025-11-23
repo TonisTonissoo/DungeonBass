@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EndPanelManager : MonoBehaviour
 {
@@ -39,4 +39,30 @@ public class EndPanelManager : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
+
+    public void ReturnToMainMenu()
+    {
+        Debug.Log("[Run Reset] Returning to Main Menu → resetting run...");
+
+        // Reset PlayerStats
+        PlayerStats.Instance.ResetStatsToDefault();
+
+
+        // Reset GameLoopManager
+        if (GameLoopManager.Instance != null)
+            GameLoopManager.Instance.SetLoop(1);
+
+        // Clear tile restore prefs
+        PlayerPrefs.DeleteKey("LastTileIndex");
+        PlayerPrefs.DeleteKey("ReturnAfterBoss");
+        PlayerPrefs.DeleteKey("BattleResult");
+        PlayerPrefs.Save();
+
+        // Resume time if paused
+        Time.timeScale = 1f;
+
+        // Load Main Menu
+        FadeController.Instance.FadeToScene("MainMenu");
+    }
+
 }
