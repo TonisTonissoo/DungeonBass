@@ -27,6 +27,20 @@ public class Unit : MonoBehaviour
     [Tooltip("Vertical offset for spawning the hit effect")]
     public float hitEffectYOffset = 0.5f;
 
+    [Header("Audio")]
+    [Tooltip("Sound played when this unit hits an enemy")]
+    public AudioClip hitSound;
+    [Tooltip("Sound played on critical hit")]
+    public AudioClip criticalHitSound;
+    [Tooltip("Sound played when this unit dies")]
+    public AudioClip deathSound;
+    [Range(0f, 1)]
+    public float hitSoundVolume = 1f;
+    [Range(0f, 1)]
+    public float criticalHitSoundVolume = 1f;
+    [Range(0f, 1)]
+    public float deathSoundVolume = 1f;
+
     private Vector3 startPos;
     private bool isAttacking;
 
@@ -61,6 +75,7 @@ public class Unit : MonoBehaviour
     {
         currentHP -= dmg;
         healthBar?.updateHealthBar(currentHP, maxHP);
+        
         if (currentHP <= 0)
         {
             currentHP = 0;
@@ -71,6 +86,13 @@ public class Unit : MonoBehaviour
     protected virtual void Die()
     {
         Debug.Log($"{unitName} died!");
+        
+        // Play death sound
+        if (deathSound != null)
+        {
+            AudioSource.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
+        }
+        
         gameObject.SetActive(false);
     }
 
@@ -142,6 +164,17 @@ public class Unit : MonoBehaviour
         // hit and spawn effect (crit uses critEffectPrefab if assigned)
         target.TakeDamage(damage);
         SpawnHitVFX(wasCrit, target.transform.position);
+        
+        // Play hit sound - use critical sound if crit, otherwise regular hit sound
+        if (wasCrit && criticalHitSound != null)
+        {
+            AudioSource.PlayClipAtPoint(criticalHitSound, target.transform.position, criticalHitSoundVolume);
+        }
+        else if (hitSound != null)
+        {
+            AudioSource.PlayClipAtPoint(hitSound, target.transform.position, hitSoundVolume);
+        }
+        
         if (wasCrit)
             Debug.Log($"CRITICAL! {unitName} hits {target.unitName} for {damage} damage!");
         else

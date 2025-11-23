@@ -646,9 +646,19 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 6671377576403784092, guid: 784c008423060634e8bb0d84a602f48b, type: 3}
   critEffectPrefab: {fileID: 6671377576403784092, guid: cd21192fa4f7d484194531373dd31e57, type: 3}
   hitEffectYOffset: 0.5
+  hitSound: {fileID: 0}
+  criticalHitSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  hitSoundVolume: 2
+  criticalHitSoundVolume: 2
+  deathSoundVolume: 2
   healthBar: {fileID: 0}
   numberOfStages: 3
   bossHealthBar: {fileID: 3088023361548305488}
+  minionPrefab: {fileID: 0}
+  minionSpawnPoints: []
+  minionsPerStage: 2
+  minionSpawnDelay: 0.3
   onStageChangeEvents: []
 --- !u!1 &3865263425183322070
 GameObject:
@@ -710,6 +720,11 @@ MonoBehaviour:
   healthText: {fileID: 7490537151233486978}
   easeSpeed: 0.5
   stageBreakDelay: 0.25
+  stageColors:
+  - {r: 0.2, g: 1, b: 0.2, a: 1}
+  - {r: 1, g: 0.9, b: 0.2, a: 1}
+  - {r: 1, g: 0.2, b: 0.2, a: 1}
+  easeSliderColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
 --- !u!1 &4054955874264174680
 GameObject:
   m_ObjectHideFlags: 0

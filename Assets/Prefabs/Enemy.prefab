@@ -106,13 +106,19 @@ MonoBehaviour:
   currentHP: 0
   attackPower: 10
   attackRange: 1.5
-  moveSpeed: 15
-  attackCooldown: 1.5
+  moveSpeed: 25
+  attackCooldown: 0.1
   criticalHitChance: 0.15
   criticalHitMultiplier: 2
-  hitEffectPrefab: {fileID: 0}
-  critEffectPrefab: {fileID: 0}
+  hitEffectPrefab: {fileID: 6671377576403784092, guid: 784c008423060634e8bb0d84a602f48b, type: 3}
+  critEffectPrefab: {fileID: 6671377576403784092, guid: cd21192fa4f7d484194531373dd31e57, type: 3}
   hitEffectYOffset: 0.5
+  hitSound: {fileID: 8300000, guid: b963d69415d6b2145b86cc1f7e375c98, type: 3}
+  criticalHitSound: {fileID: 8300000, guid: 5b67a59d94ed11f4082b026df914fd5c, type: 3}
+  deathSound: {fileID: 8300000, guid: ddf8762c25a7c814384d670eb0a0b6b2, type: 3}
+  hitSoundVolume: 1
+  criticalHitSoundVolume: 1
+  deathSoundVolume: 1
   healthBar: {fileID: 0}
 --- !u!114 &7587229935373113979
 MonoBehaviour:
