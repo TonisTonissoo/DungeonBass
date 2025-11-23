@@ -160,7 +160,7 @@ public class TileEvent : MonoBehaviour
 
                         message = $"A hidden trap injures you! Your max HP decreased by {damage}!";
                         break;
-
+    
                     case 3:
                         int coinLoss = Random.Range(10, 26);
                         PlayerStats.Instance.coins = Mathf.Max(0, PlayerStats.Instance.coins - coinLoss);
