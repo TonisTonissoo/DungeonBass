@@ -15,6 +15,7 @@ public class WaypointFollower : MonoBehaviour
 
     void Start()
     {
+        // 1) Boss fightist tagasi tulek
         bool returnFromBoss = PlayerPrefs.GetInt("ReturnAfterBoss", 0) == 1;
 
         if (returnFromBoss)
@@ -22,20 +23,40 @@ public class WaypointFollower : MonoBehaviour
             current = start;
             transform.position = start.transform.position;
 
-            IsMoving = false;
-
             PlayerPrefs.SetInt("ReturnAfterBoss", 0);
             PlayerPrefs.Save();
 
-            Debug.Log("[Follower] Returned from Boss -> Forced to START waypoint.");
-        }
-        else
-        {
-            current = start;
-            transform.position = start.transform.position;
+            Debug.Log("[Follower] Returned from Boss → forced to START.");
+            UpdateLoopText();
+            return;
         }
 
-        // Always sync loop from PlayerStats
+        // 2) Tavalise COMBATi tagasitulek (kasutame LastTileIndex’i)
+        if (PlayerPrefs.HasKey("LastTileIndex"))
+        {
+            int index = PlayerPrefs.GetInt("LastTileIndex");
+            Waypoint[] all = FindObjectsOfType<Waypoint>();
+
+            // Leia waypoint õige indexiga
+            foreach (Waypoint w in all)
+            {
+                if (w.transform.GetSiblingIndex() == index)
+                {
+                    current = w;
+                    transform.position = w.transform.position;
+
+                    Debug.Log("[Follower] Returned from Normal Fight → restored tile: " + index);
+                    UpdateLoopText();
+                    return;
+                }
+            }
+        }
+
+        // 3) Mängu täiesti uus algus
+        current = start;
+        transform.position = start.transform.position;
+
+        Debug.Log("[Follower] Fresh start.");
         UpdateLoopText();
     }
 
