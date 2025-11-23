@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DungeonBoard.unity
     guid: 8c8c1f2750ea09c4986916ddf66f4257
   - enabled: 1
-    path: Assets/Scenes/CombatScene.unity
+    path: Assets/Scenes/Combat - Forest.unity
     guid: 64db68a327e3fa143948a035a8f2c085
   - enabled: 1
     path: Assets/Scenes/BossFightScene.unity
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 5c83d06f24e6c5c4b86ed58235ad2bc2
+  - enabled: 1
+    path: Assets/Scenes/Combat - Beach.unity
+    guid: 8b142a1a879bd7e4abe1027de4d64638
+  - enabled: 1
+    path: Assets/Scenes/Combat - Desert.unity
+    guid: 6f42b8bcd1375de4e950bc1a6ec6823e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

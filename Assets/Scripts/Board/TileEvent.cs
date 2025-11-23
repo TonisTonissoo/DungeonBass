@@ -16,6 +16,14 @@ public class TileEvent : MonoBehaviour
 {
     public TileType tileType;
 
+    // Võitlussteenid 
+    private static readonly string[] combatScenes = new string[]
+    {
+        "Combat - Beach",
+        "Combat - Desert",
+        "Combat - Forest"
+    };
+
     public void TriggerEvent()
     {
         switch (tileType)
@@ -24,7 +32,12 @@ public class TileEvent : MonoBehaviour
                 Debug.Log("Enemy encounter!");
                 PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
                 PlayerPrefs.Save();
-                FadeController.Instance.FadeToScene("CombatScene");
+
+                // Valib suvaliselt ühe combat stseeni
+                string selectedScene = combatScenes[Random.Range(0, combatScenes.Length)];
+                Debug.Log($"Loading random combat scene: {selectedScene}");
+                
+                FadeController.Instance.FadeToScene(selectedScene);
                 break;
 
             case TileType.Shop:
