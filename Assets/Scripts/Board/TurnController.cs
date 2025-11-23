@@ -27,7 +27,7 @@ public class TurnController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !follower.IsMoving)
         {
             Debug.Log("[Dice] Single dice roll triggered.");
-            int steps = Random.Range(10, 17);
+            int steps = Random.Range(1, 7);
             follower.MoveSteps(steps);
         }
     }

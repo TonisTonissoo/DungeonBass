@@ -5,7 +5,7 @@ public class PlayerStats : MonoBehaviour
     // Loome instance'i, et säilitada mängija statistikat üle erinevate stseenide
     public static PlayerStats Instance { get; private set; }
 
-    public int maxHealth = 100;
+    public int maxHealth = 200;
     public int currentHealth;
     public int coins = 0;
     public int attackPower = 20;   // baas damage

@@ -10322,7 +10322,7 @@ RectTransform:
   m_GameObject: {fileID: 1550857553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3667123, y: 1.171875, z: 1}
+  m_LocalScale: {x: 1.3650517, y: 1.171875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -12629,6 +12629,7 @@ GameObject:
   - component: {fileID: 2032463130}
   - component: {fileID: 2032463129}
   - component: {fileID: 2032463131}
+  - component: {fileID: 2032463132}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -12716,6 +12717,18 @@ MonoBehaviour:
   - {fileID: 675132519}
   - {fileID: 1042121569}
   - {fileID: 551001050}
+--- !u!114 &2032463132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032463128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd699bd09ecbb054f9f706c7c86ebc2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2044141342
 GameObject:
   m_ObjectHideFlags: 0
@@ -13141,8 +13154,6 @@ MonoBehaviour:
   loopText: {fileID: 1740911508}
   health: 100
   coins: 0
-  currentLoop: 1
-  totalLoops: 20
 --- !u!114 &2087012745
 MonoBehaviour:
   m_ObjectHideFlags: 0

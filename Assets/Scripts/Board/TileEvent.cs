@@ -196,20 +196,23 @@ public class TileEvent : MonoBehaviour
 
                 int loop = PlayerStats.Instance.currentLoop;
 
-                // Loop 0 = game start
-                // Loop 1 = completed first lap
-                // Boss active from loop 2+
                 if (loop >= 1)
                 {
                     Debug.Log("[StartTile] Boss active -> Launch Boss Scene.");
+
+                    // Save current waypoint index EXACTLY like normal enemy fights
+                    PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
+                    PlayerPrefs.Save();
+
                     FadeController.Instance.FadeToScene("BossFightScene");
                 }
                 else
                 {
                     Debug.Log("[StartTile] No boss yet.");
                 }
-
                 break;
+    
+
 
         }
     }

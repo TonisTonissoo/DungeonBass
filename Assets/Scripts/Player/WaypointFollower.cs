@@ -12,18 +12,35 @@ public class WaypointFollower : MonoBehaviour
     public TextMeshProUGUI loopText;   // drag your UI text here
 
     private Waypoint current;
-    private int loops = 1;
 
     void Start()
     {
-        current = start;
-        if (current != null)
-            transform.position = current.transform.position;
-        else
-            Debug.LogError("WaypointFollower: assign a start waypoint.");
+        bool returnFromBoss = PlayerPrefs.GetInt("ReturnAfterBoss", 0) == 1;
 
+        if (returnFromBoss)
+        {
+            current = start;
+            transform.position = start.transform.position;
+
+            IsMoving = false;
+
+            PlayerPrefs.SetInt("ReturnAfterBoss", 0);
+            PlayerPrefs.Save();
+
+            Debug.Log("[Follower] Returned from Boss -> Forced to START waypoint.");
+        }
+        else
+        {
+            current = start;
+            transform.position = start.transform.position;
+        }
+
+        // Always sync loop from PlayerStats
         UpdateLoopText();
     }
+
+
+
 
     // Call this with how many tiles to move (e.g., a dice roll)
     public void MoveSteps(int steps)
@@ -63,42 +80,47 @@ public class WaypointFollower : MonoBehaviour
                                current.tileEvent != null &&
                                current.tileEvent.tileType == TileType.Start;
 
-            // If we arrived to START → STOP movement early
             if (currIsStart)
             {
-                loops++;
+                // Loop increase on reaching START tile
+                PlayerStats.Instance.currentLoop++;
 
-                if (PlayerStats.Instance != null)
-                    PlayerStats.Instance.currentLoop = loops;
+                // Update loop for scaling system
+                if (GameLoopManager.Instance != null)
+                    GameLoopManager.Instance.SetLoop(PlayerStats.Instance.currentLoop);
 
+                // Update UI
                 HUDController.Instance?.UpdateHUD();
                 UpdateLoopText();
 
-                Debug.Log("[Loop] Finished loop at START tile → stopping.");
-                break;
+                Debug.Log("[Loop] Finished loop at START tile → new loop = " + PlayerStats.Instance.currentLoop);
+
+                break; // stop movement exactly on START tile
             }
+
+
         }
 
         // Trigger event of the tile where the movement ended
-        if (current != null)
+        if (current != null && gameObject.scene.isLoaded)
             current.TriggerTileEvent();
 
         IsMoving = false;
     }
 
-
-
-
-
-
-
+    public void StopMovementImmediately()
+    {
+        StopAllCoroutines();
+        IsMoving = false;
+    }
 
 
     private void UpdateLoopText()
     {
-        if (loopText != null && loops <= 20)
-            loopText.text = $"Loop: {loops}/20";
+        if (loopText != null)
+            loopText.text = $"Loop: {PlayerStats.Instance.currentLoop}/20";
     }
+
 
     public void SetCurrentWaypoint(Waypoint wp)
     {
