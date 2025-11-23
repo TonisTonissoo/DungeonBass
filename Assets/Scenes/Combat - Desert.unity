@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 6671377576403784092, guid: cd21192fa4f7d484194531373dd31e57, type: 3}
     - target: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       propertyPath: criticalHitChance
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5863878701895811894, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: maxHP
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: hitSound
@@ -662,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b963d69415d6b2145b86cc1f7e375c98, type: 3}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: currentHP
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: healthBar
@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: maxHP
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: hitSound
@@ -817,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b963d69415d6b2145b86cc1f7e375c98, type: 3}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: currentHP
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: healthBar
@@ -2938,7 +2938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: maxHP
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: hitSound
@@ -2946,7 +2946,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b963d69415d6b2145b86cc1f7e375c98, type: 3}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: currentHP
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5282174606003717850, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: healthBar

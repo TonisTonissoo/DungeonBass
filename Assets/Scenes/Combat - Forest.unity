@@ -442,7 +442,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2464154917835080850, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2091909747}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7640540328558764378, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2464154917769173188}
   m_SourcePrefab: {fileID: 100100000, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
 --- !u!1 &184871506
 GameObject:
@@ -1951,6 +1954,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328230292}
   m_CullTransparentMesh: 1
+--- !u!1 &1358484571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7640540328558764378, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
+  m_PrefabInstance: {fileID: 71195728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1443202859
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,12 +3488,34 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7676549084978118673, guid: 8b248521274d22741b34a2f21187c1df, type: 3}
   m_PrefabInstance: {fileID: 71195728}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1358484571}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8f0e27fa41e3ea4c8a82bee49744f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2464154917769173188
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358484571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e41d762c3430e4c40b818b8722cf4135, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &3915330438437778869 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4550634736559553059, guid: bbaf25877a3c6d640aa1d50188e89bd3, type: 3}
