@@ -151,8 +151,14 @@ public class TileEvent : MonoBehaviour
                     // Halvad sündmused
                     case 2:
                         int damage = Random.Range(15, 31);
-                        PlayerStats.Instance.currentHealth = Mathf.Max(0, PlayerStats.Instance.currentHealth - damage);
-                        message = $"A hidden trap injures you! (-{damage} HP)";
+
+                        // Reduce max HP permanently
+                        PlayerStats.Instance.maxHealth = Mathf.Max(1, PlayerStats.Instance.maxHealth - damage);
+
+                        // Clamp current HP to new max
+                        PlayerStats.Instance.currentHealth = Mathf.Min(PlayerStats.Instance.currentHealth, PlayerStats.Instance.maxHealth);
+
+                        message = $"A hidden trap injures you! Your max HP decreased by {damage}!";
                         break;
 
                     case 3:
