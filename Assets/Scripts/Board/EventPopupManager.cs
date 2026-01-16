@@ -23,7 +23,6 @@ public class EventPopupManager : MonoBehaviour
 
         Instance = this;
 
-        // Peida kõik popupid alguses
         popupRoot.SetActive(false);
         if (payButton != null) payButton.gameObject.SetActive(false);
         if (riskButton != null) riskButton.gameObject.SetActive(false);
@@ -39,26 +38,32 @@ public class EventPopupManager : MonoBehaviour
             return;
         }
 
-        // Ava popup
+        // Ava popup (paneeli heli)
+        UISoundPlayer.Instance.PlayOpen();
+
         popupRoot.SetActive(true);
         eventText.text = message;
         SpaceHintUI.Show("");
 
-        // Peata mäng
         PauseManager.PauseGame();
 
-        // 🔹 Peida muud nupud
         if (payButton != null) payButton.gameObject.SetActive(false);
         if (riskButton != null) riskButton.gameObject.SetActive(false);
 
-        // 🔹 Näita ainult OK nuppu
         okButton.gameObject.SetActive(true);
 
         okButton.onClick.RemoveAllListeners();
         okButton.onClick.AddListener(() =>
         {
+            // nupu klikk
+            UISoundPlayer.Instance.PlayClick();
+
             popupRoot.SetActive(false);
             okButton.gameObject.SetActive(false);
+
+            // paneel kinni heli
+            UISoundPlayer.Instance.PlayClose();
+
             PauseManager.ResumeGame();
             onClose?.Invoke();
 
@@ -81,16 +86,16 @@ public class EventPopupManager : MonoBehaviour
             return;
         }
 
-        // Ava popup ja tekst
+        // Ava popup (paneeli heli)
+        UISoundPlayer.Instance.PlayOpen();
+
         popupRoot.SetActive(true);
         eventText.text = message;
         SpaceHintUI.Show("");
 
-        // Peata mäng
         PauseManager.PauseGame();
 
- 
-        okButton.gameObject.SetActive(false);
+        if (okButton != null) okButton.gameObject.SetActive(false);
         payButton.gameObject.SetActive(true);
         riskButton.gameObject.SetActive(true);
 
@@ -102,9 +107,14 @@ public class EventPopupManager : MonoBehaviour
 
         payButton.onClick.AddListener(() =>
         {
+            UISoundPlayer.Instance.PlayClick();
+
             popupRoot.SetActive(false);
             payButton.gameObject.SetActive(false);
             riskButton.gameObject.SetActive(false);
+
+            UISoundPlayer.Instance.PlayClose();
+
             PauseManager.ResumeGame();
             onPay?.Invoke();
 
@@ -114,9 +124,14 @@ public class EventPopupManager : MonoBehaviour
 
         riskButton.onClick.AddListener(() =>
         {
+            UISoundPlayer.Instance.PlayClick();
+
             popupRoot.SetActive(false);
             payButton.gameObject.SetActive(false);
             riskButton.gameObject.SetActive(false);
+
+            UISoundPlayer.Instance.PlayClose();
+
             PauseManager.ResumeGame();
             onRisk?.Invoke();
 

@@ -3,6 +3,7 @@
 public class TurnController : MonoBehaviour
 {
     public static TurnController Instance { get; private set; }
+
     [System.Serializable]
     public struct DicePair
     {
@@ -31,7 +32,6 @@ public class TurnController : MonoBehaviour
         if (panel != null)
             panel.Hide();
 
-        // wait one frame so SpaceHintUI has run Awake()
         StartCoroutine(InitHint());
     }
 
@@ -43,19 +43,16 @@ public class TurnController : MonoBehaviour
 
     void Update()
     {
-        // Auto-fix for missing follower reference after scene reload
         if (follower == null)
         {
             follower = FindObjectOfType<WaypointFollower>();
             if (follower == null)
-                return; // still null → safely skip frame
+                return;
         }
 
-        // Auto-fix for missing panel (optional)
         if (panel == null)
             panel = FindObjectOfType<DicePanelManager>();
 
-        // blokk telepordi ajal
         if (HorseCarriageUI.Instance != null && HorseCarriageUI.Instance.IsChoosingTile)
             return;
 
@@ -76,20 +73,26 @@ public class TurnController : MonoBehaviour
             // need new roll? -> play GIF then roll
             if (!hasActiveOptions || AllUsed())
             {
-                SpaceHintUI.Show(""); // optional: clear during roll
+                SpaceHintUI.Show("");
                 StartCoroutine(RollWithAnimation());
             }
             else
             {
+                // Paneel lahti
+                UISoundPlayer.Instance.PlayOpen();
+
                 ShowForCurrentState();
-                UpdateOpenHint(); // "Press SPACE to close dice"
+                UpdateOpenHint();
             }
         }
         // PANEL IS VISIBLE -> CLOSE IT
         else
         {
+            // Paneel kinni
+            UISoundPlayer.Instance.PlayClose();
+
             panel.Hide();
-            UpdateClosedHint(); // "Press SPACE to open dice" or "Press SPACE to roll dice"
+            UpdateClosedHint();
         }
     }
 
@@ -138,10 +141,13 @@ public class TurnController : MonoBehaviour
 
         isRollingVisual = true;
 
+        // "Rolling" = paneel avamise tunne (ja hiljem saad siia panna PlayDiceRoll())
+        UISoundPlayer.Instance.PlayOpen();
+
         SpaceHintUI.Show("");
         panel.ShowRolling();
 
-        yield return new WaitForSeconds(1.5f);   // change to 2f if you want longer
+        yield return new WaitForSeconds(1.5f);
 
         RollThreeOptions();
         hasActiveOptions = true;
@@ -149,7 +155,7 @@ public class TurnController : MonoBehaviour
         ShowForCurrentState();
 
         isRollingVisual = false;
-        UpdateOpenHint(); // "Press SPACE to close dice"
+        UpdateOpenHint();
     }
 
     void OnOptionClicked(int index)
@@ -158,22 +164,27 @@ public class TurnController : MonoBehaviour
         if (index < 0 || index > 2) return;
         if (used[index]) return;
 
+        // Nupu klikk
+        UISoundPlayer.Instance.PlayClick();
+
         used[index] = true;
 
         if (panel != null)
+        {
+            // Paneel kinni peale valikut
+            UISoundPlayer.Instance.PlayClose();
             panel.Hide();
+        }
 
         int steps = options[index].Sum;
         if (follower != null)
             follower.MoveSteps(steps);
 
-        // panel is now closed -> update hint depending on whether we still have options
         UpdateClosedHint();
     }
 
     // --- Hint helpers ---
 
-    // Called when panel is CLOSED: what will SPACE do next?
     public void UpdateClosedHint()
     {
         if (!hasActiveOptions || AllUsed())
@@ -182,7 +193,6 @@ public class TurnController : MonoBehaviour
             SpaceHintUI.Show("Press SPACE to open dice");
     }
 
-    // Called when panel is OPEN
     public void UpdateOpenHint()
     {
         SpaceHintUI.Show("Press SPACE to close dice");

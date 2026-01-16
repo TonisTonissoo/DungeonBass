@@ -4,6 +4,8 @@ public class EndMenuUI : MonoBehaviour
 {
     public void ContinueGame()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         // Continue resumes normal board position
         Time.timeScale = 1f;
 
@@ -17,6 +19,8 @@ public class EndMenuUI : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         Debug.Log("[Run Reset] Back to Main Menu → resetting full run...");
 
         Time.timeScale = 1f;

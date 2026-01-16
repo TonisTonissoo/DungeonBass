@@ -9,7 +9,7 @@ public class PauseMenuController : MonoBehaviour
     private bool isPaused = false;
 
     private void Update()
-    {   
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused) ResumeGame();
@@ -19,6 +19,8 @@ public class PauseMenuController : MonoBehaviour
 
     public void PauseGame()
     {
+        UISoundPlayer.Instance.PlayOpen();
+
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -26,6 +28,8 @@ public class PauseMenuController : MonoBehaviour
 
     public void ResumeGame()
     {
+        UISoundPlayer.Instance.PlayClose();
+
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -33,24 +37,32 @@ public class PauseMenuController : MonoBehaviour
 
     public void OpenSettings()
     {
+        UISoundPlayer.Instance.PlayOpen();
+
         pausePanel.SetActive(false);
         settingsPanel.SetActive(true);
     }
 
     public void BackToPause()
     {
+        UISoundPlayer.Instance.PlayClose();
+
         settingsPanel.SetActive(false);
         pausePanel.SetActive(true);
     }
 
     public void BackToMainMenu()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         Time.timeScale = 1f;
         SceneLoader.Load("MainMenu");
     }
 
     public void QuitGame()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         Application.Quit();
     }
 }

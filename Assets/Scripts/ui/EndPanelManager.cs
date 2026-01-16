@@ -26,6 +26,8 @@ public class EndPanelManager : MonoBehaviour
     {
         if (victoryPanel)
         {
+            UISoundPlayer.Instance.PlayOpen();
+
             victoryPanel.SetActive(true);
             Time.timeScale = 0f;
         }
@@ -35,6 +37,8 @@ public class EndPanelManager : MonoBehaviour
     {
         if (gameOverPanel)
         {
+            UISoundPlayer.Instance.PlayOpen();
+
             gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
         }
@@ -42,11 +46,12 @@ public class EndPanelManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         Debug.Log("[Run Reset] Returning to Main Menu → resetting run...");
 
         // Reset PlayerStats
         PlayerStats.Instance.ResetStatsToDefault();
-
 
         // Reset GameLoopManager
         if (GameLoopManager.Instance != null)
@@ -64,5 +69,4 @@ public class EndPanelManager : MonoBehaviour
         // Load Main Menu
         FadeController.Instance.FadeToScene("MainMenu");
     }
-
 }

@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     // DEFAULT VALUES (milleni resetitakse)
     public int maxHealthDefault = 100;
     public int attackPowerDefault = 20;
-    public int startingCoins = 0;
+    public int startingCoins = 100;
     public int startingLoop = 1;
 
     // RUNTIME VALUES (mängus muutuvad)

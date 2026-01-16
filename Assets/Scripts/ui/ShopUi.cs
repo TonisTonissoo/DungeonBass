@@ -16,7 +16,6 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private int attackCost = 75;
     [SerializeField] private int attackIncrease = 5;
 
-
     [Header("Shop Settings")]
     [SerializeField] private int cost = 50;
     [SerializeField] private int hpIncrease = 25;
@@ -31,7 +30,6 @@ public class ShopUI : MonoBehaviour
 
         Instance = this;
 
-        // Alguses peidetud � ilmub ainult kui m�ngija satub Shop-ruudule
         if (panelRoot != null)
             panelRoot.SetActive(false);
     }
@@ -58,6 +56,8 @@ public class ShopUI : MonoBehaviour
             return;
         }
 
+        UISoundPlayer.Instance.PlayOpen();
+
         panelRoot.SetActive(true);
         PauseManager.PauseGame();
         SpaceHintUI.Show("");
@@ -73,6 +73,8 @@ public class ShopUI : MonoBehaviour
             Debug.LogWarning("ShopUI: PanelRoot missing!");
             return;
         }
+
+        UISoundPlayer.Instance.PlayClose();
 
         panelRoot.SetActive(false);
         PauseManager.ResumeGame();
@@ -91,6 +93,8 @@ public class ShopUI : MonoBehaviour
 
     private void BuyHealthUpgrade()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         if (PlayerStats.Instance == null) return;
 
         if (PlayerStats.Instance.SpendCoins(cost))
@@ -98,7 +102,6 @@ public class ShopUI : MonoBehaviour
             PlayerStats.Instance.IncreaseMaxHealth(hpIncrease);
             Debug.Log($"+{hpIncrease} Max HP purchased for {cost} coins!");
 
-            // Uuenda HUD ja poe UI
             HUDController.Instance?.UpdateHUD();
             UpdateCoinsDisplay();
         }
@@ -110,6 +113,8 @@ public class ShopUI : MonoBehaviour
 
     private void BuyAttackUpgrade()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         if (PlayerStats.Instance == null) return;
 
         if (PlayerStats.Instance.SpendCoins(attackCost))
@@ -125,5 +130,4 @@ public class ShopUI : MonoBehaviour
             Debug.Log("Not enough coins to buy attack upgrade!");
         }
     }
-
 }

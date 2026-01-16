@@ -3975,6 +3975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40aa50e1aab1144681a9b46ff86612f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealthDefault: 100
+  attackPowerDefault: 20
+  startingCoins: 100
+  startingLoop: 1
   maxHealth: 100
   currentHealth: 100
   coins: 0
@@ -10784,7 +10788,7 @@ RectTransform:
   m_GameObject: {fileID: 1550857553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.176264, y: 1.171875, z: 1}
+  m_LocalScale: {x: 1.3725452, y: 1.171875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

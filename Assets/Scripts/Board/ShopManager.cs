@@ -17,12 +17,18 @@ public class ShopManager : MonoBehaviour
 
     public void OpenShop()
     {
+        // Paneeli avamise heli
+        UISoundPlayer.Instance.PlayOpen();
+
         // Näita poe UI-d (võime lisada hiljem)
         Debug.Log("Shop opened!");
     }
 
     public void BuyHealthUpgrade(int cost, int healthIncrease)
     {
+        // Nupu klikk
+        UISoundPlayer.Instance.PlayClick();
+
         if (PlayerStats.Instance.SpendCoins(cost))
         {
             PlayerStats.Instance.IncreaseMaxHealth(healthIncrease);

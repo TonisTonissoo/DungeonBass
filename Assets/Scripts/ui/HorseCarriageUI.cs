@@ -26,26 +26,40 @@ public class HorseCarriageUI : MonoBehaviour
     public void OpenPopup(WaypointFollower f)
     {
         follower = f;
+
+        // Paneel lahti
+        UISoundPlayer.Instance.PlayOpen();
+
         panel.SetActive(true);
         SpaceHintUI.Show("");
         IsChoosingTile = false;
 
-        Debug.Log("[HorseCarriage] Popup opened � waiting for player choice.");
+        Debug.Log("[HorseCarriage] Popup opened - waiting for player choice.");
 
         skipButton.onClick.RemoveAllListeners();
         chooseTileButton.onClick.RemoveAllListeners();
 
         skipButton.onClick.AddListener(() =>
         {
-            Debug.Log("[HorseCarriage] Player clicked SKIP � event ignored.");
+            // Nupu klikk
+            UISoundPlayer.Instance.PlayClick();
+
+            Debug.Log("[HorseCarriage] Player clicked SKIP - event ignored.");
             panel.SetActive(false);
+
+            // Paneel kinni
+            UISoundPlayer.Instance.PlayClose();
+
             if (TurnController.Instance != null)
                 TurnController.Instance.UpdateClosedHint();
         });
 
         chooseTileButton.onClick.AddListener(() =>
         {
-            Debug.Log("[HorseCarriage] Player clicked CHOOSE TILE � entering selection mode.");
+            // Nupu klikk
+            UISoundPlayer.Instance.PlayClick();
+
+            Debug.Log("[HorseCarriage] Player clicked CHOOSE TILE - entering selection mode.");
             StartTileSelection();
         });
     }
@@ -53,33 +67,35 @@ public class HorseCarriageUI : MonoBehaviour
     private void StartTileSelection()
     {
         Debug.Log("[HorseCarriage] Forcing tile selection TRUE");
+
+        // Paneel kinni (läheb selection mode)
         panel.SetActive(false);
+        UISoundPlayer.Instance.PlayClose();
 
         IsChoosingTile = true;
 
         if (selectionText != null)
             selectionText.SetActive(true);
 
-
-        Debug.Log("[HorseCarriage] Selection mode ON � waiting for tile click.");
-
+        Debug.Log("[HorseCarriage] Selection mode ON - waiting for tile click.");
     }
 
     public void OnTileClicked(Waypoint wp)
     {
-        if (!IsChoosingTile) 
+        if (!IsChoosingTile)
         {
             Debug.LogWarning("[HorseCarriage] Tile clicked but NOT in selection mode.");
             return;
         }
 
-        Debug.Log($"[HorseCarriage] Tile clicked: {wp.name} � performing teleport.");
+        // Tile klik heli
+        UISoundPlayer.Instance.PlayClick();
+
+        Debug.Log($"[HorseCarriage] Tile clicked: {wp.name} - performing teleport.");
         IsChoosingTile = false;
 
-        // Teleport 
         follower.TeleportTo(wp);
 
-        // Event seal ruudul
         TileEvent te = wp.GetComponent<TileEvent>();
 
         if (te != null)
@@ -87,10 +103,8 @@ public class HorseCarriageUI : MonoBehaviour
         else
             Debug.LogWarning("[HorseCarriage] No TileEvent found on new tile!");
 
-
         te?.TriggerEvent();
 
-        // TurnController tagasi ON
         TurnController tc = FindObjectOfType<TurnController>();
         if (tc != null)
         {
@@ -103,6 +117,6 @@ public class HorseCarriageUI : MonoBehaviour
 
         if (TurnController.Instance != null)
             TurnController.Instance.UpdateClosedHint();
-
     }
+
 }

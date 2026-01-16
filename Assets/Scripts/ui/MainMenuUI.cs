@@ -7,7 +7,8 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayGame()
     {
- 
+        UISoundPlayer.Instance.PlayClick();
+
         PlayerPrefs.DeleteKey("LastTileIndex");
         PlayerPrefs.DeleteKey("BattleResult");
         PlayerPrefs.DeleteKey("LastTileName");
@@ -19,20 +20,25 @@ public class MainMenuUI : MonoBehaviour
 
     public void QuitGame()
     {
+        UISoundPlayer.Instance.PlayClick();
+
         Debug.Log("Quit pressed");
         SceneLoader.QuitGame();
     }
 
     public void OpenSettings()
     {
+        UISoundPlayer.Instance.PlayOpen();
+
         mainButtons.SetActive(false);
         settingsPanel.SetActive(true);
     }
 
     public void CloseSettings()
     {
+        UISoundPlayer.Instance.PlayClose();
+
         settingsPanel.SetActive(false);
         mainButtons.SetActive(true);
     }
 }
-    
