@@ -37,8 +37,9 @@ public class PauseMenuController : MonoBehaviour
 
     public void OpenSettings()
     {
-        UISoundPlayer.Instance.PlayOpen();
 
+        Debug.Log("OpenSettings called. settingsPanel=" + settingsPanel);
+        UISoundPlayer.Instance.PlayOpen();
         pausePanel.SetActive(false);
         settingsPanel.SetActive(true);
     }

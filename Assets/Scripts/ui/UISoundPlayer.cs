@@ -4,6 +4,10 @@ public class UISoundPlayer : MonoBehaviour
 {
     public static UISoundPlayer Instance { get; private set; }
 
+    [Header("Volume")]
+    [SerializeField, Range(0f, 1f)] private float sfxVolume = 1f;
+
+
     [Header("UI & Gameplay Sounds")]
     [SerializeField] private AudioClip click;
     [SerializeField] private AudioClip openPanel;
@@ -43,6 +47,27 @@ public class UISoundPlayer : MonoBehaviour
     private void Play(AudioClip clip)
     {
         if (clip == null || source == null) return;
-        source.PlayOneShot(clip);
+        source.PlayOneShot(clip, sfxVolume);
     }
+
+    private void Start()
+    {
+        // Load SFX volume
+        if (PlayerPrefs.HasKey("sfxVolume"))
+            sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
+    }
+
+    public void SetSFXVolume(float value)
+    {
+        sfxVolume = Mathf.Clamp01(value);
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+        PlayerPrefs.Save();
+    }
+
+    public float GetSFXVolume()
+    {
+        return sfxVolume;
+    }
+
+
 }
