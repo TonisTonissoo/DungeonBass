@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 9c2ec8d9552cf804da96f404b91208f8
+guid: f893cde7166b98846a969f7315faeb8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1692755369612600283
-    second: 4ef1f059-0470-4384-82c1-d65d141d34a6_0
+      213: 339172498047753876
+    second: start_tile_0
+  - first:
+      213: -3328756732019836589
+    second: start_tile_1
+  - first:
+      213: 6169665191878571837
+    second: start_tile_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,12 +106,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4ef1f059-0470-4384-82c1-d65d141d34a6_0
+      name: start_tile_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 1536
+        width: 1513
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 52c1b9eb5ff1288e0800000000000000
-      internalID: -1692755369612600283
+      spriteID: 49ed7b7079bf4b400800000000000000
+      internalID: 339172498047753876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: start_tile_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 735
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35974448361edc1d0800000000000000
+      internalID: -3328756732019836589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: start_tile_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 622
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d37b301cdcd0f9550800000000000000
+      internalID: 6169665191878571837
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      4ef1f059-0470-4384-82c1-d65d141d34a6_0: -1692755369612600283
+      start_tile_0: 339172498047753876
+      start_tile_1: -3328756732019836589
+      start_tile_2: 6169665191878571837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
