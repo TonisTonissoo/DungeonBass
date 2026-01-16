@@ -78,15 +78,12 @@ public class WaypointFollower : MonoBehaviour
         {
             Waypoint previous = current;
 
-            // Get next waypoint (wrap to start if needed)
             Waypoint nextWp = current.GetNext();
             if (nextWp == null)
                 nextWp = start;
 
-            // MOVE to next tile
             current = nextWp;
 
-            // arrival movement
             Vector3 target = current.transform.position;
             while ((transform.position - target).sqrMagnitude > 0.0001f)
             {
@@ -96,7 +93,9 @@ public class WaypointFollower : MonoBehaviour
             }
             transform.position = target;
 
-            // Stop early on the shop tile (18th waypoint) so we always enter the shop
+            // ✅ heli siis kui jõudis tile'i peale
+            UISoundPlayer.Instance?.PlayMove();
+
             bool currIsShop = current != null &&
                               current.tileEvent != null &&
                               current.tileEvent.tileType == TileType.Shop;
@@ -107,38 +106,32 @@ public class WaypointFollower : MonoBehaviour
                 break;
             }
 
-            // CHECK if this tile IS the START tile
             bool currIsStart = current != null &&
                                current.tileEvent != null &&
                                current.tileEvent.tileType == TileType.Start;
 
             if (currIsStart)
             {
-                // Loop increase on reaching START tile
                 PlayerStats.Instance.currentLoop++;
 
-                // Update loop for scaling system
                 if (GameLoopManager.Instance != null)
                     GameLoopManager.Instance.SetLoop(PlayerStats.Instance.currentLoop);
 
-                // Update UI
                 HUDController.Instance?.UpdateHUD();
                 UpdateLoopText();
 
                 Debug.Log("[Loop] Finished loop at START tile → new loop = " + PlayerStats.Instance.currentLoop);
 
-                break; // stop movement exactly on START tile
+                break;
             }
-
-
         }
 
-        // Trigger event of the tile where the movement ended
         if (current != null && gameObject.scene.isLoaded)
             current.TriggerTileEvent();
 
         IsMoving = false;
     }
+
 
     public void StopMovementImmediately()
     {

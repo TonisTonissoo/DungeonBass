@@ -141,8 +141,9 @@ public class TurnController : MonoBehaviour
 
         isRollingVisual = true;
 
-        // "Rolling" = paneel avamise tunne (ja hiljem saad siia panna PlayDiceRoll())
-        UISoundPlayer.Instance.PlayOpen();
+        // Dice roll heli
+        UISoundPlayer.Instance.PlayDiceRoll();
+
 
         SpaceHintUI.Show("");
         panel.ShowRolling();
