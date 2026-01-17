@@ -28,7 +28,7 @@ public class HealthBar : MonoBehaviour
         {
             slider.value = currentHealth / maxHealth;
         }
-        
+
         if (healthText != null)
         {
             healthText.text = $"{Mathf.CeilToInt(currentHealth)} / {Mathf.CeilToInt(maxHealth)}";
@@ -38,5 +38,16 @@ public class HealthBar : MonoBehaviour
         {
             Debug.LogWarning($"[HealthBar] Cannot update text - healthText is null on {gameObject.name}");
         }
+    }
+
+    private void LateUpdate()
+    {
+        // 1. Fix Rotation: Always face the camera upright
+        transform.rotation = Quaternion.identity;
+
+        // REMOVED Scale Fix. 
+        // User reports that prefabs are set up correctly in themselves.
+        // We will trust the hierarchy of the Prefab.
+        // If the prefab has Scale -1, and text has Scale -1 (net +1), it should work.
     }
 }

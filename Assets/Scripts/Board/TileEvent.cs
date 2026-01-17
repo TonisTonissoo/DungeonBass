@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public enum TileType
 {
@@ -16,13 +17,19 @@ public class TileEvent : MonoBehaviour
 {
     public TileType tileType;
 
-    // Võitlussteenid 
-    private static readonly string[] combatScenes = new string[]
-    {
-        "Combat - Beach",
-        "Combat - Desert",
-        "Combat - Forest"
-    };
+    [Header("Random Combat Generation")]
+    [Tooltip("Add all possible encounters for this tile here. The game will pick one randomly.")]
+    public List<CombatEncounter> possibleEncounters;
+
+    [Header("Scaling Settings")]
+    [Tooltip("Start adding +1 enemy at this loop (Brackets: 1-6 = +0, 7-14 = +1).")]
+    public int tier1LoopThreshold = 7;
+
+    [Tooltip("Start adding +2 enemies at this loop (Brackets: 15-20+ = +2).")]
+    public int tier2LoopThreshold = 15;
+
+    [Tooltip("Hard limit on the maximum number of enemies to prevent overcrowding.")]
+    public int maxTotalEnemies = 5;
 
     public void TriggerEvent()
     {
@@ -31,13 +38,73 @@ public class TileEvent : MonoBehaviour
             case TileType.Enemy:
                 Debug.Log("Enemy encounter!");
                 PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
-                PlayerPrefs.Save();
 
-                // Valib suvaliselt ühe combat stseeni
-                string selectedScene = combatScenes[Random.Range(0, combatScenes.Length)];
-                Debug.Log($"Loading random combat scene: {selectedScene}");
-                UISoundPlayer.Instance?.PlayFightStart();
-                FadeController.Instance.FadeToScene(selectedScene);
+                if (possibleEncounters != null && possibleEncounters.Count > 0)
+                {
+                    // 1. Pick a Random Encounter (Random Scene + Random Enemy Type)
+                    CombatEncounter selection = possibleEncounters[Random.Range(0, possibleEncounters.Count)];
+
+                    // 2. Roll for Random Amount of Enemies (Bracket Scaling)
+                    int currentLoop = GameLoopManager.Instance != null ? GameLoopManager.Instance.CurrentLoop : 1;
+
+                    // Brackets Logic: 1-6 (+0), 7-14 (+1), 15-20+ (+2)
+                    int bonus = 0;
+                    if (currentLoop >= tier2LoopThreshold)
+                    {
+                        bonus = 2;
+                    }
+                    else if (currentLoop >= tier1LoopThreshold)
+                    {
+                        bonus = 1;
+                    }
+
+                    int finalMin = selection.minEnemies + bonus;
+                    int finalMax = selection.maxEnemies + bonus;
+
+                    // Safety: Ensure max >= min
+                    if (finalMax < finalMin) finalMax = finalMin;
+
+                    // Safety: Clamp to hard limit
+                    finalMax = Mathf.Min(finalMax, maxTotalEnemies);
+                    finalMin = Mathf.Min(finalMin, finalMax); // Ensure min doesn't exceed capped max
+
+                    int count = Random.Range(finalMin, finalMax + 1);
+
+                    // Clamp to max total enemies
+                    count = Mathf.Min(count, maxTotalEnemies);
+
+                    // 3. Save Data for Combat Scene
+                    // Use GameLoopManager to pass object references (Prefab)
+                    if (GameLoopManager.Instance != null)
+                    {
+                        GameLoopManager.Instance.nextEncounter = selection;
+                        GameLoopManager.Instance.nextEncounterCount = count;
+                    }
+
+                    // Keep PlayerPrefs for scene loading and string-based fallbacks
+                    PlayerPrefs.SetString("NextCombatScene", selection.combatSceneName);
+                    // Deprecated: PlayerPrefs.SetString("NextEnemyType", selection.enemyTypeID); 
+                    PlayerPrefs.SetInt("NextEnemyCount", count);
+                    PlayerPrefs.Save();
+
+                    Debug.Log($"Generated Encounter: {count} enemies in {selection.combatSceneName} (Loop {currentLoop})");
+
+                    // 4. Load the scene defined in the data
+                    // Transition with Zoom if CameraController is present
+                    if (BoardCameraController.Instance != null)
+                    {
+                        BoardCameraController.Instance.TriggerBattleTransition(selection.combatSceneName);
+                    }
+                    else
+                    {
+                        UISoundPlayer.Instance?.PlayFightStart();
+                        FadeController.Instance.FadeToScene(selection.combatSceneName);
+                    }
+                }
+                else
+                {
+                    Debug.LogError($"Tile {gameObject.name} has no Encounter Data assigned!");
+                }
                 break;
 
             case TileType.Shop:
@@ -51,25 +118,19 @@ public class TileEvent : MonoBehaviour
             case TileType.Rest:
                 Debug.Log("Rest event triggered!");
 
-                int coinsGained = Random.Range(10, 26); // 10–25 münti
+                int coinsGained = Random.Range(10, 26);
                 PlayerStats.Instance.AddCoins(coinsGained);
 
                 HUDController.Instance?.UpdateHUD();
 
-                // Kui sul on EventPopupManager (popup tekstiks)
                 if (EventPopupManager.Instance != null)
-                {
                     EventPopupManager.Instance.ShowEvent($"You found {coinsGained} coins while resting!");
-                }
                 else
-                {
                     Debug.Log($"You found {coinsGained} coins while resting!");
-                }
                 break;
 
             case TileType.Bandit:
                 Debug.Log("Bandit event triggered!");
-
                 int banditCost = 30;
                 int riskLoss = 60;
 
@@ -85,7 +146,7 @@ public class TileEvent : MonoBehaviour
                             {
                                 PlayerStats.Instance.SpendCoins(banditCost);
                                 HUDController.Instance?.UpdateHUD();
-                                EventPopupManager.Instance.ShowEvent($"You paid the bandits {banditCost} coins and they let you pass.");
+                                EventPopupManager.Instance.ShowEvent($"You paid the bandits {banditCost} coins.");
                             }
                             else
                             {
@@ -173,7 +234,7 @@ public class TileEvent : MonoBehaviour
 
                         message = $"A hidden trap injures you! Your max HP decreased by {damage}!";
                         break;
-    
+
                     case 3:
                         int coinLoss = Random.Range(10, 26);
                         PlayerStats.Instance.coins = Mathf.Max(0, PlayerStats.Instance.coins - coinLoss);
@@ -222,15 +283,24 @@ public class TileEvent : MonoBehaviour
                     // Save current waypoint index EXACTLY like normal enemy fights
                     PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
                     PlayerPrefs.Save();
-                    UISoundPlayer.Instance?.PlayFightStart();
-                    FadeController.Instance.FadeToScene("BossFightScene");
+
+                    // Transition with Zoom
+                    if (BoardCameraController.Instance != null)
+                    {
+                        BoardCameraController.Instance.TriggerBattleTransition("BossFightScene");
+                    }
+                    else
+                    {
+                        UISoundPlayer.Instance?.PlayFightStart();
+                        FadeController.Instance.FadeToScene("BossFightScene");
+                    }
                 }
                 else
                 {
                     Debug.Log("[StartTile] No boss yet.");
                 }
                 break;
-    
+
 
 
         }
