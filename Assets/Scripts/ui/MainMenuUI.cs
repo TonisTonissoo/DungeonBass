@@ -32,6 +32,8 @@ public class MainMenuUI : MonoBehaviour
 
         mainButtons.SetActive(false);
         settingsPanel.SetActive(true);
+
+        settingsPanel.transform.SetAsLastSibling();
     }
 
     public void CloseSettings()

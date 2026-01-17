@@ -36,7 +36,7 @@ public class TileEvent : MonoBehaviour
                 // Valib suvaliselt ühe combat stseeni
                 string selectedScene = combatScenes[Random.Range(0, combatScenes.Length)];
                 Debug.Log($"Loading random combat scene: {selectedScene}");
-                
+                UISoundPlayer.Instance?.PlayFightStart();
                 FadeController.Instance.FadeToScene(selectedScene);
                 break;
 
@@ -222,7 +222,7 @@ public class TileEvent : MonoBehaviour
                     // Save current waypoint index EXACTLY like normal enemy fights
                     PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
                     PlayerPrefs.Save();
-
+                    UISoundPlayer.Instance?.PlayFightStart();
                     FadeController.Instance.FadeToScene("BossFightScene");
                 }
                 else

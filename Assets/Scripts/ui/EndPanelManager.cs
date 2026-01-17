@@ -26,7 +26,7 @@ public class EndPanelManager : MonoBehaviour
     {
         if (victoryPanel)
         {
-            UISoundPlayer.Instance.PlayOpen();
+            UISoundPlayer.Instance?.PlayVictory();
 
             victoryPanel.SetActive(true);
             Time.timeScale = 0f;
@@ -37,7 +37,7 @@ public class EndPanelManager : MonoBehaviour
     {
         if (gameOverPanel)
         {
-            UISoundPlayer.Instance.PlayOpen();
+            UISoundPlayer.Instance?.PlayDefeat();
 
             gameOverPanel.SetActive(true);
             Time.timeScale = 0f;

@@ -93,12 +93,11 @@ public class ShopUI : MonoBehaviour
 
     private void BuyHealthUpgrade()
     {
-        UISoundPlayer.Instance.PlayClick();
-
         if (PlayerStats.Instance == null) return;
 
         if (PlayerStats.Instance.SpendCoins(cost))
         {
+            UISoundPlayer.Instance.PlayShopBuy();
             PlayerStats.Instance.IncreaseMaxHealth(hpIncrease);
             Debug.Log($"+{hpIncrease} Max HP purchased for {cost} coins!");
 
@@ -107,18 +106,18 @@ public class ShopUI : MonoBehaviour
         }
         else
         {
+            UISoundPlayer.Instance.PlayNoMoney();
             Debug.Log("Not enough coins to buy upgrade!");
         }
     }
 
     private void BuyAttackUpgrade()
     {
-        UISoundPlayer.Instance.PlayClick();
-
         if (PlayerStats.Instance == null) return;
 
         if (PlayerStats.Instance.SpendCoins(attackCost))
         {
+            UISoundPlayer.Instance.PlayShopBuy();
             PlayerStats.Instance.IncreaseAttackPower(attackIncrease);
             Debug.Log($"+{attackIncrease} Attack Power purchased for {attackCost} coins!");
 
@@ -127,6 +126,7 @@ public class ShopUI : MonoBehaviour
         }
         else
         {
+            UISoundPlayer.Instance.PlayNoMoney();
             Debug.Log("Not enough coins to buy attack upgrade!");
         }
     }

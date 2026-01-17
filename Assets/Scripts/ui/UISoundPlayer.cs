@@ -16,6 +16,17 @@ public class UISoundPlayer : MonoBehaviour
     [SerializeField] private AudioClip diceRoll;
     [SerializeField] private AudioClip move;
 
+    [Header("Shop Sounds")]
+    [SerializeField] private AudioClip shopBuy;
+    [SerializeField] private AudioClip noMoney;
+
+    [Header("Fight")]
+    [SerializeField] private AudioClip fightStart;
+
+    [Header("Fight Results")]
+    [SerializeField] private AudioClip victory;
+    [SerializeField] private AudioClip defeat;
+
 
     private AudioSource source;
 
@@ -43,6 +54,14 @@ public class UISoundPlayer : MonoBehaviour
 
     public void PlayOpen() => Play(openPanel);
     public void PlayClose() => Play(closePanel);
+
+    public void PlayShopBuy() => Play(shopBuy);
+    public void PlayNoMoney() => Play(noMoney);
+
+    public void PlayFightStart() => Play(fightStart);
+
+    public void PlayVictory() => Play(victory);
+    public void PlayDefeat() => Play(defeat);
 
     private void Play(AudioClip clip)
     {
