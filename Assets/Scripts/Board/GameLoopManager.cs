@@ -9,6 +9,10 @@ public class GameLoopManager : MonoBehaviour
     public int CurrentLoop { get; private set; } = 1;
     public int MaxLoops => maxLoops;
 
+    // Data for the next combat encounter
+    public CombatEncounter nextEncounter;
+    public int nextEncounterCount;
+
     private void Awake()
     {
         if (Instance != null)

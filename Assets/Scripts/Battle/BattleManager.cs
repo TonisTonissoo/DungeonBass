@@ -14,6 +14,16 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private string victorySceneName = "Victory";
     [SerializeField] private string gameOverSceneName = "GameOver";
 
+    [Header("Spawning")]
+    [Tooltip("Points where enemies will be spawned. If empty, will try to use positions of pre-placed enemies.")]
+    public List<Transform> spawnPoints;
+
+    [Tooltip("Default Y height for procedurally spawned enemies (if no spawn points found).")]
+    public float defaultSpawnY = -2f;
+
+    [Tooltip("Horizontal spacing between procedurally spawned enemies.")]
+    public float spawnSpacing = 3.5f;
+
     [SerializeField] private float musicVolume = 1f;
 
     [Header("Scene Load Delay (optional)")]
@@ -21,6 +31,8 @@ public class BattleManager : MonoBehaviour
 
     void Start()
     {
+        SpawnEnemiesFromData();
+
         // Validate setup
         if (player == null)
         {
@@ -163,15 +175,108 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    private void SpawnEnemiesFromData()
+    {
+        if (GameLoopManager.Instance != null && GameLoopManager.Instance.nextEncounter != null && GameLoopManager.Instance.nextEncounterCount > 0)
+        {
+            CombatEncounter encounter = GameLoopManager.Instance.nextEncounter;
+            int count = GameLoopManager.Instance.nextEncounterCount;
+
+            // 1. Capture positions from existing enemies if spawnPoints is empty
+            if ((spawnPoints == null || spawnPoints.Count == 0) && enemies.Count > 0)
+            {
+                if (spawnPoints == null) spawnPoints = new List<Transform>();
+                foreach (var e in enemies)
+                {
+                    if (e != null) spawnPoints.Add(e.transform);
+                }
+            }
+
+            // 2. Clear existing enemies
+            for (int i = enemies.Count - 1; i >= 0; i--)
+            {
+                if (enemies[i] != null) Destroy(enemies[i].gameObject);
+            }
+            enemies.Clear();
+
+            // 3. Spawn new enemies
+            for (int i = 0; i < count; i++)
+            {
+                // Determine which prefab to use for THIS enemy
+                GameObject prefabToSpawn = null;
+
+                // Priority 1: Pick random from list
+                if (encounter.enemyPrefabs != null && encounter.enemyPrefabs.Count > 0)
+                {
+                    prefabToSpawn = encounter.enemyPrefabs[Random.Range(0, encounter.enemyPrefabs.Count)];
+                }
+
+                if (prefabToSpawn == null)
+                {
+                    Debug.LogWarning($"BattleManager: Could not resolve enemy prefab for encounter {encounter.name}");
+                    continue;
+                }
+
+                Vector3 spawnPos = Vector3.zero;
+
+                if (spawnPoints != null && spawnPoints.Count > 0)
+                {
+                    // Cycle through spawn points
+                    Transform point = spawnPoints[i % spawnPoints.Count];
+                    spawnPos = point.position;
+
+                    // Add offset if we are looping through points (multiple enemies on same point)
+                    if (i >= spawnPoints.Count)
+                    {
+                        // Simple offset to avoid perfect overlap.
+                        // Assuming 2D, offset on X or Y depending on game style.
+                        // We use spawnSpacing / 2 to keep them somewhat grouped but distinct.
+                        spawnPos += new Vector3((spawnSpacing * 0.75f) * (i / spawnPoints.Count), 0, 0);
+                    }
+                }
+                else
+                {
+                    // Procedural fallback: Right side of screen
+                    // Start at X=3, then add spacing.
+                    spawnPos = new Vector3(3f + (i * spawnSpacing), defaultSpawnY, 0f);
+                }
+
+                // Use the PREFAB'S rotation, not Identity. This ensures any pre-configured rotation (like facing left) is preserved.
+                GameObject newEnemyObj = Instantiate(prefabToSpawn, spawnPos, prefabToSpawn.transform.rotation);
+
+                // No manual scale manipulation needed in BattleManager. 
+                // We rely on the Prefab being set up correctly.
+
+                Unit newEnemyUnit = newEnemyObj.GetComponent<Unit>();
+
+                if (newEnemyUnit != null)
+                {
+                    enemies.Add(newEnemyUnit);
+                    // Rename for clarity in hierarchy
+                    newEnemyObj.name = $"{prefabToSpawn.name} {i + 1}";
+                }
+            }
+
+            Debug.Log($"BattleManager: Spawned {count} enemies from encounter {encounter.name}.");
+
+            // Clear the data so it doesn't persist for other battles (unless intended)
+            // Actually, let's keep it in GameLoopManager until overwritten, 
+            // but BattleManager consumes it once per Start.
+            // It is safer to clear it to prevent accidental respawn on scene reload if logic changes.
+            GameLoopManager.Instance.nextEncounter = null;
+            GameLoopManager.Instance.nextEncounterCount = 0;
+        }
+    }
+
     private bool IsFinalBossFight()
     {
         bool isBossScene = SceneManager.GetActiveScene().name == bossSceneName;
 
         // loop check: PlayerStats.currentLoop vs GameLoopManager.maxLoops
         bool isFinalLoop =
-            GameLoopManager.Instance != null &&
-            PlayerStats.Instance != null &&
-            GameLoopManager.Instance.IsFinalLoop(PlayerStats.Instance.currentLoop);
+                GameLoopManager.Instance != null &&
+                PlayerStats.Instance != null &&
+                GameLoopManager.Instance.IsFinalLoop(PlayerStats.Instance.currentLoop);
 
         return isBossScene && isFinalLoop;
     }

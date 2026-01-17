@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 4
+  possibleEncounters: []
 --- !u!61 &6426705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -873,6 +874,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
 --- !u!61 &90490592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1205,6 +1208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
 --- !u!61 &126624047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2129,6 +2134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
 --- !u!61 &301498362
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2558,6 +2565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!61 &401252944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2800,6 +2808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
 --- !u!61 &420984419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3042,6 +3052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &441160681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3313,6 +3324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
 --- !u!61 &486557194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3739,6 +3752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &519430012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3993,6 +4007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &551001052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4242,6 +4257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &560402797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4968,6 +4984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!61 &675132522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5089,6 +5106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
 --- !u!61 &695284150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6450,6 +6469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!61 &832845013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6571,6 +6591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
 --- !u!61 &832948772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6900,6 +6922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
 --- !u!61 &884280040
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7382,6 +7406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!61 &912005338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7503,6 +7528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!61 &912819238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7688,6 +7714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!61 &964800187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8078,6 +8105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
 --- !u!61 &980975027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8199,6 +8228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
 --- !u!61 &1012568908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8456,6 +8487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
 --- !u!61 &1039287384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8577,6 +8610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
 --- !u!61 &1042121572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9021,6 +9056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!61 &1169562456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9665,6 +9701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 3
+  possibleEncounters: []
 --- !u!61 &1294733936
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9993,6 +10030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &1372771083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11048,6 +11086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 1
+  possibleEncounters: []
 --- !u!61 &1474957979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12265,6 +12304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 5
+  possibleEncounters: []
 --- !u!222 &1660497425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12571,6 +12611,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
 --- !u!61 &1686752386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13253,6 +13295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 7
+  possibleEncounters: []
 --- !u!61 &1864663656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13374,6 +13417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &1866176091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14094,6 +14138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
 --- !u!61 &1932755114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14215,6 +14261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &1947958420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14703,6 +14750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLoops: 20
+  nextEncounter: {fileID: 0}
+  nextEncounterCount: 0
 --- !u!1 &2044205546
 GameObject:
   m_ObjectHideFlags: 0
@@ -14898,6 +14947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
 --- !u!61 &2062556803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15448,6 +15499,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  possibleEncounters:
+  - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
 --- !u!61 &2106727613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15569,6 +15622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  possibleEncounters: []
 --- !u!61 &2113260304
 BoxCollider2D:
   m_ObjectHideFlags: 0
