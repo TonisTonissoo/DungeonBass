@@ -34,10 +34,13 @@ public class HUDController : MonoBehaviour
 
         // Always read loop from PlayerStats (single source of truth)
         int loop = PlayerStats.Instance != null ? PlayerStats.Instance.currentLoop : 1;
+        int maxLoops = 20; // fallback
+        if (GameLoopManager.Instance != null)
+            maxLoops = GameLoopManager.Instance.MaxLoops;
 
         if (healthText) healthText.text = $"Health: {health}";
         if (coinsText) coinsText.text = $"Coins: {coins}";
-        if (loopText) loopText.text = $"Loop: {loop}/20";
+        if (loopText) loopText.text = $"Loop: {loop}/{maxLoops}";
     }
 
     public void SetHealth(int value)

@@ -14702,7 +14702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd699bd09ecbb054f9f706c7c86ebc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLoops: 2
+  maxLoops: 20
 --- !u!1 &2044205546
 GameObject:
   m_ObjectHideFlags: 0
