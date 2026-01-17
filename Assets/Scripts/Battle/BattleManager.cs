@@ -1,12 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
     public Unit player;
     public List<Unit> enemies = new List<Unit>();
     private bool battleActive = true;
+
+    [Header("Final Boss (Loop End)")]
+    [SerializeField] private string bossSceneName = "BossFightScene";
+    [SerializeField] private string victorySceneName = "Victory";
+    [SerializeField] private string gameOverSceneName = "GameOver";
+
+    [SerializeField] private float musicVolume = 1f;
+
+    [Header("Scene Load Delay (optional)")]
+    [SerializeField] private float loadDelaySeconds = 0.75f;
 
     void Start()
     {
@@ -47,12 +58,28 @@ public class BattleManager : MonoBehaviour
                 yield break;
             }
 
+            // ---------------------------
+            // LOSS CHECK
+            // ---------------------------
             if (!player.IsAlive())
             {
                 Debug.Log("Player lost!");
-                EndPanelManager.Instance.ShowGameOver();
+
+                bool isFinalBossFight = IsFinalBossFight();
+
                 PlayerPrefs.SetString("BattleResult", "Lose");
                 PlayerPrefs.Save();
+
+                if (isFinalBossFight)
+                {
+                    // FINAL BOSS LOSE -> load GameOver scene + music
+                    UISoundPlayer.Instance?.PlayDefeat();
+                    yield return StartCoroutine(LoadSceneAfterDelay(gameOverSceneName));
+                    yield break;
+                }
+
+                // Default (nagu enne)
+                EndPanelManager.Instance.ShowGameOver();
                 yield break;
             }
 
@@ -65,7 +92,9 @@ public class BattleManager : MonoBehaviour
                 }
             }
 
-            // Check for victory
+            // ---------------------------
+            // VICTORY CHECK
+            // ---------------------------
             if (enemies.Count == 0)
             {
                 Debug.Log("Player won!");
@@ -77,9 +106,33 @@ public class BattleManager : MonoBehaviour
                 PlayerStats.Instance.HealToFull();
                 HUDController.Instance?.UpdateHUD();
 
-                EndPanelManager.Instance.ShowVictory();
+                bool isBossScene = SceneManager.GetActiveScene().name == bossSceneName;
+
                 PlayerPrefs.SetString("BattleResult", "Win");
                 PlayerPrefs.Save();
+
+                if (isBossScene)
+                {
+                    // Kui see on boss fight, siis boardi taastamise lipp (nagu sul varem)
+                    // AGA final boss win korral pole seda enam vaja, sest me läheme VictoryScene'i
+                    bool isFinalBossFight = IsFinalBossFight();
+
+                    if (isFinalBossFight)
+                    {
+                        // FINAL BOSS WIN -> load Victory scene + music
+                        UISoundPlayer.Instance?.PlayVictory();
+                        yield return StartCoroutine(LoadSceneAfterDelay(victorySceneName));
+                        yield break;
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetInt("ReturnAfterBoss", 1);
+                        PlayerPrefs.Save();
+                    }
+                }
+
+                // Default (nagu enne)
+                EndPanelManager.Instance.ShowVictory();
                 yield break;
             }
 
@@ -96,7 +149,7 @@ public class BattleManager : MonoBehaviour
             // --- Enemies' Turn ---
             // Create a snapshot to safely iterate even if enemies die
             List<Unit> enemiesToAttack = new List<Unit>(enemies);
-            
+
             foreach (Unit enemy in enemiesToAttack)
             {
                 // Ensure both units are still valid and alive
@@ -108,6 +161,28 @@ public class BattleManager : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    private bool IsFinalBossFight()
+    {
+        bool isBossScene = SceneManager.GetActiveScene().name == bossSceneName;
+
+        // loop check: PlayerStats.currentLoop vs GameLoopManager.maxLoops
+        bool isFinalLoop =
+            GameLoopManager.Instance != null &&
+            PlayerStats.Instance != null &&
+            GameLoopManager.Instance.IsFinalLoop(PlayerStats.Instance.currentLoop);
+
+        return isBossScene && isFinalLoop;
+    }
+
+    private IEnumerator LoadSceneAfterDelay(string sceneName)
+    {
+        if (loadDelaySeconds > 0f)
+            yield return new WaitForSeconds(loadDelaySeconds);
+
+        // Kasuta sinu olemasolevat loaderit
+        SceneLoader.Load(sceneName);
     }
 
     private Unit SelectPlayerTarget()

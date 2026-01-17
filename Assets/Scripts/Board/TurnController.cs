@@ -198,4 +198,34 @@ public class TurnController : MonoBehaviour
     {
         SpaceHintUI.Show("Press SPACE to close dice");
     }
+
+    public static void ResetDiceState()
+    {
+        // nulli kogu static dice state
+        for (int i = 0; i < 3; i++)
+        {
+            options[i] = new DicePair(0, 0);
+            used[i] = false;
+        }
+
+        hasActiveOptions = false;
+        isRollingVisual = false;
+
+        Debug.Log("[TurnController] ResetDiceState (static) done");
+    }
+
+    public void ResetRuntimeUI()
+    {
+        StopAllCoroutines();
+
+        if (panel == null)
+            panel = FindObjectOfType<DicePanelManager>(true);
+
+        if (panel != null)
+            panel.ResetDiceUI();
+
+        UpdateClosedHint();
+    }
+
+
 }

@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class DicePanelManager : MonoBehaviour
@@ -11,6 +11,12 @@ public class DicePanelManager : MonoBehaviour
     public DiceOptionUI[] optionsUI;  // Option1, Option2, Option3
 
     public bool IsVisible => panelRoot && panelRoot.activeSelf;
+
+    void Awake()
+    {
+        // Kindluse mõttes pane alati startis nulli
+        ResetDiceUI();
+    }
 
     public void SetHeader(string text)
     {
@@ -49,6 +55,35 @@ public class DicePanelManager : MonoBehaviour
 
     public void Hide()
     {
+        if (panelRoot) panelRoot.SetActive(false);
+    }
+
+    // ✅ FULL UI RESET for dice panel
+    public void ResetDiceUI()
+    {
+        // Header
+        if (headerText) headerText.text = "";
+
+        // Roots
+        if (rollingRoot) rollingRoot.SetActive(false);
+        if (optionsRoot) optionsRoot.SetActive(false);
+
+        // Options
+        if (optionsUI != null)
+        {
+            foreach (var opt in optionsUI)
+            {
+                if (opt == null) continue;
+
+                if (opt.button != null)
+                    opt.button.onClick.RemoveAllListeners();
+
+                opt.SetUsedVisual(false);
+                opt.gameObject.SetActive(false);
+            }
+        }
+
+        // Panel off
         if (panelRoot) panelRoot.SetActive(false);
     }
 }

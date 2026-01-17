@@ -9,14 +9,12 @@ public class MainMenuUI : MonoBehaviour
     {
         UISoundPlayer.Instance.PlayClick();
 
-        PlayerPrefs.DeleteKey("LastTileIndex");
-        PlayerPrefs.DeleteKey("BattleResult");
-        PlayerPrefs.DeleteKey("LastTileName");
-        PlayerPrefs.Save();
+        RunResetter.FullReset();
 
         SceneLoader.Load("DungeonBoard");
         Debug.Log("Play pressed");
     }
+
 
     public void QuitGame()
     {

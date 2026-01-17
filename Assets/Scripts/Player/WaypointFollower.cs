@@ -11,6 +11,11 @@ public class WaypointFollower : MonoBehaviour
     [Header("Loop Counter UI (optional)")]
     public TextMeshProUGUI loopText;   // drag your UI text here
 
+    [Header("DEBUG (optional)")]
+    [SerializeField] private bool debugStartAtLoop = false;
+    [SerializeField] private int debugLoopValue = 19;
+
+
     private Waypoint current;
 
     void Start()
@@ -53,11 +58,21 @@ public class WaypointFollower : MonoBehaviour
         }
 
         // 3) Mängu täiesti uus algus
+        // 3) Mängu täiesti uus algus
         current = start;
         transform.position = start.transform.position;
 
+        if (debugStartAtLoop && PlayerStats.Instance != null)
+        {
+            PlayerStats.Instance.currentLoop = debugLoopValue;
+            GameLoopManager.Instance?.SetLoop(debugLoopValue);
+            HUDController.Instance?.UpdateHUD();
+            Debug.Log($"[DEBUG] Fresh start forced to loop {debugLoopValue}");
+        }
+
         Debug.Log("[Follower] Fresh start.");
         UpdateLoopText();
+
     }
 
 

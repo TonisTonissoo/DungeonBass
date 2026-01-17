@@ -583,6 +583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7a3ed0dbd705147aa4596ffe128232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 184871506}
+  continueButton: {fileID: 0}
 --- !u!1 &420388506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7a3ed0dbd705147aa4596ffe128232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 0}
+  continueButton: {fileID: 0}
 --- !u!1001 &2091909746
 PrefabInstance:
   m_ObjectHideFlags: 0

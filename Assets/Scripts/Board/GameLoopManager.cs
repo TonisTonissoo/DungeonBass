@@ -4,7 +4,10 @@ public class GameLoopManager : MonoBehaviour
 {
     public static GameLoopManager Instance;
 
+    [SerializeField] private int maxLoops = 20;
+
     public int CurrentLoop { get; private set; } = 1;
+    public int MaxLoops => maxLoops;
 
     private void Awake()
     {
@@ -21,4 +24,7 @@ public class GameLoopManager : MonoBehaviour
     {
         CurrentLoop = Mathf.Max(1, loop);
     }
+
+    public bool IsFinalLoop(int loop) => loop >= maxLoops;
+    public bool IsFinalLoop() => CurrentLoop >= maxLoops;
 }

@@ -17,6 +17,14 @@ public class EndMenuUI : MonoBehaviour
         SceneLoader.Load("DungeonBoard");
     }
 
+    public void Respawn()
+    {
+        UISoundPlayer.Instance.PlayClick();
+
+        RunResetter.FullReset();          // ✅ full reset (stats + loop + prefs)
+        SceneLoader.Load("DungeonBoard"); // ✅ uus run
+    }
+
     public void BackToMainMenu()
     {
         UISoundPlayer.Instance.PlayClick();
@@ -31,17 +39,25 @@ public class EndMenuUI : MonoBehaviour
         if (PlayerStats.Instance != null)
             PlayerStats.Instance.ResetStatsToDefault();
 
-        // Reset Loop manager
+        // Reset Loop manager + loop counter
         if (GameLoopManager.Instance != null)
             GameLoopManager.Instance.SetLoop(1);
+
+        if (PlayerStats.Instance != null)
+            PlayerStats.Instance.currentLoop = 1;
 
         // Clear any tile-based data
         PlayerPrefs.DeleteKey("LastTileIndex");
         PlayerPrefs.DeleteKey("ReturnAfterBoss");
         PlayerPrefs.DeleteKey("BattleResult");
+
+        // (optional) kui sul on muid run’i state key’sid, siis lisa siia
+        // PlayerPrefs.DeleteKey("SomeOtherRunKey");
+
         PlayerPrefs.Save();
 
         // Load main menu
         SceneLoader.Load("MainMenu");
     }
+
 }

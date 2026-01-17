@@ -10601,6 +10601,8 @@ MonoBehaviour:
   start: {fileID: 1864663653}
   moveSpeed: 4
   loopText: {fileID: 1740911508}
+  debugStartAtLoop: 0
+  debugLoopValue: 19
 --- !u!114 &1434384141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11749,7 +11751,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1561693161
@@ -14700,6 +14702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd699bd09ecbb054f9f706c7c86ebc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLoops: 2
 --- !u!1 &2044205546
 GameObject:
   m_ObjectHideFlags: 0
@@ -15817,3 +15820,4 @@ SceneRoots:
   - {fileID: 551002837}
   - {fileID: 1984793982}
   - {fileID: 2096679204}
+  - {fileID: 1550857554}
