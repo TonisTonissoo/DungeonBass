@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 176831879872421698}
   - component: {fileID: 3611693201160608741}
   - component: {fileID: 1681495973958875786}
+  - component: {fileID: 7101067014672736207}
   m_Layer: 0
   m_Name: BossMinion 1
   m_TagString: Untagged
@@ -509,10 +510,24 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: b963d69415d6b2145b86cc1f7e375c98, type: 3}
   criticalHitSound: {fileID: 8300000, guid: 5b67a59d94ed11f4082b026df914fd5c, type: 3}
   deathSound: {fileID: 8300000, guid: ddf8762c25a7c814384d670eb0a0b6b2, type: 3}
-  hitSoundVolume: 2
-  criticalHitSoundVolume: 2
-  deathSoundVolume: 2
+  hitSoundVolume: 1
+  criticalHitSoundVolume: 1
+  deathSoundVolume: 1
   healthBar: {fileID: 8774520961819343283}
+--- !u!114 &7101067014672736207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147970757720089702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc215725fbac25419945dfb1e38639a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpPerLoop: 0.15
+  attackPerLoop: 0.1
 --- !u!1 &8784767751537743943
 GameObject:
   m_ObjectHideFlags: 0
