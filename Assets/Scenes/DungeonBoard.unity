@@ -182,6 +182,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 4
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &6426705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -876,6 +879,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &90490592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1210,6 +1216,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &126624047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2136,6 +2145,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &301498362
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2566,6 +2578,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &401252944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2810,6 +2825,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &420984419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3053,6 +3071,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &441160681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3326,6 +3347,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &486557194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3753,6 +3777,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &519430012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4008,6 +4035,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &551001052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4258,6 +4288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &560402797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4330,6 +4363,7 @@ GameObject:
   - component: {fileID: 600557908}
   - component: {fileID: 600557911}
   - component: {fileID: 600557912}
+  - component: {fileID: 600557913}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4471,6 +4505,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &600557913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600557907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d758a66e2f263478aef213906f6f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetZoomMultiplier: 0.2
+  zoomDuration: 0.7
 --- !u!1 &630873499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,6 +5033,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &675132522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5108,6 +5159,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &695284150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6470,6 +6524,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &832845013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6593,6 +6650,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &832948772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6924,6 +6984,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &884280040
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7407,6 +7470,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &912005338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7529,6 +7595,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &912819238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7715,6 +7784,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &964800187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8107,6 +8179,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &980975027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8230,6 +8305,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1012568908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8489,6 +8567,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1039287384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8612,6 +8693,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1042121572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9057,6 +9141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1169562456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9537,6 +9624,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262333378}
   m_CullTransparentMesh: 1
+--- !u!1 &1282668786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282668788}
+  - component: {fileID: 1282668787}
+  m_Layer: 0
+  m_Name: BoardBackgroundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1282668787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282668786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d94fdb8c191b64ca09fda7764bd629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundRenderer: {fileID: 2096679203}
+  fadeDuration: 0.5
+  regions:
+  - regionName: Forest
+    backgroundSprite: {fileID: -2154590256400454780, guid: dcc2ed51d1ff9844a976593436b21f0c, type: 3}
+    startTileIndex: 0
+    endTileIndex: 11
+  - regionName: Desert
+    backgroundSprite: {fileID: 130452656225014213, guid: 929e40e6c1779f343b91fd5ba7605173, type: 3}
+    startTileIndex: 12
+    endTileIndex: 24
+  - regionName: Beach
+    backgroundSprite: {fileID: -3260171324595997514, guid: 4336f2b622c89ac4089961b41927b809, type: 3}
+    startTileIndex: 25
+    endTileIndex: 35
+--- !u!4 &1282668788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282668786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.90783435, y: 0.3024196, z: -3.4972472}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1285876471
 GameObject:
   m_ObjectHideFlags: 0
@@ -9702,6 +9848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 3
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1294733936
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10031,6 +10180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1372771083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11087,6 +11239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 1
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1474957979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12305,6 +12460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 5
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!222 &1660497425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12613,6 +12771,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: f8700332a0eefea40b0a041c1cc6aaca, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1686752386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13296,6 +13457,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 7
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1864663656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13418,6 +13582,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1866176091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14140,6 +14307,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 9eecd72475525e84f9ff9f46bee24225, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1932755114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14262,6 +14432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &1947958420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14949,6 +15122,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &2062556803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15411,7 +15587,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2154590256400454780, guid: dcc2ed51d1ff9844a976593436b21f0c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15419,7 +15595,7 @@ SpriteRenderer:
   m_Size: {x: 15.36, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2096679204
@@ -15501,6 +15677,9 @@ MonoBehaviour:
   tileType: 0
   possibleEncounters:
   - {fileID: 11400000, guid: 517d1f990ba804b4389c28ab43225a10, type: 2}
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &2106727613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15623,6 +15802,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 2
   possibleEncounters: []
+  tier1LoopThreshold: 7
+  tier2LoopThreshold: 15
+  maxTotalEnemies: 5
 --- !u!61 &2113260304
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15875,3 +16057,4 @@ SceneRoots:
   - {fileID: 1984793982}
   - {fileID: 2096679204}
   - {fileID: 1550857554}
+  - {fileID: 1282668788}

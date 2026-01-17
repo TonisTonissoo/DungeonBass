@@ -90,8 +90,16 @@ public class TileEvent : MonoBehaviour
                     Debug.Log($"Generated Encounter: {count} enemies in {selection.combatSceneName} (Loop {currentLoop})");
 
                     // 4. Load the scene defined in the data
-                    UISoundPlayer.Instance?.PlayFightStart();
-                    FadeController.Instance.FadeToScene(selection.combatSceneName);
+                    // Transition with Zoom if CameraController is present
+                    if (BoardCameraController.Instance != null)
+                    {
+                        BoardCameraController.Instance.TriggerBattleTransition(selection.combatSceneName);
+                    }
+                    else
+                    {
+                        UISoundPlayer.Instance?.PlayFightStart();
+                        FadeController.Instance.FadeToScene(selection.combatSceneName);
+                    }
                 }
                 else
                 {
@@ -275,8 +283,17 @@ public class TileEvent : MonoBehaviour
                     // Save current waypoint index EXACTLY like normal enemy fights
                     PlayerPrefs.SetInt("LastTileIndex", transform.GetSiblingIndex());
                     PlayerPrefs.Save();
-                    UISoundPlayer.Instance?.PlayFightStart();
-                    FadeController.Instance.FadeToScene("BossFightScene");
+
+                    // Transition with Zoom
+                    if (BoardCameraController.Instance != null)
+                    {
+                        BoardCameraController.Instance.TriggerBattleTransition("BossFightScene");
+                    }
+                    else
+                    {
+                        UISoundPlayer.Instance?.PlayFightStart();
+                        FadeController.Instance.FadeToScene("BossFightScene");
+                    }
                 }
                 else
                 {

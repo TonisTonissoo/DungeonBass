@@ -33,6 +33,8 @@ public class WaypointFollower : MonoBehaviour
 
             Debug.Log("[Follower] Returned from Boss → forced to START.");
             UpdateLoopText();
+            // Update background for start (Instant)
+            BoardBackgroundManager.Instance?.UpdateBackground(current.transform.GetSiblingIndex(), true);
             return;
         }
 
@@ -52,6 +54,8 @@ public class WaypointFollower : MonoBehaviour
 
                     Debug.Log("[Follower] Returned from Normal Fight → restored tile: " + index);
                     UpdateLoopText();
+                    // Update background for restored tile (Instant)
+                    BoardBackgroundManager.Instance?.UpdateBackground(index, true);
                     return;
                 }
             }
@@ -72,6 +76,8 @@ public class WaypointFollower : MonoBehaviour
 
         Debug.Log("[Follower] Fresh start.");
         UpdateLoopText();
+        // Update background for fresh start (Instant)
+        BoardBackgroundManager.Instance?.UpdateBackground(current.transform.GetSiblingIndex(), true);
 
     }
 
@@ -98,6 +104,9 @@ public class WaypointFollower : MonoBehaviour
                 nextWp = start;
 
             current = nextWp;
+
+            // Update background as we move
+            BoardBackgroundManager.Instance?.UpdateBackground(current.transform.GetSiblingIndex());
 
             Vector3 target = current.transform.position;
             while ((transform.position - target).sqrMagnitude > 0.0001f)

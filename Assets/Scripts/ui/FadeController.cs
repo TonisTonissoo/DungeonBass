@@ -8,7 +8,7 @@ public class FadeController : MonoBehaviour
     public static FadeController Instance;
 
     private Image fadeImage;
-    public float fadeSpeed = 1.2f; // Ühtne fade kiirus kõikjal
+    public float fadeSpeed = 4.0f; // Very fast fade (0.25s duration) to match zoom
 
     private void Awake()
     {
