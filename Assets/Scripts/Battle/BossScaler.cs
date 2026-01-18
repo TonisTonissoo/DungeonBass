@@ -4,10 +4,10 @@ public class BossScaler : MonoBehaviour
 {
     [Header("Scaling Settings")]
     [Tooltip("Extra HP per loop (0.15 = +15% HP per loop).")]
-    public float hpPerLoop = 0.15f;
+    public float hpPerLoop = 0.2f;
 
     [Tooltip("Extra Damage per loop (0.10 = +10% DMG per loop).")]
-    public float attackPerLoop = 0.10f;
+    public float attackPerLoop = 0.15f;
 
     [Tooltip("Cap scaling at this loop count (e.g. stop getting harder after Loop 20).")]
     public int maxScalingLoop = 20;

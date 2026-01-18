@@ -10,10 +10,14 @@ public class PauseMenuController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseManager.IsPaused)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused) ResumeGame();
-            else PauseGame();
+            PauseGame();
         }
     }
 
@@ -22,7 +26,7 @@ public class PauseMenuController : MonoBehaviour
         UISoundPlayer.Instance.PlayOpen();
 
         pausePanel.SetActive(true);
-        Time.timeScale = 0f;
+        PauseManager.PauseGame();
         isPaused = true;
     }
 
@@ -31,7 +35,7 @@ public class PauseMenuController : MonoBehaviour
         UISoundPlayer.Instance.PlayClose();
 
         pausePanel.SetActive(false);
-        Time.timeScale = 1f;
+        PauseManager.ResumeGame();
         isPaused = false;
     }
 
@@ -56,7 +60,7 @@ public class PauseMenuController : MonoBehaviour
     {
         UISoundPlayer.Instance.PlayClick();
 
-        Time.timeScale = 1f;
+        PauseManager.ResumeGame();
         SceneLoader.Load("MainMenu");
     }
 
