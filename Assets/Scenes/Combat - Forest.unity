@@ -601,6 +601,8 @@ MonoBehaviour:
   victorySceneName: Victory
   gameOverSceneName: GameOver
   spawnPoints: []
+  defaultSpawnY: -2
+  spawnSpacing: 3.5
   musicVolume: 1
   loadDelaySeconds: 0.75
 --- !u!4 &419152833
@@ -2734,7 +2736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004659364575478978, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.77
+      value: 5.79
       objectReference: {fileID: 0}
     - target: {fileID: 6004659364575478978, guid: 2186371a1f149c74591c9872774451d5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3115,7 +3117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1426456821042308783, guid: a107db4f6ecfdb049b3f29e0586f6621, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.46
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 1426456821042308783, guid: a107db4f6ecfdb049b3f29e0586f6621, type: 3}
       propertyPath: m_LocalPosition.y
