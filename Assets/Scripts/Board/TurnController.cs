@@ -43,6 +43,9 @@ public class TurnController : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.IsPaused)
+            return;
+
         if (follower == null)
         {
             follower = FindObjectOfType<WaypointFollower>();
