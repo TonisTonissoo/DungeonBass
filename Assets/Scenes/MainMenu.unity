@@ -3870,6 +3870,7 @@ MonoBehaviour:
   fightStart: {fileID: 8300000, guid: 83803b14e3467cc458474f551967a8a1, type: 3}
   victory: {fileID: 8300000, guid: 811cf4656dad4034287c57ebced833d8, type: 3}
   defeat: {fileID: 8300000, guid: de9946bc797081d448097d65041494c7, type: 3}
+  healingPotion: {fileID: 8300000, guid: 8aec2465aa1fcee41a1c53b29d269579, type: 3}
 --- !u!4 &1719615280
 Transform:
   m_ObjectHideFlags: 0

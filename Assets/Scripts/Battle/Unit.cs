@@ -95,6 +95,7 @@ public class Unit : MonoBehaviour
                 bool used = PlayerStats.Instance.UseHealingPotion();
                 if (used)
                 {
+                    UISoundPlayer.Instance?.PlayHealing();
                     // Sync heal tagasi Unit'i
                     currentHP = PlayerStats.Instance.currentHealth;
                     maxHP = PlayerStats.Instance.maxHealth;
