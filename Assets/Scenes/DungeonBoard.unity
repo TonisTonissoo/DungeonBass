@@ -4136,7 +4136,7 @@ MonoBehaviour:
   attackPower: 20
   currentLoop: 1
   healingPotions: 0
-  healPotionAmount: 30
+  healPotionAmount: 20
 --- !u!4 &551002837
 Transform:
   m_ObjectHideFlags: 0
@@ -12674,7 +12674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Healing Potion (25)
+  m_text: Healing Potion (35)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15754,7 +15754,7 @@ MonoBehaviour:
   hpIncrease: 25
   buyPotionButton: {fileID: 1563680903}
   potionText: {fileID: 1411906719}
-  potionCost: 25
+  potionCost: 35
 --- !u!114 &2087012747
 MonoBehaviour:
   m_ObjectHideFlags: 0

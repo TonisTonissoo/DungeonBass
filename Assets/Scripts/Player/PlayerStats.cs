@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Potions")]
     public int healingPotions = 0;
-    public int healPotionAmount = 30;
+    public int healPotionAmount = 20;
 
     public event Action OnStatsChanged;
 
