@@ -38,6 +38,7 @@ public class TurnController : MonoBehaviour
     private System.Collections.IEnumerator InitHint()
     {
         yield return null;
+        SpaceHintUI.Restore();
         UpdateClosedHint();
     }
 

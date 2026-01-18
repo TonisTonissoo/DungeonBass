@@ -43,7 +43,7 @@ public class EventPopupManager : MonoBehaviour
 
         popupRoot.SetActive(true);
         eventText.text = message;
-        SpaceHintUI.Show("");
+        SpaceHintUI.HideTemporarily();
 
         PauseManager.PauseGame();
 
@@ -63,8 +63,9 @@ public class EventPopupManager : MonoBehaviour
 
             // paneel kinni heli
             UISoundPlayer.Instance.PlayClose();
-
+            SpaceHintUI.Restore();
             PauseManager.ResumeGame();
+
             onClose?.Invoke();
 
             if (TurnController.Instance != null)
@@ -91,7 +92,7 @@ public class EventPopupManager : MonoBehaviour
 
         popupRoot.SetActive(true);
         eventText.text = message;
-        SpaceHintUI.Show("");
+        SpaceHintUI.HideTemporarily();
 
         PauseManager.PauseGame();
 
@@ -114,6 +115,7 @@ public class EventPopupManager : MonoBehaviour
             riskButton.gameObject.SetActive(false);
 
             UISoundPlayer.Instance.PlayClose();
+            SpaceHintUI.Restore();
 
             PauseManager.ResumeGame();
             onPay?.Invoke();
