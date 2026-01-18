@@ -112,6 +112,7 @@ public class ShopUI : MonoBehaviour
     {
         if (PlayerStats.Instance == null) return;
 
+        UISoundPlayer.Instance.PlayClick();
         if (PlayerStats.Instance.SpendCoins(cost))
         {
             UISoundPlayer.Instance.PlayShopBuy();
@@ -132,6 +133,7 @@ public class ShopUI : MonoBehaviour
     {
         if (PlayerStats.Instance == null) return;
 
+        UISoundPlayer.Instance.PlayClick();
         if (PlayerStats.Instance.SpendCoins(attackCost))
         {
             UISoundPlayer.Instance.PlayShopBuy();
@@ -164,6 +166,8 @@ public class ShopUI : MonoBehaviour
         {
             UISoundPlayer.Instance.PlayNoMoney();
         }
+
         UpdateCoinsDisplay();
+        UpdatePotionDisplay();
     }
 }
