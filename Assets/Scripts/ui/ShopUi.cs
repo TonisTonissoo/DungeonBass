@@ -23,7 +23,7 @@ public class ShopUI : MonoBehaviour
     [Header("Potion UI")]
     [SerializeField] private Button buyPotionButton;
     [SerializeField] private TMP_Text potionText;
-    [SerializeField] private int potionCost = 25;
+    [SerializeField] private int potionCost = 35;
 
     private void Awake()
     {
