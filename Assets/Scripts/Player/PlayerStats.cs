@@ -19,6 +19,12 @@ public class PlayerStats : MonoBehaviour
     public int attackPower;
     public int currentLoop;
 
+    [Range(0f, 1f)]
+    public float critChanceDefault = 0.15f;
+
+    [Range(0f, 1f)]
+    public float critChance;
+
     [Header("Potions")]
     public int healingPotions = 0;
     public int healPotionAmount = 20;
@@ -51,6 +57,8 @@ public class PlayerStats : MonoBehaviour
         coins = startingCoins;
         currentLoop = startingLoop;
 
+        critChance = critChanceDefault;
+
         Debug.Log("[PlayerStats] Reset to default stats.");
     }
 
@@ -72,6 +80,13 @@ public class PlayerStats : MonoBehaviour
     {
         attackPower += amount;
         Debug.Log($"Attack Power increased to {attackPower}");
+    }
+
+    public void IncreaseCritChance(float amountInPercent)
+    {
+        float add = amountInPercent / 100f;
+        critChance = Mathf.Clamp01(critChance + add);
+        Debug.Log($"Crit Chance increased to {critChance:P0}");
     }
 
     public void AddCoins(int amount)

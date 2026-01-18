@@ -25,6 +25,12 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private TMP_Text potionText;
     [SerializeField] private int potionCost = 35;
 
+    [Header("Crit UI")]
+    [SerializeField] private Button buyCritButton;
+    [SerializeField] private TMP_Text critText;
+    [SerializeField] private int critCost = 60;
+    [SerializeField] private float critIncreasePercent = 5f;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -53,8 +59,13 @@ public class ShopUI : MonoBehaviour
         if (buyPotionButton != null)
             buyPotionButton.onClick.AddListener(BuyPotion);
 
+        if (buyCritButton != null)
+            buyCritButton.onClick.AddListener(BuyCritUpgrade);
+
+
         UpdateCoinsDisplay();
         UpdatePotionDisplay();
+        UpdateCritDisplay();
     }
 
     public void OpenShop()
@@ -73,7 +84,38 @@ public class ShopUI : MonoBehaviour
 
         UpdateCoinsDisplay();
         UpdatePotionDisplay();
+        UpdateCritDisplay();
         Debug.Log("Shop opened!");
+    }
+
+    private void UpdateCritDisplay()
+    {
+        if (critText != null && PlayerStats.Instance != null)
+            critText.text = $"Crit: {(PlayerStats.Instance.critChance * 100f):0}%";
+    }
+
+    private void BuyCritUpgrade()
+    {
+        if (PlayerStats.Instance == null) return;
+
+        UISoundPlayer.Instance.PlayClick();
+
+        if (PlayerStats.Instance.SpendCoins(critCost))
+        {
+            UISoundPlayer.Instance.PlayShopBuy();
+            PlayerStats.Instance.IncreaseCritChance(critIncreasePercent);
+
+            Debug.Log($"+{critIncreasePercent}% Crit purchased for {critCost} coins!");
+
+            HUDController.Instance?.UpdateHUD();
+            UpdateCoinsDisplay();
+            UpdateCritDisplay();
+        }
+        else
+        {
+            UISoundPlayer.Instance.PlayNoMoney();
+            Debug.Log("Not enough coins to buy crit upgrade!");
+        }
     }
 
     public void CloseShop()

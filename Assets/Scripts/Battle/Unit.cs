@@ -58,7 +58,9 @@ public class Unit : MonoBehaviour
         {
             maxHP = PlayerStats.Instance.maxHealth;
             currentHP = PlayerStats.Instance.currentHealth;
-            attackPower = PlayerStats.Instance.attackPower; 
+            attackPower = PlayerStats.Instance.attackPower;
+
+            criticalHitChance = PlayerStats.Instance.critChance;
         }
         else
         {
@@ -128,8 +130,14 @@ public class Unit : MonoBehaviour
 
     protected bool RollForCriticalHit()
     {
+        // Playeri crit tuleb alati PlayerStatsist (live)
+        if (unitName == "Player" && PlayerStats.Instance != null)
+            return Random.value < PlayerStats.Instance.critChance;
+
+        // Kõik teised kasutavad Unit'i enda väärtust (enemy/boss)
         return Random.value < criticalHitChance;
     }
+
 
     protected float CalculateDamage(out bool wasCritical)
     {
