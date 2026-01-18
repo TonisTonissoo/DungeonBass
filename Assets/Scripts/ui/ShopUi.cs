@@ -20,6 +20,11 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private int cost = 50;
     [SerializeField] private int hpIncrease = 25;
 
+    [Header("Potion UI")]
+    [SerializeField] private Button buyPotionButton;
+    [SerializeField] private TMP_Text potionText;
+    [SerializeField] private int potionCost = 25;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -45,7 +50,11 @@ public class ShopUI : MonoBehaviour
         if (buyAttackButton != null)
             buyAttackButton.onClick.AddListener(BuyAttackUpgrade);
 
+        if (buyPotionButton != null)
+            buyPotionButton.onClick.AddListener(BuyPotion);
+
         UpdateCoinsDisplay();
+        UpdatePotionDisplay();
     }
 
     public void OpenShop()
@@ -63,6 +72,7 @@ public class ShopUI : MonoBehaviour
         SpaceHintUI.Show("");
 
         UpdateCoinsDisplay();
+        UpdatePotionDisplay();
         Debug.Log("Shop opened!");
     }
 
@@ -90,6 +100,13 @@ public class ShopUI : MonoBehaviour
         if (coinsText != null && PlayerStats.Instance != null)
             coinsText.text = $"Coins: {PlayerStats.Instance.coins}";
     }
+
+    private void UpdatePotionDisplay()
+    {
+        if (potionText != null && PlayerStats.Instance != null)
+            potionText.text = $"Potions: {PlayerStats.Instance.healingPotions}";
+    }
+
 
     private void BuyHealthUpgrade()
     {
@@ -129,5 +146,24 @@ public class ShopUI : MonoBehaviour
             UISoundPlayer.Instance.PlayNoMoney();
             Debug.Log("Not enough coins to buy attack upgrade!");
         }
+    }
+
+    private void BuyPotion()
+    {
+        if (PlayerStats.Instance == null) return;
+
+        UISoundPlayer.Instance.PlayClick();
+
+        if (PlayerStats.Instance.SpendCoins(potionCost))
+        {
+            UISoundPlayer.Instance.PlayShopBuy();
+            PlayerStats.Instance.AddHealingPotion(1);
+            HUDController.Instance?.UpdateHUD();
+        }
+        else
+        {
+            UISoundPlayer.Instance.PlayNoMoney();
+        }
+        UpdateCoinsDisplay();
     }
 }

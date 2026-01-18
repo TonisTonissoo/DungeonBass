@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class PlayerStats : MonoBehaviour
     public int coins;
     public int attackPower;
     public int currentLoop;
+
+    [Header("Potions")]
+    public int healingPotions = 0;
+    public int healPotionAmount = 30;
+
+    public event Action OnStatsChanged;
 
     private void Awake()
     {
@@ -83,5 +90,23 @@ public class PlayerStats : MonoBehaviour
 
         Debug.Log($"Not enough coins! Have {coins}, need {cost}");
         return false;
+    }
+
+    // --- POTION METHODS ---
+    public void AddHealingPotion(int amount = 1)
+    {
+        healingPotions += Mathf.Max(0, amount);
+        OnStatsChanged?.Invoke();
+    }
+
+    public bool UseHealingPotion()
+    {
+        if (healingPotions <= 0) return false;
+        if (currentHealth >= maxHealth) return false;
+
+        healingPotions--;
+        currentHealth = Mathf.Min(maxHealth, currentHealth + healPotionAmount);
+        OnStatsChanged?.Invoke();
+        return true;
     }
 }
