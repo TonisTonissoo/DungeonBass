@@ -27,6 +27,9 @@ public class UISoundPlayer : MonoBehaviour
     [SerializeField] private AudioClip victory;
     [SerializeField] private AudioClip defeat;
 
+    [Header("Potion")]
+    [SerializeField] private AudioClip healingPotion;
+
 
     private AudioSource source;
 
@@ -62,6 +65,8 @@ public class UISoundPlayer : MonoBehaviour
 
     public void PlayVictory() => Play(victory);
     public void PlayDefeat() => Play(defeat);
+
+    public void PlayHealing() => Play(healingPotion);
 
     private void Play(AudioClip clip)
     {

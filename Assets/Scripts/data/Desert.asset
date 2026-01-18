@@ -15,5 +15,5 @@ MonoBehaviour:
   combatSceneName: Combat - Desert
   enemyPrefabs:
   - {fileID: 789699782623113464, guid: 605496af38c9aa743b370369d8a0b041, type: 3}
-  minEnemies: 1
+  minEnemies: 2
   maxEnemies: 3

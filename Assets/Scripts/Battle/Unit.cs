@@ -70,12 +70,42 @@ public class Unit : MonoBehaviour
     }
 
     public bool IsAlive() => currentHP > 0;
-    
+
     public virtual void TakeDamage(float dmg)
     {
         currentHP -= dmg;
+
+        // Kui see on player, hoia PlayerStats sünkroonis
+        if (unitName == "Player" && PlayerStats.Instance != null)
+        {
+            // Sync damage PlayerStats'i
+            PlayerStats.Instance.currentHealth = Mathf.CeilToInt(currentHP);
+
+            // Kui sul on OnStatsChanged event olemas, siis võid selle rea jätta
+            // PlayerStats.Instance.OnStatsChanged?.Invoke();
+
+            // --- AUTO POTION kui HP <= 50% ---
+            float hpPercent = (float)PlayerStats.Instance.currentHealth / PlayerStats.Instance.maxHealth;
+            bool belowOrEqual50 = hpPercent <= 0.5f;
+
+            if (belowOrEqual50 &&
+                PlayerStats.Instance.healingPotions > 0 &&
+                PlayerStats.Instance.currentHealth < PlayerStats.Instance.maxHealth)
+            {
+                bool used = PlayerStats.Instance.UseHealingPotion();
+                if (used)
+                {
+                    UISoundPlayer.Instance?.PlayHealing();
+                    // Sync heal tagasi Unit'i
+                    currentHP = PlayerStats.Instance.currentHealth;
+                    maxHP = PlayerStats.Instance.maxHealth;
+                }
+            }
+        }
+
+        // Uuenda healthbar (pärast võimaliku potionit)
         healthBar?.updateHealthBar(currentHP, maxHP);
-        
+
         if (currentHP <= 0)
         {
             currentHP = 0;
