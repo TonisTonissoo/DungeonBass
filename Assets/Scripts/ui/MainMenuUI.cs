@@ -4,7 +4,7 @@ public class MainMenuUI : MonoBehaviour
 {
     public GameObject mainButtons;
     public GameObject settingsPanel;
-
+    [SerializeField] private TutorialMenu tutorialMenu;
     public void PlayGame()
     {
         UISoundPlayer.Instance.PlayClick();
@@ -41,4 +41,27 @@ public class MainMenuUI : MonoBehaviour
         settingsPanel.SetActive(false);
         mainButtons.SetActive(true);
     }
+
+    public void OpenTutorial()
+    {
+        if (!tutorialMenu)
+        {
+            Debug.LogError("TutorialMenu reference missing on MainMenuUI.");
+            return;
+        }
+
+        tutorialMenu.OpenTutorial();
+    }
+
+    public void CloseTutorial()
+    {
+        if (!tutorialMenu)
+        {
+            Debug.LogError("TutorialMenu reference missing on MainMenuUI.");
+            return;
+        }
+
+        tutorialMenu.CloseTutorial();
+    }
+
 }
